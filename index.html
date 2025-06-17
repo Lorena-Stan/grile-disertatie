@@ -20,19 +20,14 @@
   </div>
   <div id="result" style="display:none;"></div>
 
+  <!-- AICI se încarcă întrebările ca variabilă globală -->
+  <script src="questions.js"></script>
+
   <script>
-    let allQuestions = [];
-    let selectedQuestions = [];
     let current = 0;
     let score = 0;
 
-    <script src="questions.js"></script>
-      .then(res => res.json())
-      .then(data => {
-        allQuestions = data;
-        selectedQuestions = shuffle(allQuestions).slice(0, 80);
-        showQuestion();
-      });
+    const selectedQuestions = shuffle(questions).slice(0, 80);
 
     function shuffle(array) {
       return array.sort(() => Math.random() - 0.5);
@@ -62,9 +57,12 @@
       } else {
         document.getElementById('quiz').style.display = 'none';
         document.getElementById('result').style.display = 'block';
-        document.getElementById('result').innerHTML = `<h2>Ai obtinut ${score} din 80 puncte</h2>`;
+        document.getElementById('result').innerHTML = `<h2>Ai obținut ${score} din 80 de puncte</h2>`;
       }
     });
+
+    // Pornire
+    showQuestion();
   </script>
 </body>
 </html>
