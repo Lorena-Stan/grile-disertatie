@@ -1,68 +1,97 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Test Grilă Anatomie Patologică</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Test Grilă</title>
   <style>
-    body { font-family: sans-serif; max-width: 600px; margin: auto; padding: 20px; }
-    .question { margin-bottom: 20px; }
-    .answers label { display: block; margin: 5px 0; }
-    button { padding: 10px 20px; font-size: 1rem; margin-top: 20px; }
+    body { font-family: sans-serif; padding: 20px; max-width: 600px; margin: auto; }
+    select, button { font-size: 1rem; padding: 10px; margin: 10px 0; }
+    .question { margin-top: 20px; }
+    label { display: block; margin: 5px 0; }
   </style>
 </head>
 <body>
-  <h1>Test Grilă Anatomie Patologică</h1>
-  <div id="quiz">
-    <div class="question" id="question"></div>
-    <div class="answers" id="answers"></div>
-    <button id="nextButton">Următoarea întrebare</button>
+  <h1>Test Grilă</h1>
+
+  <label for="testType">Selectează un test:</label>
+  <select id="testType">
+    <option value="mix">80 grile aleatorii din toate materiile</option>
+    <option value="anatomie">100 grile Anatomie Patologică</option>
+    <option value="farmacologie">100 grile Farmacologie</option>
+    <option value="fiziologie">100 grile Fiziologie</option>
+    <option value="patologie">100 grile Patologie</option>
+    <option value="bacteriologie">100 grile Bacteriologie</option>
+  </select>
+  <button onclick="startTest()">Începe testul</button>
+
+  <div id="quiz" style="display:none;">
+    <div id="question" class="question"></div>
+    <div id="answers"></div>
+    <button id="nextBtn">Următoarea întrebare</button>
   </div>
+
   <div id="result" style="display:none;"></div>
 
-  <!-- AICI se încarcă întrebările ca variabilă globală -->
   <script src="questions.js"></script>
-
   <script>
+    let allQuestions = {};
+    let selectedQuestions = [];
     let current = 0;
     let score = 0;
 
-    const selectedQuestions = shuffle(questions).slice(0, 80);
+    function shuffle(arr) {
+      return arr.sort(() => Math.random() - 0.5);
+    }
 
-    function shuffle(array) {
-      return array.sort(() => Math.random() - 0.5);
+    function startTest() {
+      const type = document.getElementById("testType").value;
+      let combined = [];
+
+      if (type === "mix") {
+        Object.values(questions).forEach(arr => combined.push(...arr));
+        selectedQuestions = shuffle(combined).slice(0, 80);
+      } else {
+        selectedQuestions = shuffle(questions[type] || []).slice(0, 100);
+      }
+
+      if (selectedQuestions.length === 0) {
+        alert("Nu există întrebări pentru această selecție!");
+        return;
+      }
+
+      current = 0;
+      score = 0;
+      document.getElementById("quiz").style.display = "block";
+      document.getElementById("result").style.display = "none";
+      showQuestion();
     }
 
     function showQuestion() {
       const q = selectedQuestions[current];
-      document.getElementById('question').textContent = (current + 1) + '. ' + q.intrebare;
-      const answersDiv = document.getElementById('answers');
-      answersDiv.innerHTML = '';
-      q.variante.forEach((opt, i) => {
-        const label = document.createElement('label');
-        label.innerHTML = `<input type="radio" name="answer" value="${i}"> ${opt}`;
-        answersDiv.appendChild(label);
+      document.getElementById("question").textContent = `${current + 1}. ${q.intrebare}`;
+      const ansDiv = document.getElementById("answers");
+      ansDiv.innerHTML = "";
+      q.variante.forEach((v, i) => {
+        const label = document.createElement("label");
+        label.innerHTML = `<input type="radio" name="ans" value="${i}"> ${v}`;
+        ansDiv.appendChild(label);
       });
     }
 
-    document.getElementById('nextButton').addEventListener('click', () => {
-      const selected = document.querySelector('input[name="answer"]:checked');
-      if (!selected) return alert('Selectează un răspuns!');
-      if (parseInt(selected.value) === selectedQuestions[current].corect) {
-        score++;
-      }
+    document.getElementById("nextBtn").onclick = () => {
+      const selected = document.querySelector("input[name='ans']:checked");
+      if (!selected) return alert("Selectează un răspuns!");
+      if (parseInt(selected.value) === selectedQuestions[current].corect) score++;
       current++;
       if (current < selectedQuestions.length) {
         showQuestion();
       } else {
-        document.getElementById('quiz').style.display = 'none';
-        document.getElementById('result').style.display = 'block';
-        document.getElementById('result').innerHTML = `<h2>Ai obținut ${score} din 80 de puncte</h2>`;
+        document.getElementById("quiz").style.display = "none";
+        document.getElementById("result").style.display = "block";
+        document.getElementById("result").innerHTML = `<h2>Scor: ${score} / ${selectedQuestions.length}</h2>`;
       }
-    });
-
-    // Pornire
-    showQuestion();
+    };
   </script>
 </body>
 </html>
