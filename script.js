@@ -2,6 +2,7 @@ let allQuestions = [];
 let selectedQuestions = [];
 let currentIndex = 0;
 let score = 0;
+let userAnswers = [];
 
 document.getElementById("start").addEventListener("click", async () => {
   const select = document.getElementById("selector").value;
@@ -20,55 +21,5 @@ document.getElementById("start").addEventListener("click", async () => {
 
   currentIndex = 0;
   score = 0;
+  userAnswers = [];
   document.getElementById("result").innerHTML = "";
-  showCurrentQuestion();
-});
-
-function showCurrentQuestion() {
-  const q = selectedQuestions[currentIndex];
-  const quizDiv = document.getElementById("quiz");
-  quizDiv.innerHTML = `
-    <div class="question">
-      <h3>${currentIndex + 1}. ${q.intrebare}</h3>
-      ${q.variante.map((opt, i) => `
-        <label>
-          <input type="radio" name="q" value="${i}"> ${opt}
-        </label>
-      `).join("")}
-    </div>
-    <button id="next">Următoarea întrebare</button>
-  `;
-
-  document.getElementById("submit").style.display = "none";
-
-  document.getElementById("next").addEventListener("click", () => {
-    const selected = document.querySelector(`input[name="q"]:checked`);
-    if (!selected) {
-      alert("Te rog selectează un răspuns.");
-      return;
-    }
-
-    if (parseInt(selected.value) === q.corect) {
-      score++;
-    }
-
-    currentIndex++;
-    if (currentIndex < selectedQuestions.length) {
-      showCurrentQuestion();
-    } else {
-      showResult();
-    }
-  });
-}
-
-function showResult() {
-  document.getElementById("quiz").innerHTML = "";
-  document.getElementById("result").innerHTML = `
-    <h2>Ai răspuns corect la ${score} din ${selectedQuestions.length} întrebări.</h2>
-  `;
-}
-
-// Funcție pentru amestecare
-function shuffle(array) {
-  return array.sort(() => Math.random() - 0.5);
-}
