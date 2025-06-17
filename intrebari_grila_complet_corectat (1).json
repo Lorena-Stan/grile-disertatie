@@ -1,0 +1,5249 @@
+[
+  {
+    "id": 1,
+    "materie": "Anatomie patologica",
+    "intrebare": "Toful gutos defineste:",
+    "variante": [
+      "un granulom de corp strain inert",
+      "o distrofie protidica",
+      "depunerile de acid uric si urati la nivel articular"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 2,
+    "materie": "Anatomie patologica",
+    "intrebare": "Aparitia semnelor de calduri la femele castrate este determinata de:",
+    "variante": [
+      "ovarita parenchimatoasa",
+      "gestatie",
+      "reminescenta ovariana"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 3,
+    "materie": "Anatomie patologica",
+    "intrebare": "ConsecinÅ£ele chisturilor paraovariene sunt:",
+    "variante": [
+      "nu sunt relevante",
+      "hiperestrogenism",
+      "infertilitate"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 4,
+    "materie": "Anatomie patologica",
+    "intrebare": "AbsenÅ£a caldurilor la femele poate fi determinatÄƒ de:",
+    "variante": [
+      "chisturile paraovariene",
+      "chisturile foliculare",
+      "chisturile pancreatice"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 5,
+    "materie": "Anatomie patologica",
+    "intrebare": "Vehicularea, prin intermediul sistemului cardiovascular, a unor agregate straine de compozitia normala a sangelui poarta denumirea de:",
+    "variante": [
+      "tromboza",
+      "limfopenie",
+      "embolie"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 6,
+    "materie": "Anatomie patologica",
+    "intrebare": "Prezenta unei populatii monomorfe de celule ce manifesta diferite grade de atipie, defineste:",
+    "variante": [
+      "un proces inflamator acut",
+      "un proces neoplazic",
+      "un proces inflamator parenchimatos"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 7,
+    "materie": "Anatomie patologica",
+    "intrebare": "ConsecinÅ£ele prolapsului uterin sunt:",
+    "variante": [
+      "scaderea tonusului uterin, cahexia, hiperestrogenismul",
+      "aderente fibroase peritoneale",
+      "staza sangvina, necroza si infectie"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 8,
+    "materie": "Anatomie patologica",
+    "intrebare": "Encefalopatiile spongiforme transmisibile au origine:",
+    "variante": [
+      "prionica",
+      "bacteriana",
+      "virala"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 9,
+    "materie": "Anatomie patologica",
+    "intrebare": "Fatarile distocice favorizeaza:",
+    "variante": [
+      "lactatie falsa",
+      "ruptura uterina",
+      "uichisturi ovariene"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 10,
+    "materie": "Anatomie patologica",
+    "intrebare": "Hipoplazia functiei ovariene determinÄƒ:",
+    "variante": [
+      "hidrometru",
+      "atrofia endometrului",
+      "hiperestrogenism"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 11,
+    "materie": "Anatomie patologica",
+    "intrebare": "In cadrul procesului inflamator proliferativ, dominanta celulara este reprezentata de:",
+    "variante": [
+      "neutrofile si fibroblaste",
+      "fibrocite si fibre de colagen",
+      "limfocite si macrofage"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 12,
+    "materie": "Anatomie patologica",
+    "intrebare": "Rahitismul se caracterizeaza prin:",
+    "variante": [
+      "oase moi, cu canal medular largit",
+      "porozitate crescuta a oaselor",
+      "curbarea si ingrosarea oaselor lungi"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 13,
+    "materie": "Anatomie patologica",
+    "intrebare": "Hiperplazia endometrului poate fi determinatÄƒ de:",
+    "variante": [
+      "hepatosteatoza",
+      "intoxicatia cu lucerna",
+      "consumul de plante fitoestrogene"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 14,
+    "materie": "Anatomie patologica",
+    "intrebare": "Endometrita apare mai frecvent in:",
+    "variante": [
+      "estru",
+      "anestru",
+      "metestrus"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 15,
+    "materie": "Anatomie patologica",
+    "intrebare": "Guta articulara este o distrofie datorata:",
+    "variante": [
+      "depunerii acidului uric si a sarurilor acestuia la nivel articular",
+      "maturarii vicioase a cartilajelor articulare",
+      "acumularii unei colectii lichidiene la nivel articular"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 16,
+    "materie": "Anatomie patologica",
+    "intrebare": "Apoptoza celulelor prostatice este determinata de:",
+    "variante": [
+      "scaderea testosteronului din sange",
+      "administrarea de acid acetilsalicilic",
+      "cresterea hormonilor estrogeni"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 17,
+    "materie": "Anatomie patologica",
+    "intrebare": "Hidrartroza reprezinta:",
+    "variante": [
+      "un proces inflamator",
+      "o tulburare circulatorie",
+      "o malformatie congenitala"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 18,
+    "materie": "Anatomie patologica",
+    "intrebare": "Osteomalacia reprezinta:",
+    "variante": [
+      "ramolirea sau inmuierea oaselor",
+      "rarefactia osului la tineret",
+      "o tumora osoasa"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 19,
+    "materie": "Anatomie patologica",
+    "intrebare": "Cresterea numarului de celule keratinizate anucleate la nivelul epidermului poarta\ndenumirea de:",
+    "variante": [
+      "paracheratoza",
+      "discheratoza",
+      "hipercheratoza"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 20,
+    "materie": "Anatomie patologica",
+    "intrebare": "Dilatatia cardiaca necesita diagnostic diferential fata de:",
+    "variante": [
+      "hipetrofia concentrica",
+      "pericardita fibroasa",
+      "hipertrofia excentrica"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 21,
+    "materie": "Anatomie patologica",
+    "intrebare": "Stadiul final a furunculozei este:",
+    "variante": [
+      "dermatita fibroasa",
+      "dermatita subepidermica pustuloasa",
+      "hiperelastoza cutanata"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 22,
+    "materie": "Anatomie patologica",
+    "intrebare": "Rinitele acute pot imbraca urmatoarele forme:",
+    "variante": [
+      "parazitara, atrofica, fibroasa",
+      "catarala, purulenta, fibroasa",
+      "catarala, seroasa, purulenta"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 23,
+    "materie": "Anatomie patologica",
+    "intrebare": "Inflamatia tesutului conjunctiv subcutanat poarta denumirea de:",
+    "variante": [
+      "paniculita",
+      "dermatita",
+      "conjunctivita"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 24,
+    "materie": "Anatomie patologica",
+    "intrebare": "Maceratia fetala reprezinta:",
+    "variante": [
+      "deshidratarea progresivÄƒ a fetuÅŸilor morÅ£i È™i reÅ£inuÅ£i timp Ã®ndelungat Ã®n uter",
+      "expulzarea unui fetus mort Ã®n intervalul de timp Ã®n care nou-nÄƒscuÅ£ii sunt viabili",
+      "lichefierea Å£esuturilor fetale moi ÅŸi resorbÅ£ia/eliminarea externÄƒ a acestora"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 25,
+    "materie": "Anatomie patologica",
+    "intrebare": "Culoarea galbenÄƒ, vizibilÄƒ Ã®n sclerÄƒ, mucoase, piele nepigmentatÄƒ, Å£esut adipos si pe unele organe interne este intalnita in:",
+    "variante": [
+      "intoxicatia cu rostopasca",
+      "icter",
+      "hipovitaminoza A\t"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 26,
+    "materie": "Anatomie patologica",
+    "intrebare": "Care dintre urmatoarele neoformaÈ›iuni cutanate sunt de natura benigna?",
+    "variante": [
+      "osteosarcomul",
+      "papilomul",
+      "carcinomul"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 27,
+    "materie": "Anatomie patologica",
+    "intrebare": "Cheratitele sunt:",
+    "variante": [
+      "inflamatiile coroidei",
+      "inflamatiile corpului ciliar",
+      "inflamatiile corneei"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 28,
+    "materie": "Anatomie patologica",
+    "intrebare": "Extinderea procesului supurativ la ochiul sÄƒnÄƒtos poarta denumirea de:",
+    "variante": [
+      "oftalmia simpatica",
+      "retinopatia degenerativa",
+      "cherato-conjunctivita"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 29,
+    "materie": "Anatomie patologica",
+    "intrebare": "Prezenta celulelor gigante multinucleate este specifica unui proces",
+    "variante": [
+      "inflamator cronic",
+      "tumoral",
+      "distrofic"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 30,
+    "materie": "Anatomie patologica",
+    "intrebare": "Functia exocrina testiculara este asigurata de:",
+    "variante": [
+      "spermatozoizi",
+      "prostata",
+      "celulele epiteliului germinativ din tubii seminiferi"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 31,
+    "materie": "Anatomie patologica",
+    "intrebare": "Encefalita eozinofilica apare consecutiv:",
+    "variante": [
+      "intoxicatiei cu solanine",
+      "intoxicatiei cu sare",
+      "neurofibromului"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 32,
+    "materie": "Anatomie patologica",
+    "intrebare": "Tumora maligna a tesutului muscular neted poarta denumirea de:",
+    "variante": [
+      "rabdomiom",
+      "leiomiosarcom",
+      "rabdomiosarcom"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 33,
+    "materie": "Anatomie patologica",
+    "intrebare": "Freemartinismul se caracterizeaza prin:",
+    "variante": [
+      "subdezvoltare utero-ovariana",
+      "absenta ovarelor",
+      "hiperplazie vulvo-vaginala"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 34,
+    "materie": "Anatomie patologica",
+    "intrebare": "Aparitia unui sindrom de feminizare la masculi se datoreaza:",
+    "variante": [
+      "hipertiroidismului",
+      "castrarii",
+      "sertolinomului"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 35,
+    "materie": "Anatomie patologica",
+    "intrebare": "Metroragia reprezinta:",
+    "variante": [
+      "edematierea endometrului",
+      "o hemoragie uterina",
+      "o hemoragie digestiva"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 36,
+    "materie": "Anatomie patologica",
+    "intrebare": "Dezvoltarea exageratÄƒ a unor grupe de muÅŸchi, datoritÄƒ creÅŸterii numÄƒrului de fibre musculare poarta denumirea de:",
+    "variante": [
+      "hiperplazia fibrelor musculare",
+      "amiotrofia musculara",
+      "miodistrofia nutritionala"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 37,
+    "materie": "Anatomie patologica",
+    "intrebare": "Acumularea de lichid neinflamator la nivelul tunicii vaginale poarta denumirea de:",
+    "variante": [
+      "vaginita exudativa",
+      "mucometrita",
+      "hidrocel"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 38,
+    "materie": "Anatomie patologica",
+    "intrebare": "Boala muschilor albi apare consecutiv:",
+    "variante": [
+      "atrofiei musculare",
+      "carentei nutritionale in vitamina E si seleniu",
+      "atrofiei de denervare"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 40,
+    "materie": "Anatomie patologica",
+    "intrebare": "Aportul nutritiv scazut sau tulburarile de malabsorbtie determina:",
+    "variante": [
+      "atrofie cahectica",
+      "hepatosteatoza",
+      "encefalopatie spongiforma"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 41,
+    "materie": "Anatomie patologica",
+    "intrebare": "Acumularea de tesut adipos printre fibrele musculare poartÄƒ denumirea de:",
+    "variante": [
+      "steatoza musculara",
+      "lipomatoza musculara",
+      "fibrosteatoza"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 42,
+    "materie": "Anatomie patologica",
+    "intrebare": "Aspectul macroscopic de tesut ramolit, de culoare cenusiu-verzui, urat mirositor este specific:",
+    "variante": [
+      "gangrenei umede",
+      "hipertrofiei musculare",
+      " distrofie vacuolare"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 43,
+    "materie": "Anatomie patologica",
+    "intrebare": "Sarcomul Stiker este:",
+    "variante": [
+      "o tumora benigna",
+      "o tumora maligna",
+      "o inflamatie limfohistiocitara"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 44,
+    "materie": "Anatomie patologica",
+    "intrebare": "Infecunditatea este:",
+    "variante": [
+      "o tulburare definitiva a functiei de reproductie",
+      "o tulburare pasagera a functiei de reproductie",
+      "o tulburare de comportament"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 45,
+    "materie": "Anatomie patologica",
+    "intrebare": "Stomatita aftoasa este specifica:",
+    "variante": [
+      "pasteurelozei",
+      "ectima contagioasa",
+      "salmonelozei"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 46,
+    "materie": "Anatomie patologica",
+    "intrebare": "Epulidele sunt:",
+    "variante": [
+      "tumori gingivale",
+      "inflamatii ale epiteliului cecal",
+      "protuberante cartilaginoase pe razele osoase"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 47,
+    "materie": "Anatomie patologica",
+    "intrebare": "Edemul este o consecinta a:",
+    "variante": [
+      "hemoragiei",
+      "efortului muscular",
+      "stazei"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 48,
+    "materie": "Anatomie patologica",
+    "intrebare": "Esofagita de reflux apare Ã®n cazul:",
+    "variante": [
+      "dilacerarea musculaturii esofagiene",
+      "inchiderii imperfecte a orificiului cardia",
+      "absenta peristaltismului esofagian"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 49,
+    "materie": "Anatomie patologica",
+    "intrebare": "Sabloza se mai numeste:",
+    "variante": [
+      "meteorism",
+      "supraincarcarea rumenului",
+      "geosedimentoza"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 50,
+    "materie": "Anatomie patologica",
+    "intrebare": "Pericardita sclerogena este o inflamatie de tip:",
+    "variante": [
+      "exudativ",
+      "proliferativ",
+      "alterativ"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 51,
+    "materie": "Anatomie patologica",
+    "intrebare": "Lipofuscinoza intestinala se caracterizeaza prin:",
+    "variante": [
+      "fecale grase ca urmare a malabsorbtiei lipidelor",
+      "pigmentarea maronie a musculaturii intestinale",
+      "continut negricios in lumenul intestinal"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 52,
+    "materie": "Anatomie patologica",
+    "intrebare": "Capacitatea celulelor de a se multiplica, producÃ¢nd colonii, poarta denumirea de:",
+    "variante": [
+      "apoptoza",
+      "citoproliferare",
+      "citodiferentiere"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 53,
+    "materie": "Anatomie patologica",
+    "intrebare": "Enterita hemoragico-necrotica este:",
+    "variante": [
+      "un proces inflamator",
+      "o distrofie pigmentara",
+      "o tulburare circulatorie"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 54,
+    "materie": "Anatomie patologica",
+    "intrebare": "Colestaza defineste:",
+    "variante": [
+      "prezenta trombilor biliari si a pigmentilor biliari in celulele kupfer",
+      "prezenta unor necroze difuze, centrolobulare",
+      "fibroza masiva a parenchimului hepatic"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 55,
+    "materie": "Anatomie patologica",
+    "intrebare": "ApariÅ£ia celulelor blastice, imature, Ã®n sÃ¢ngele periferic se datoreaza:",
+    "variante": [
+      "anemiei aregenerative",
+      "hemolizei intravasculare",
+      "insuficientei functionale a citodiabazei"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 56,
+    "materie": "Anatomie patologica",
+    "intrebare": "CreÅŸterea numÄƒrului de eritrocite, peste limita superioarÄƒ a valorilor normale poartÄƒ denumirea de:",
+    "variante": [
+      "poliglobulie",
+      "anemie",
+      "hematopoieza"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 57,
+    "materie": "Anatomie patologica",
+    "intrebare": "Afectiunile hepatice predominant distrofice sunt:",
+    "variante": [
+      "hepatita interstitiala, ciroza hepatica, guta",
+      "hepatosteatoza, amiloidoza, guta",
+      "amiloidoza, hepatomul, colangiocarcinomul"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 58,
+    "materie": "Anatomie patologica",
+    "intrebare": "Hepatita granulomatoasa este intalnita in:",
+    "variante": [
+      "salmoneloza",
+      "necrobaciloza ",
+      "tuberculoza"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 59,
+    "materie": "Anatomie patologica",
+    "intrebare": "Ciroza hepatica este:",
+    "variante": [
+      "un proces distrofic",
+      "un proces inflamator",
+      "un proces tumoral"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 60,
+    "materie": "Anatomie patologica",
+    "intrebare": "Celulele implicate È‹n modularea reactiilor alergice sunt:",
+    "variante": [
+      "neutrofilele",
+      "eozinofilele",
+      "celulele Kupffer"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 61,
+    "materie": "Anatomie patologica",
+    "intrebare": "Celula stem unipotenta din care se formeaza trombocitul este:",
+    "variante": [
+      "megacarioblastul",
+      "prolimfoblastul",
+      "reticulocitul"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 62,
+    "materie": "Anatomie patologica",
+    "intrebare": "ScÄƒderea numÄƒrului de leucocite din sÃ¢nge poartÄƒ denumirea de:",
+    "variante": [
+      "leucopenie",
+      "limfopenie",
+      "leucocitoza"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 63,
+    "materie": "Anatomie patologica",
+    "intrebare": "Inflamatia limbii poarta denumirea de:",
+    "variante": [
+      "glosita",
+      "gingivita",
+      "stomatita"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 64,
+    "materie": "Anatomie patologica",
+    "intrebare": "Leziunile care, coroborate, duc la stabilirea unui diagnostic de certitudine poarta denumirea de:",
+    "variante": [
+      "leziuni identice",
+      "leziuni reversibile",
+      "leziuni caracteristice"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 65,
+    "materie": "Anatomie patologica",
+    "intrebare": "Prezenta unei populatii monomorfe de celule ce manifesta diferite grade de atipie, defineste:",
+    "variante": [
+      "o colectie purulenta",
+      "un proces inflamator acut",
+      "un proces neoplazic"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 66,
+    "materie": "Anatomie patologica",
+    "intrebare": "Consecinta leziunilor celulare ireversibile este:",
+    "variante": [
+      "necrobioza",
+      "apoptoza",
+      "necroza"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 67,
+    "materie": "Anatomie patologica",
+    "intrebare": "Adaptarea celulelor la stres prin cresterea in dimensiuni poarta denumirea de:",
+    "variante": [
+      "homeostazie",
+      "necrobioza",
+      "hipertrofie"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 68,
+    "materie": "Anatomie patologica",
+    "intrebare": "Una dintre cauzele aparitiei atrofiei musculare este determinata de:",
+    "variante": [
+      "reducerea aportului sangvin",
+      "excesul hormonal",
+      "efortul muscular intens"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 69,
+    "materie": "Anatomie patologica",
+    "intrebare": "Ficat mÄƒrit Ã®n volum, cu margini rotunjite, de culoare galben lutos, friabil, este descrierea:",
+    "variante": [
+      "amiloidozei hepatice",
+      "steatozei hepatice",
+      "necrozei hepatice"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 70,
+    "materie": "Anatomie patologica",
+    "intrebare": "Amiloidoza este o leziune de tip:",
+    "variante": [
+      "inflamator",
+      "neoplazic",
+      "distrofic"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 71,
+    "materie": "Anatomie patologica",
+    "intrebare": "Care dintre urmatoarele leziuni are un caracter reversibil?",
+    "variante": [
+      "metaplazia",
+      "neoplazia",
+      "guta"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 72,
+    "materie": "Anatomie patologica",
+    "intrebare": "Forma si rigiditatea celulelor este determinata de:",
+    "variante": [
+      "membrana celulara",
+      "citoschelet",
+      "nucleu"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 73,
+    "materie": "Anatomie patologica",
+    "intrebare": "InhibiÅ£ia profundÄƒ a sistemului nervos, cu pÄƒstrarea funcÅ£iilor vegetative de bazÄƒ defineste:",
+    "variante": [
+      "agonia",
+      "moartea biologica",
+      "coma"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 74,
+    "materie": "Anatomie patologica",
+    "intrebare": "Moartea datorata uzurii fiziologice poarta denumirea de:",
+    "variante": [
+      "fiziologica",
+      "aparenta",
+      "provocata"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 75,
+    "materie": "Anatomie patologica",
+    "intrebare": "Coagulii formaÅ£i post-mortem vor fi diferenÅ£iaÅ£i de trombi aparuti in timpul vietii prin faptul ca:",
+    "variante": [
+      "apare doar in artere",
+      "nu au aderenta",
+      "contin mai multa fibrina"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 76,
+    "materie": "Anatomie patologica",
+    "intrebare": "Salpingita este:",
+    "variante": [
+      "o tumora a glandei mamare",
+      "o distrofie uterine",
+      "o inflamatie a trompelor uterine"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 77,
+    "materie": "Anatomie patologica",
+    "intrebare": "Septicemia este declansata de:",
+    "variante": [
+      "multiplicarea microorganismelor in sange",
+      "ingerarea de substante toxice",
+      "o reactie alergica"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 78,
+    "materie": "Anatomie patologica",
+    "intrebare": "Celulele epitelioide reprezinta:",
+    "variante": [
+      "celule tumorale",
+      "celule de origine epiteliala",
+      "celule macrofagic-like"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 79,
+    "materie": "Anatomie patologica",
+    "intrebare": "Hiperemia activa se defineste ca fiind:",
+    "variante": [
+      "creÅŸterea cantitÄƒÅ£ii de sÃ¢nge venos Ã®ntr-un teritoriu tisular",
+      "extravazarea sangelui arterial din patul vascular si invadarea teritoriilor invecinate",
+      "creÅŸterea cantitÄƒÅ£ii de sÃ¢nge arterial Ã®ntr-un teritoriu tisular"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 80,
+    "materie": "Anatomie patologica",
+    "intrebare": "Hiperemia pasiva se defineste ca fiind:",
+    "variante": [
+      "cresterea masei de sange in teritoriul venos si capilar datorita incetinirii si/sau reducerii cantitative a fluxului sangvin venos",
+      "cresterea masei de sange in teritoriul venos si capilar datorita aparitiei trombilor si/sau embolilor in patul vascular",
+      "cresterea masei de sange in teritoriul arterial si capilar datorita aparitiei trombilor si/sau embolilor in patul vascular"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 81,
+    "materie": "Anatomie patologica",
+    "intrebare": "Antracoza este È‹ntalnita frecvent la:",
+    "variante": [
+      "viteii nou-nascuti",
+      "cainii urbani, batrani",
+      "femelele gestante"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 82,
+    "materie": "Anatomie patologica",
+    "intrebare": "Scurgerea unui sange de culoare rosu-negricos la sectionarea unui organ parenchimatos denota:",
+    "variante": [
+      "o ruptura de aorta",
+      "un infarct",
+      "o staza"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 83,
+    "materie": "Anatomie patologica",
+    "intrebare": "Scaderea progresiva a circulatiei arteriale defineste :",
+    "variante": [
+      "o ischemie",
+      "un hematom",
+      "un edem"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 84,
+    "materie": "Anatomie patologica",
+    "intrebare": "Calcificarile metastatice survin Ã®n cazul:",
+    "variante": [
+      "unui dezechilibru fosfocalcic",
+      "hiperparatiroidismului",
+      "unor tesuturi necrozate"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 85,
+    "materie": "Anatomie patologica",
+    "intrebare": "Prezenta unor pete rosii, subcutanate, bine delimitate, care nu dispar la compresiune atesta:",
+    "variante": [
+      "o hiperemie pasiva",
+      "un edem inflamator",
+      "o hemoragie"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 86,
+    "materie": "Anatomie patologica",
+    "intrebare": "Una dintre cauzele aparitiei trombilor este:",
+    "variante": [
+      "lezarea endoteliului vascular",
+      "cresterea vitezei de circulatie a sangelui",
+      "scaderea factorilor de coagulare"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 87,
+    "materie": "Anatomie patologica",
+    "intrebare": "Deshidratarea severa determina:",
+    "variante": [
+      "o poliglobulie relativa",
+      "o anemie severa",
+      " trombocitopenie"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 88,
+    "materie": "Anatomie patologica",
+    "intrebare": "Flebolitele sunt:",
+    "variante": [
+      "inflamatii ale venelor",
+      "hemoragii capilare",
+      "trombi venosi calcificati"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 89,
+    "materie": "Anatomie patologica",
+    "intrebare": "Structurile centrale ale limfopoiezei sunt reprezentate de:",
+    "variante": [
+      "maduva hematopoietica, limfonodurile si splina",
+      "maduva hematopoietica, splina, timusul",
+      "maduva hematopoietica, timusul si bursa Fabricius"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 90,
+    "materie": "Anatomie patologica",
+    "intrebare": "Metastazarea este o consecinta a:",
+    "variante": [
+      "proceselor inflamatorii acute",
+      "emboliilor",
+      "distrofiilor minerale"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 91,
+    "materie": "Anatomie patologica",
+    "intrebare": "Granulomul parazitar este constituit din:",
+    "variante": [
+      "zona centrala, necrotica si zona periferica, limfo-histiocitara si eozinocitara",
+      "o singura zona reprezentata de necroza masiva si detritus parazitar",
+      "zona centrala, fibrozata, zona periferica, eozinofilica"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 92,
+    "materie": "Anatomie patologica",
+    "intrebare": "Necroza produsa prin blocarea circulatiei sangvine intr-un teritoriu poarta denumirea de:",
+    "variante": [
+      "infarct",
+      "metastaza",
+      "ischemie"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 93,
+    "materie": "Anatomie patologica",
+    "intrebare": "Acumularea transudatului in cavitati poarta denumirea de:",
+    "variante": [
+      "peritonita",
+      "hidropizie",
+      "anasarca"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 94,
+    "materie": "Anatomie patologica",
+    "intrebare": "Chilotoraxul defineste:",
+    "variante": [
+      "hemoragie in cavitatea toracica",
+      "inflamatia purulenta a cavitatii toracice",
+      "limforagie in cavitatea toracica"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 95,
+    "materie": "Anatomie patologica",
+    "intrebare": "Enterita hemoragica se caracterizeaza prin:",
+    "variante": [
+      "prezenta unei colectii alb-sidefii pe suprafata mucoasei gastrice",
+      "prezenta unei cantitati mari de sange in lumenul intestinal",
+      "prezenta unui exudat rosiatic in structura peretilor intestinali"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 96,
+    "materie": "Anatomie patologica",
+    "intrebare": "Splina SAGO este specifica:",
+    "variante": [
+      "gutei",
+      "amiloidozei",
+      "steatozei"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 97,
+    "materie": "Anatomie patologica",
+    "intrebare": "CreÅŸterea, la nivel sangvin, a produÅŸilor de catabolism ai bazelor purinice ÅŸi depunerea lor Ã®n diferite Å£esuturi ÅŸi organe se intalneste in:",
+    "variante": [
+      "sindromul uremic",
+      "guta",
+      "anemie"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 98,
+    "materie": "Anatomie patologica",
+    "intrebare": "Colectiile lichidiene ce pot fi prezente la nivelul tunicii externe cardiace sunt reprezentate de:",
+    "variante": [
+      "hidrotoraxul si ascita",
+      "endocarditele sero-fibrinoase si ascita",
+      "chilo- si hemopericardul"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 99,
+    "materie": "Anatomie patologica",
+    "intrebare": "Inflamatiile predominant alterative sunt reprezentate de:",
+    "variante": [
+      "inflamatiile proliferative si granulomatoase",
+      "inflamatiile parenchimatoase si necrotice",
+      "inflamatiile parenchimatoase, catarale si purulente"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 100,
+    "materie": "Anatomie patologica",
+    "intrebare": "Depigmentarea senila a firului de par poarta denumirea de:",
+    "variante": [
+      "albinism",
+      "canitie",
+      "leucodermie"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 103,
+    "materie": "Bacteriologie",
+    "intrebare": "Gruparea de palisadă este prezentă la:",
+    "variante": [
+      "vibrioni",
+      "bacili",
+      "coci"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 104,
+    "materie": "Bacteriologie",
+    "intrebare": "Gruparea staphilo este prezentă la:",
+    "variante": [
+      "vibrioni",
+      "bacili ",
+      "coci"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 105,
+    "materie": "Bacteriologie",
+    "intrebare": "Gruparea strepto este prezentă la:",
+    "variante": [
+      "vibrioni",
+      "bacili",
+      "bacterii filamentoase"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 108,
+    "materie": "Bacteriologie",
+    "intrebare": "Care dintre bacteriile următoare sunt lipsite de perete celular:",
+    "variante": [
+      "vibrioni",
+      "bacili",
+      "micoplasmele"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 109,
+    "materie": "Bacteriologie",
+    "intrebare": "Rolul capsulei este de:",
+    "variante": [
+      "deplasare",
+      "factor antifagocitar",
+      "de depozitare a metabolitilor"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 110,
+    "materie": "Bacteriologie",
+    "intrebare": "Bacteriile ciliate care au cilii dispuşi sub formă de smoc la un singur pol sunt",
+    "variante": [
+      "monotricha",
+      "amfitricha",
+      "lofotricha"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 111,
+    "materie": "Bacteriologie",
+    "intrebare": "Fimbriile sunt formaţiuni cu rol de :",
+    "variante": [
+      "deplasare",
+      "adeziune",
+      "factor antifagocitar"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 112,
+    "materie": "Bacteriologie",
+    "intrebare": "Plasmidele sunt formaţiuni intracitoplasmatice care conţin:",
+    "variante": [
+      "ADN",
+      "ARN",
+      "ADN și ARN"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 113,
+    "materie": "Bacteriologie",
+    "intrebare": "Materialul genetic la bacterii este format din:",
+    "variante": [
+      "ADN",
+      "ARN",
+      "ADN și ARN"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 114,
+    "materie": "Bacteriologie",
+    "intrebare": "În funcţie de habitat bacteriile se pot dezvolta:",
+    "variante": [
+      "în sol și in aer",
+      "în sol şi în apă",
+      "ubiquitar"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 116,
+    "materie": "Bacteriologie",
+    "intrebare": "Ce înţelegeţi prin faza de multiplicare exponenţială, privind multiplicarea bacteriilor in medii lichide",
+    "variante": [
+      "numărul bacteriilor rămâne constant, sau scade puţin",
+      "multiplicarea este de înlocuire ",
+      "celulele bacteriene se divid activ"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 117,
+    "materie": "Bacteriologie",
+    "intrebare": "Bacteriile din mediul marin sunt:",
+    "variante": [
+      "strict parazite",
+      "saprofite",
+      "halofile"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 120,
+    "materie": "Bacteriologie",
+    "intrebare": "Microflora autohtonă a organismului animal este formată din:",
+    "variante": [
+      "bacterii patogene",
+      "bacterii comensale",
+      " bacterii saprofite "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 121,
+    "materie": "Bacteriologie",
+    "intrebare": "Microflora alohtonă a organismului animal este:",
+    "variante": [
+      "tranzitorie",
+      "permanentă",
+      "inexistentă"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 122,
+    "materie": "Bacteriologie",
+    "intrebare": "Microbiota intestinului subţire poate conţine bacterii din genul:",
+    "variante": [
+      "Micoplasma spp.",
+      "Streptococcus spp.",
+      " Listeria spp."
+    ],
+    "corect": 1
+  },
+  {
+    "id": 125,
+    "materie": "Bacteriologie",
+    "intrebare": "Căldura omoară bacteriile prin:",
+    "variante": [
+      "denaturarea lipidelor",
+      "denaturarea glucidelor",
+      "denaturarea proteinelor"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 126,
+    "materie": "Bacteriologie",
+    "intrebare": "Căldura umedă omoară sporii bacterieni în următoarele condiţii:",
+    "variante": [
+      "sterilizare la 170 grade Celsius  timp de 5 minute",
+      "sterilizare la 121 grade Celsius  timp de 15 minute",
+      "sterilizare la 70 grade Celsius  timp de 30 minute"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 127,
+    "materie": "Bacteriologie",
+    "intrebare": "Radiaţiile ultraviolete sunt folosite pentru distrugerea bacteriilor din:",
+    "variante": [
+      "termostate",
+      "hote sterile ",
+      "încăperi de laborator"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 130,
+    "materie": "Bacteriologie",
+    "intrebare": "Acidul acetic 10% este folosit pentru dezinfecţia faţă de:",
+    "variante": [
+      "leptospire",
+      "stafilococi",
+      "streptococi"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 134,
+    "materie": "Bacteriologie",
+    "intrebare": "Care dintre următorii factori de agresivitate nu sunt prezenţi la Genul Staphylococcus :",
+    "variante": [
+      "hialuronidaza",
+      "toxina eritrogenă",
+      "coagulaza"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 135,
+    "materie": "Bacteriologie",
+    "intrebare": "Care dintre următoarele hemolizine sunt prezente la Genul Staphylococcus:",
+    "variante": [
+      "hemolizinele α β γ",
+      "hemolizinele β",
+      "hemolizinele α "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 136,
+    "materie": "Bacteriologie",
+    "intrebare": "Care dintre următorii coci sunt capsulaţi:",
+    "variante": [
+      "gonococul",
+      "pneumococul ",
+      "stafilococul"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 137,
+    "materie": "Bacteriologie",
+    "intrebare": "Care dintre următoarele boli sunt produse de Genul Staphylococcus:",
+    "variante": [
+      "mamita gangrenoasă (răsfugul negru)",
+      "agalaxia contagioasă (răsfugul alb)",
+      "difterovariola"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 139,
+    "materie": "Bacteriologie",
+    "intrebare": "Genul Streptococcus cuprinde coci grupaţi:",
+    "variante": [
+      "în tetradă",
+      "în lanţ",
+      "fara mod de grupare"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 140,
+    "materie": "Bacteriologie",
+    "intrebare": "Bacteriile din Genul Streptococcus se dezvoltă pe agar astfel:",
+    "variante": [
+      "în colonii mari transparente",
+      "în colonii mici transparente",
+      "  în colonii mici pigmentate în alb"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 141,
+    "materie": "Bacteriologie",
+    "intrebare": "Bacteriile din Genul Listeria apar în frotiu astfel:",
+    "variante": [
+      "bacili lungi, filamentosi ",
+      "bacili scurţi",
+      "forme de coci"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 142,
+    "materie": "Bacteriologie",
+    "intrebare": "Bacteriile din Genul Listeria se aseamănă din punct de vedere cultural şi morfologic cu:",
+    "variante": [
+      "bacilul antraxului",
+      "bacilul piocianic",
+      "bacilul rujetului"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 143,
+    "materie": "Bacteriologie",
+    "intrebare": "Bacteriile din Genul Listeria se colorează prin coloratia Gram în:",
+    "variante": [
+      "roşu",
+      "albastru violet",
+      "nici un răspuns nu este corect"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 144,
+    "materie": "Bacteriologie",
+    "intrebare": "Bacteriile din Genul Listeria se multiplica în organism:",
+    "variante": [
+      "intracelular",
+      "intercelular",
+      "în sânge"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 145,
+    "materie": "Bacteriologie",
+    "intrebare": "Rujetul este o boală produsă de următoarele  genuri de bacterii:",
+    "variante": [
+      "Genul Erysipelothrix ",
+      "Genul Corynebacterium",
+      "Genul Rhodococcus"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 146,
+    "materie": "Bacteriologie",
+    "intrebare": "Listerioza oilor este produsă de:",
+    "variante": [
+      "Listeria ivanovi",
+      "Listeria monocytogenes",
+      "Listeria gray"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 147,
+    "materie": "Bacteriologie",
+    "intrebare": "Listerioza se manifestă prin :",
+    "variante": [
+      "tulburări nervoase",
+      "tulburări respiratorii",
+      "tulburări digestive"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 148,
+    "materie": "Bacteriologie",
+    "intrebare": "Bacteriile din Genul Erysipelothrix prezintă în bulion următoarele caractere:",
+    "variante": [
+      "mediu cu turbiditate crescută la agitare",
+      "mediu cu aspect de valuri la agitare",
+      "mediu limpede cu peliculă la suprafaţă"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 149,
+    "materie": "Bacteriologie",
+    "intrebare": "Bacteriile din Genul Erysipelothrix prezintă pe agar următoarele caractere:",
+    "variante": [
+      "colonii mici transparente sau semitransparente",
+      "colonii mari transparente sau semitransparente",
+      "colonii mari pigmentate"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 150,
+    "materie": "Bacteriologie",
+    "intrebare": "Vaccinul antirujetic este preparat din :",
+    "variante": [
+      "germeni vii, virulenţi",
+      "germeni vii, atenuaţi",
+      "germeni vii, patogeni"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 151,
+    "materie": "Bacteriologie",
+    "intrebare": "Serul antirujetic se foloseşte în următoarele situaţii :",
+    "variante": [
+      "preventiv",
+      "curativ",
+      "preventiv şi curativ"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 154,
+    "materie": "Bacteriologie",
+    "intrebare": "Bacillus anthracis se detectează în frotiurile din bulion sub formă de :",
+    "variante": [
+      "ciorchine",
+      "streptobacili",
+      " nu are mod de grupare"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 155,
+    "materie": "Bacteriologie",
+    "intrebare": "Bacillus anthracis prezintă în bulion următoarele caractere :",
+    "variante": [
+      "mediu limpede şi depozit floconos ",
+      "mediu tulbure şi depozit floconos",
+      "c)     mediu cu depozit sub formă de fuior"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 156,
+    "materie": "Bacteriologie",
+    "intrebare": "Bacillus anthracis este o bacterie care:",
+    "variante": [
+      "nu sporulează ",
+      "sporulează în contact cu aerul ",
+      "c)     sporulează în contact cu solul"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 157,
+    "materie": "Bacteriologie",
+    "intrebare": "Bacillus anthracis acţionează prin virulenţă care este dată de:",
+    "variante": [
+      "spor ",
+      "capsulă",
+      "fimbrii"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 158,
+    "materie": "Bacteriologie",
+    "intrebare": "Rezistenţa în mediul exterior a bacilului antraxului este dată de:",
+    "variante": [
+      "spor",
+      "capsulă",
+      "spor și capsulă"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 159,
+    "materie": "Bacteriologie",
+    "intrebare": "Clostridium tetani este o bacterie:",
+    "variante": [
+      "anaerobă",
+      "aerob-anaerobă",
+      "aerobă"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 160,
+    "materie": "Bacteriologie",
+    "intrebare": "Clostridium tetani este o bacterie care acţionează asupra organismului prin",
+    "variante": [
+      "virulenţă",
+      "toxigenitate",
+      " virulenţă şi toxigenitate"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 162,
+    "materie": "Bacteriologie",
+    "intrebare": "Vaccinul antitetanic este o un produs biologic denumit ",
+    "variante": [
+      "anatoxină tetanică",
+      "antitoxină tetanică",
+      "enterotoxină tetanică"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 163,
+    "materie": "Bacteriologie",
+    "intrebare": "Clostridium tetani este o bacterie :",
+    "variante": [
+      "Gram pozitivă",
+      "Gram negativă",
+      "Gram labilă"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 164,
+    "materie": "Bacteriologie",
+    "intrebare": "Clostridium chaouvoei este o bacterie :",
+    "variante": [
+      "sporulată cu sporul situat terminal",
+      "sporulată cu sporul situat central",
+      "este o bacterie nesporulată "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 165,
+    "materie": "Bacteriologie",
+    "intrebare": "Cărbunele emfizematos este o boală produsă de  :",
+    "variante": [
+      "Clostridium septicum  ",
+      "Clostridium chaouvoei  ",
+      "Clostridium novy"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 167,
+    "materie": "Bacteriologie",
+    "intrebare": "Bradsotul este o boală produsă de  :",
+    "variante": [
+      "Clostridium septicum  ",
+      "Clostridium chaouvoei  ",
+      "Clostridium novy"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 169,
+    "materie": "Bacteriologie",
+    "intrebare": "Dizenteria anaerobă este produsă de:",
+    "variante": [
+      "Clostridium septicum  ",
+      "Clostridium perfringens ",
+      "Clostridium chaouvoei"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 170,
+    "materie": "Bacteriologie",
+    "intrebare": "Familia Enterobacteriaceae cuprinde bacterii:",
+    "variante": [
+      "Gram pozitive",
+      "Gram negative",
+      "Gram labile"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 171,
+    "materie": "Bacteriologie",
+    "intrebare": "Familia Enterobacteriaceae cuprinde bacterii:",
+    "variante": [
+      "sporulate cu sporul situat terminal",
+      "sporulate cu sporul situat central",
+      "sunt bacterii nesporulate"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 172,
+    "materie": "Bacteriologie",
+    "intrebare": "Bacteriile din Genul Escherichia sunt :",
+    "variante": [
+      "saprofite în tubul digestiv",
+      "comensale în tubul digestiv",
+      "parazite în tubul digestiv"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 173,
+    "materie": "Bacteriologie",
+    "intrebare": "Bacteriile din specia Escherichia coli se dezvoltă pe agar sub formă de:",
+    "variante": [
+      "colonii de tip R",
+      "colonii de tip S",
+      "nici o variantă nu este adevărată"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 174,
+    "materie": "Bacteriologie",
+    "intrebare": "După efectuarea testului biochimic T. S. I. (triple sugar iron) bacteriile din specia Escherichia coli  au următoarele caracteristici :",
+    "variante": [
+      "sunt glucozo pozitive, lactozo pozitive, hidrogen sulfurat negative",
+      "sunt glucozo pozitive, lactozo negative, hidrogen sulfurat negative",
+      "sunt glucozo pozitive, lactozo pozitive, hidrogen sulfurat pozitive"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 175,
+    "materie": "Bacteriologie",
+    "intrebare": " Boala edemelor este o boală produsă de :",
+    "variante": [
+      "Clostridium perfringens",
+      "Escherichia coli  ",
+      "Klebsiella pneumoniae"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 176,
+    "materie": "Bacteriologie",
+    "intrebare": "Stabilirea patogenităţii unor tulpini bacteriene prin testul ansei ligaturate se efectuează în:",
+    "variante": [
+      "dizenterie anaerobă",
+      "colibaciloză  ",
+      "salmoneloză"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 177,
+    "materie": "Bacteriologie",
+    "intrebare": "După efectuarea testului biochimic T. S. I. (triple sugar iron) bacteriile din Genul Salmonella  au următoarele caracteristici :",
+    "variante": [
+      "sunt glucozo pozitive, lactozo pozitive, hidrogen sulfurat negative",
+      "sunt glucozo pozitive, lactozo negative, hidrogen sulfurat negative",
+      "sunt glucozo pozitive, lactozo negative, hidrogen sulfurat pozitive"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 178,
+    "materie": "Bacteriologie",
+    "intrebare": "Învelişul  permanent  al unei celule bacteriene este reprezentat de:",
+    "variante": [
+      "membrana citoplasmatică",
+      "peretele celular ",
+      "capsula"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 179,
+    "materie": "Bacteriologie",
+    "intrebare": "Care dintre următoarele grupe de bacterii pot prezenta atât formă vegetativă cât şi spor:",
+    "variante": [
+      "Genul Staphilococcus",
+      "Genul Streptococcus",
+      "Genul Bacillus"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 180,
+    "materie": "Bacteriologie",
+    "intrebare": "Gruparea diplo este prezentă la: ",
+    "variante": [
+      "vibrioni şi bacili ",
+      "bacili ",
+      "bacterii spiralate"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 181,
+    "materie": "Bacteriologie",
+    "intrebare": "Dimensiunile unei colonii bacteriene sunt de ordinul: ",
+    "variante": [
+      "nanometrilor",
+      "micrometrilor ",
+      "milimetrilor"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 182,
+    "materie": "Bacteriologie",
+    "intrebare": "Mezozomii sunt structuri membranare bacteriene cu rol de: ",
+    "variante": [
+      "transfer de nutrienţi",
+      "diviziune celulară ",
+      "stocare a unor substanţe"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 184,
+    "materie": "Bacteriologie",
+    "intrebare": "După distribuţia cililor, bacteriile de tip amfitricha conţin:",
+    "variante": [
+      "cili dispuşi la un pol bacterian ",
+      "cili dispuşi la un ambii poli ai bacteriei",
+      "lipsa cililor"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 185,
+    "materie": "Bacteriologie",
+    "intrebare": "Formarea sporului bacterian poartă denumirea de:",
+    "variante": [
+      "sporogeneză ",
+      "germinare",
+      "spermatogeneză"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 186,
+    "materie": "Bacteriologie",
+    "intrebare": "Sporul bacterian are rol de:",
+    "variante": [
+      " înmulţire ",
+      "rezistenţă",
+      "înmulţire şi rezistenţă"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 187,
+    "materie": "Bacteriologie",
+    "intrebare": "Incluziile citoplasmatice au rol:",
+    "variante": [
+      "de depozite cu metaboliti ",
+      "de depozite nutritive",
+      "de depozite de material genetic"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 188,
+    "materie": "Bacteriologie",
+    "intrebare": "Zoogleea reprezintă un organit bacterian care:",
+    "variante": [
+      "acoperă o singură bacterie ",
+      "acoperă mai multe  bacterii",
+      "nu este o componentă bacteriană"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 189,
+    "materie": "Bacteriologie",
+    "intrebare": "Pilii sexuali bacterieni au rol în transferul de material genetic la bacterii prin fenomenul de:",
+    "variante": [
+      "transformare ",
+      "conjugare",
+      "transducţie"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 190,
+    "materie": "Bacteriologie",
+    "intrebare": "În care dintre modalităţile de transfer de material genetic la bacterii intervin bacteriofagii:",
+    "variante": [
+      "în transformare ",
+      "în conjugare",
+      "în transducţie"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 191,
+    "materie": "Bacteriologie",
+    "intrebare": "Ce înţelegeţi printr-o bacterie halofilă:",
+    "variante": [
+      "necesită pentru creştere concentraţii mari de hidroxid de sodiu",
+      "necesită pentru creştere concentraţii mari de clorură de sodiu",
+      "necesită pentru creştere concentraţii mari de acid clorhidric"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 192,
+    "materie": "Bacteriologie",
+    "intrebare": "Eliberarea endotoxinelor bacteriene se realizează prin:",
+    "variante": [
+      "înmulţirea bacteriei",
+      "distrugerea bacteriei",
+      " sporularea bacteriei"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 193,
+    "materie": "Bacteriologie",
+    "intrebare": "Încadraţi o bacterie:",
+    "variante": [
+      "reprezintă un organism acelular",
+      "reprezintă un organism unicelular",
+      "reprezintă un organism pluricelular"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 194,
+    "materie": "Bacteriologie",
+    "intrebare": "Deleţia este un fenomen de :",
+    "variante": [
+      "mutaţie",
+      "recombinare genetică",
+      "variabilitate fenotipică"
+    ],
+    "corect": 0
+  },
+  {
+    "id": 195,
+    "materie": "Bacteriologie",
+    "intrebare": "Plasmidele reprezintă material genetic bacterian:",
+    "variante": [
+      "prezent în interiorul cromozomului",
+      "prezent în exteriorul  cromozomului",
+      "prezent in sporul bacterian"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 196,
+    "materie": "Bacteriologie",
+    "intrebare": "Plasmidele reprezintă material genetic bacterian:",
+    "variante": [
+      "prezent în interiorul cromozomului",
+      "prezent în exteriorul  cromozomului",
+      "ambele variante sunt corecte"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 197,
+    "materie": "Bacteriologie",
+    "intrebare": "Sinergismul este o reaţie de tip cooperant ăn care:",
+    "variante": [
+      "numai un partener este  beneficiar",
+      "un partener nu se poate dispensa de celălalt",
+      "partenerii produc efecte pe care separat nu le pot produce"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 198,
+    "materie": "Bacteriologie",
+    "intrebare": "Variaţiile genotipice bacteriene presupun:",
+    "variante": [
+      "modificări ale structurii materialului genetic şi se transmit ereditar",
+      "modificări ale structurii materialului genetic şi nu se transmit ereditar",
+      "modificări  adaptative dependente de factorii de mediu "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 199,
+    "materie": "Bacteriologie",
+    "intrebare": "Bacteriile din genul Salmonella se colorează conform coloraţiei Gram în:",
+    "variante": [
+      "sunt Gram labile",
+      "culoarea albastru- violet",
+      "culoarea roşu"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 201,
+    "materie": "Farmacologie",
+    "intrebare": "Farmacodinamia este o ramura cu caracter: ",
+    "variante": [
+      "Fundamental ",
+      "Aplicativ ",
+      "Experimental "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 202,
+    "materie": "Farmacologie",
+    "intrebare": "Farmacografia este o ramura cu caracter: ",
+    "variante": [
+      "Fundamental ",
+      "Experimental ",
+      "Aplicativ "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 203,
+    "materie": "Farmacologie",
+    "intrebare": "Farmacotoxicologia este o ramura cu caracter: ",
+    "variante": [
+      "Experimental ",
+      "Fundamental ",
+      "Aplicativ "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 204,
+    "materie": "Farmacologie",
+    "intrebare": "Unde se studiaza regulile de prescriere a medicamentelor: ",
+    "variante": [
+      "Farmacocinetica ",
+      "Farmacografie ",
+      "Farmacoepidemiol ogie "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 205,
+    "materie": "Farmacologie",
+    "intrebare": "Care cale de administrare a medicamentelor este naturala: ",
+    "variante": [
+      "Injectare subcutanata ",
+      "Injectare intramusculara ",
+      "Orala "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 206,
+    "materie": "Farmacologie",
+    "intrebare": "Primul factor de care trebuie sa se tina cont la administrarea unui medicament: ",
+    "variante": [
+      "Forma farmaceutica ",
+      "Stare lichida ",
+      "Stare solida "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 207,
+    "materie": "Farmacologie",
+    "intrebare": "Unde se produce efectul primului pas - The first-pass effect: ",
+    "variante": [
+      "In stomac ",
+      "In ficat ",
+      "In intestin "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 208,
+    "materie": "Farmacologie",
+    "intrebare": "Pe cale respiratorie se pot administra: ",
+    "variante": [
+      "Gaze si lichide volatile ",
+      "Pulberi ",
+      "Paste "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 209,
+    "materie": "Farmacologie",
+    "intrebare": "Care particule administrate prin atomizare ajung in bronhiolele terminale si in alveole: ",
+    "variante": [
+      "Particulele mai mici de 5 microni ",
+      "Particulele mai mici de 2 microni ",
+      "Particulele intre 5 si10 microni "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 210,
+    "materie": "Farmacologie",
+    "intrebare": "Calea intradermica se utilizeaza pentru: ",
+    "variante": [
+      "Testarea hipersensibilitatii si unele vaccinari ",
+      "Numai pentru testarea hipersensibilitatii ",
+      "Numai pentru unele vaccinari "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 211,
+    "materie": "Farmacologie",
+    "intrebare": "Care solutii pot fi injectate intravenos: ",
+    "variante": [
+      "Solutii nesterile ",
+      "Solutii uleioase ",
+      "Sterile izotonice, neizotonice si iritante "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 212,
+    "materie": "Farmacologie",
+    "intrebare": "Care solutii nu se pot injecta subcutanat: ",
+    "variante": [
+      "Iritante si uleioase ",
+      "Solutii izotonice ",
+      "Vitamine hidrosolubile "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 213,
+    "materie": "Farmacologie",
+    "intrebare": "Care forme farmaceutice aplicate topic au efect local: ",
+    "variante": [
+      "Emplastere ",
+      "Pour on, Spot on ",
+      "Unguente, creme, emulsii "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 214,
+    "materie": "Farmacologie",
+    "intrebare": "Care forme farmaceutice aplicate topic au efect sistemic: ",
+    "variante": [
+      "Unguente, paste ",
+      "Pour on, spot on, emplastre ",
+      "Creme, pulberi fine "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 215,
+    "materie": "Farmacologie",
+    "intrebare": "Calea intramamara este considerata aplicatie topica: ",
+    "variante": [
+      "Nu ",
+      "Da se aplica emulsii, creme in tratamentul mamitelor ",
+      "Da se aplica numai emulsii "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 216,
+    "materie": "Farmacologie",
+    "intrebare": "Faza farmacocinetica include: ",
+    "variante": [
+      "Absorbtia, distribuirea, biotransformarea si eliminarea medicamentului ",
+      "Absorbtia, distribuirea medicamentului ",
+      "Transformarea si eliminarea medicamentului "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 217,
+    "materie": "Farmacologie",
+    "intrebare": "Faza farmacodinamica se desfasoara prin: ",
+    "variante": [
+      "Fixarea moleculelor de substanta activa pe substratul reactiv ",
+      "Declansarea actiunii farmacodinamice ",
+      "Fixarea moleculelor de substanta activa pe substratul reactiv si declansarea actiunii farmacodinamice "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 218,
+    "materie": "Farmacologie",
+    "intrebare": "Absorbtia substantei active este influentata de: ",
+    "variante": [
+      "Forma farmaceutica ",
+      "Forma farmaceutica, proprietatile fizico- chimice si concentratia ",
+      "Concentratia "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 219,
+    "materie": "Farmacologie",
+    "intrebare": "Factorii care depind de organism sunt reprezentati de: ",
+    "variante": [
+      "Particularitatile fiziologice, starea patologica, calea de administrare ",
+      "Particularitatile fiziologice si calea de administrare ",
+      "Calea de administrare "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 220,
+    "materie": "Farmacologie",
+    "intrebare": "Care preparate sunt depot: ",
+    "variante": [
+      "Procainpenicilina, benzantinpenicilin a, protamin-zinc- insulina, methyl prednisolon acetat ",
+      "Amoxicilina ",
+      "Enrofloxacina "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 221,
+    "materie": "Farmacologie",
+    "intrebare": "Ce este picul plasmatic: ",
+    "variante": [
+      "Concentratia maxima de medicament de la locul de administrare ",
+      "Concentratia maxima de substanta activa din sange ",
+      "Concentratia minima de substanta activa din sange "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 222,
+    "materie": "Farmacologie",
+    "intrebare": "Care doza terapeutica se utilizeaza curent in practica medicala: ",
+    "variante": [
+      "Doza terapeutica maxima – DE100 ",
+      "Doza terapeutica medie – DE 50 ",
+      "Doza terapeutica minima – DE 25 "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 223,
+    "materie": "Farmacologie",
+    "intrebare": "In care doza fenobarbitalul are actiune narcotica: ",
+    "variante": [
+      "Mica ",
+      "Medie ",
+      "Maxima "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 224,
+    "materie": "Farmacologie",
+    "intrebare": "Doza de atac antimicrobian reprezinta: ",
+    "variante": [
+      "Cantitatea maxima de medicament care se administreaza la inceputul unui tratament ",
+      "Cantitatea medie de medicament care se administreaza la inceputul unui tratament ",
+      "Cantitatea minima medicament care se administreaza la inceputul unui tratament "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 225,
+    "materie": "Farmacologie",
+    "intrebare": "Doza de intretinere reprezinta: ",
+    "variante": [
+      "Cantitatea insuficienta de medicament ",
+      "Cantitatea minima de medicament necesara pentru a mentine nivelul unei concentratii terapeutice constante si eficiente ",
+      "Cantitatea maxima de medicament "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 226,
+    "materie": "Farmacologie",
+    "intrebare": "Cumularea materiala: ",
+    "variante": [
+      "Daca dozele se repeta la intervale mai mici, efectul va fi mai puternic ",
+      "Daca dozele se repeta la intervale mai mari, efectul va fi mai puternic ",
+      "Nici una dintre cele doua variante "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 227,
+    "materie": "Farmacologie",
+    "intrebare": "Cumularea functionala: ",
+    "variante": [
+      "La repetarea dozei se constata un efect scazut ca urmare a scaderii sensibilitatii organismului ",
+      "La repetarea dozei se constata un efect crescut ca urmare a cresterii sensibilitatii organismului ",
+      "Nici una dintre cele doua variante "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 228,
+    "materie": "Farmacologie",
+    "intrebare": "Obisnuinta: ",
+    "variante": [
+      "Consecutiv administrarilor repetate se produc efecte farmacodinamice din ce in ce mai slabe ",
+      "Consecutiv administrarilor repetate se produc efecte farmacodinamice din ce in ce ",
+      "Nici una dintre cele doua variante "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 229,
+    "materie": "Farmacologie",
+    "intrebare": "Sumatia sau aditionare de efecte: ",
+    "variante": [
+      "Prin asocierea unor medicamente cu aceleasi calitati farmacodinamice se obtine o actiune mai mica ",
+      "Prin asocierea unor medicamente cu aceleasi calitati farmacodinamice se obtine o actiune mai mare ",
+      "Nici una dintre cele doua variante "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 230,
+    "materie": "Farmacologie",
+    "intrebare": "Sinergismul clinic reprezinta: ",
+    "variante": [
+      "Mai multe medicamente asociate compatibile care concura la vindecarea unui pacient ",
+      "Mai multe medicamente asociate incompatibile care nu concura la vindecarea unui pacient ",
+      "Nici una dintre cele doua variante "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 231,
+    "materie": "Farmacologie",
+    "intrebare": "Ce este doza de intretinere ",
+    "variante": [
+      "Este mai mica decat doza de atac, dar suficienta pentru a mentine nivelul unei concentratii terapeutice constante si eficiente de antibiotic sau chimioterapic ",
+      "Este mai mare decat doza de atac, dar suficienta pentru a mentine nivelul unei concentratii terapeutice constante si eficiente de antibiotic sau chimioterapic ",
+      "Nici una dintre cele doua variante "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 232,
+    "materie": "Farmacologie",
+    "intrebare": "Schimbarea culorii unui medicament este o incompatibilitate ",
+    "variante": [
+      "Nu ",
+      "Da ",
+      "Depinde de situatie "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 233,
+    "materie": "Farmacologie",
+    "intrebare": "Cum se manifesta clinic efectul stimulant ",
+    "variante": [
+      "Mentine normal tonusul functional al unui organ, aparat sau sistem ",
+      "Diminueaza tonusul functional al unui organ, aparat sau sistem ",
+      "Creste tonusul functional al unui organ, aparat sau sistem "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 234,
+    "materie": "Farmacologie",
+    "intrebare": "Cum se manifesta clinic efectul deprimant ",
+    "variante": [
+      "Creste tonusul functional al unui organ, aparat sau sistem, printr-o inhibitie propriu- zisa sau printr-un alt mecanism de actiune. ",
+      "Scade tonusul functional al unui organ, aparat sau sistem, printr-o inhibitie propriu- zisa sau printr-un alt mecanism de actiune. ",
+      "Modereaza tonusul functional al unui organ, aparat sau sistem, printr-o inhibitie propriu-zisa sau printr-un alt mecanism de actiune. "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 235,
+    "materie": "Farmacologie",
+    "intrebare": "Farmacovigilenta se ocupa cu: ",
+    "variante": [
+      "Monitorizarea efectelor adverse produse de medicamente ",
+      "Studiul efectelor adverse produse de medicamente ",
+      "Studiul si monitorizarea efectelor adverse produse de medicamente "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 236,
+    "materie": "Farmacologie",
+    "intrebare": "Intoxicatia cu medicamente la doze normale poate sa apara la: ",
+    "variante": [
+      "Animale adulte ",
+      "Animale tinere ",
+      "Animale tinere si batrane "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 237,
+    "materie": "Farmacologie",
+    "intrebare": "Substantele antiseptice se aplica pe tesuturi vii si au actiune: ",
+    "variante": [
+      "Bactericida ",
+      "Bacteriostatica ",
+      "Nu au actiune asupra microbilor "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 238,
+    "materie": "Farmacologie",
+    "intrebare": "Substatele dezinfectante nu se aplica pe tesuturi vii si au actiune: ",
+    "variante": [
+      "Bacteriostatica ",
+      "Bactericida ",
+      "Actioneaza aleator "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 239,
+    "materie": "Farmacologie",
+    "intrebare": "Ce reprezinta coeficientul fenolic: ",
+    "variante": [
+      "Raportul intre concentratia eficace a fenolului si cea a substantei a carei eficacitate vrem sa o exprimam comparativ cu fenolul ",
+      "Raportul intre concentratia ineficace a fenolului si cea a substantei a carei eficacitate vrem sa o exprimam comparativ cu fenolul ",
+      "Nu are importanta farmacologica "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 240,
+    "materie": "Farmacologie",
+    "intrebare": "Care dintre nantisepticele si dezinfectante sunt oxidante nestabile: ",
+    "variante": [
+      "Formolul ",
+      "Fenolul ",
+      "Clorul, iodul si apa oxigenata "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 241,
+    "materie": "Farmacologie",
+    "intrebare": "Ce este perhidrolul: ",
+    "variante": [
+      "O solutie 30% peroxid de hidrogen si se utilizeaza la prepararea apei oxigenate ",
+      "O solutie 10% peroxid de hidrogen si se utilizeaza la prepararea apei oxigenate ",
+      "O solutie 5% peroxid de hidrogen si se utilizeaza la prepararea apei oxigenate "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 242,
+    "materie": "Farmacologie",
+    "intrebare": "Ce este formolul sau formalina: ",
+    "variante": [
+      "O solutie oficinala de formaldehida 30% in apa ",
+      "O solutie oficinala de formaldehida 10% in apa ",
+      "O solutie oficinala de formaldehida 37- 40% in apa "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 243,
+    "materie": "Farmacologie",
+    "intrebare": "Care dintre substante sunt antiseptice si dezinfectante stabile: ",
+    "variante": [
+      "Acizi, alcali, detergenti, saruri ale metalelor, fenolii si derivatii lor ",
+      "Apa oxigenata ",
+      "Cloramina "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 244,
+    "materie": "Farmacologie",
+    "intrebare": "Ce reprezinta indicele chimioterapic (IC): ",
+    "variante": [
+      "Raportul dintre doza minima letala si cea medie terapeutica (eficace) IC = DL 25/DE 50 ",
+      "Raportul dintre doza minima letala si cea minima terapeutica (eficace) IC = DL 25/DE 25 ",
+      "Raportul dintre doza medie letala si cea medie terapeutica (eficace) IC = DL 50/DE 50 "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 245,
+    "materie": "Farmacologie",
+    "intrebare": "Care dintre substantele active sunt chimioterapice din grupa quinolone: ",
+    "variante": [
+      "Enrofloxacina, norfloxacina, ciprofloxacina ",
+      "Rivanolul ",
+      "Saprosanul "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 246,
+    "materie": "Farmacologie",
+    "intrebare": "In tratamente de luga durata sulfamidele au actiune: ",
+    "variante": [
+      "Ototoxica si nefrotoxica ",
+      "Ototoxica ",
+      "Nefrotoxica "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 247,
+    "materie": "Farmacologie",
+    "intrebare": "Care antibiotice fac parte din grupa beta lactamine: ",
+    "variante": [
+      "Penicilina, amoxicilina, ampicilina, cefalosporinele ",
+      "Streptomicina ",
+      "Lincospectina "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 248,
+    "materie": "Farmacologie",
+    "intrebare": "Care dintre antibiotice fac parte din grupa aminoglicozide: ",
+    "variante": [
+      "Tilozina ",
+      "Tulatromicina ",
+      "Streptomicina, gentamicina, neomicina, kanamicina, spectinomicina "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 249,
+    "materie": "Farmacologie",
+    "intrebare": "Care dintre antibiotice fac parte din grupa tetracicline: ",
+    "variante": [
+      "Clortetraciclina, oxitetraciclina, doxiciclina ",
+      "Lincomicina ",
+      "Spectinomicina "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 250,
+    "materie": "Farmacologie",
+    "intrebare": "Care dintre tetraciclina are culoare alba: ",
+    "variante": [
+      "Clortetraciclina ",
+      "Oxitetraciclina ",
+      "Doxiciclina "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 251,
+    "materie": "Farmacologie",
+    "intrebare": "Care dintre tetracicline se prezinta sub forma de solutie injectabila uleioasa: ",
+    "variante": [
+      "Clortetraciclina ",
+      "Oxitetraciclina ",
+      "Doxiciclina "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 252,
+    "materie": "Farmacologie",
+    "intrebare": "Care dintre antibiotice fac parte din grupa cloramfenicoli: ",
+    "variante": [
+      "Cloramfenicol si florfenicol ",
+      "Colistin sulfat ",
+      "Eritromicina "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 253,
+    "materie": "Farmacologie",
+    "intrebare": "Care dintre antibiotice fac parte din grupa macrolide: ",
+    "variante": [
+      "Gentamicina si neomicina ",
+      "Amoxicilina ",
+      "Eritromicina, tilozina, tilmicozina si tulatromicina "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 254,
+    "materie": "Farmacologie",
+    "intrebare": "Care antibiotic face parte din grupa false macrolide: ",
+    "variante": [
+      "Lincomicina ",
+      "Eritromicina ",
+      "Tilozina "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 255,
+    "materie": "Farmacologie",
+    "intrebare": "Care dintre antibiotice fac parte din grupa peptolide: ",
+    "variante": [
+      "Doxiciclina ",
+      "Florfenicol ",
+      "Rifampicina, virginiamicina, pristamicina "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 256,
+    "materie": "Farmacologie",
+    "intrebare": "Care antibiotic face parte din grupa polipetide ciclice: ",
+    "variante": [
+      "Ampicilina ",
+      "Polimixina C sau colistin sulfat ",
+      "Neomicina "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 257,
+    "materie": "Farmacologie",
+    "intrebare": "Care dintre antibiotice au actiune antimicotica: ",
+    "variante": [
+      "Stamicina, griseofulvina, amfotericina B ",
+      "Eritromicina ",
+      "Tetraciclina "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 258,
+    "materie": "Farmacologie",
+    "intrebare": "Care dintre antibiotice se folosesc in tratamentul tuberculozei la om: ",
+    "variante": [
+      "Eritromicina ",
+      "Oxitetraciclina ",
+      "Rifampicina "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 259,
+    "materie": "Farmacologie",
+    "intrebare": "Stamicina sau nistatina se utilizeaza in tratamentul micozei produsa de micromiceti din genul: ",
+    "variante": [
+      "Candida, Aspergillus, Sporotrichum ",
+      "Tricophyton ",
+      "Nu are actiune antimicotica "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 260,
+    "materie": "Farmacologie",
+    "intrebare": "Griseofulvina are actiune fungistatica fata de micromiceti din genurile ",
+    "variante": [
+      "Candida ",
+      "Aspergilus ",
+      "Tricophyton sp., Microsporum sp. si Achorion sp. "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 261,
+    "materie": "Farmacologie",
+    "intrebare": "Se pot asocia antibiotice cu actiune bacteriostatica cu antibiotice cu actiune bactericida: ",
+    "variante": [
+      "Da ",
+      "Nu pentru ca antibioticele cu actiune bactericida actioneaza in faza de multiplicare logaritmica a bacteriilor ",
+      "Nici una din variante "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 262,
+    "materie": "Farmacologie",
+    "intrebare": "Care antibiotic este produs de tesutul animal: ",
+    "variante": [
+      "Alicina ",
+      "Sativina ",
+      "Lizozimul "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 263,
+    "materie": "Farmacologie",
+    "intrebare": "Care dintre antibiotice sunt de origine vegetala: ",
+    "variante": [
+      "Alicina, sativina, tomatina, dicumarina ",
+      "Lizozimul ",
+      "Nici unul dintre ele "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 264,
+    "materie": "Farmacologie",
+    "intrebare": "Ce fel de efecte au substantele parasimpaticomimetice (pm) si simpaticomimetice (sm): ",
+    "variante": [
+      "Deprimante ",
+      "Stimulante ",
+      "Aleatorii "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 265,
+    "materie": "Farmacologie",
+    "intrebare": "Ce fel de efecte au substantele parasimpaticolitice (pl) si simpaticolitice (sl): ",
+    "variante": [
+      "Produc efecte stimulante prin cresterea mediatorilor chimici ",
+      "Produc efecte stimulante prin deblocarea mediatorilor chimici ",
+      "Produc efecte inhibitorii prin blocarea mediatorilor chimici "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 266,
+    "materie": "Farmacologie",
+    "intrebare": "Care substante sunt parasimpaticomimetice: ",
+    "variante": [
+      "Pilocarpina, arecolina ",
+      "Adrenalina ",
+      "Noradrenalina "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 267,
+    "materie": "Farmacologie",
+    "intrebare": "Care substante sunt parasimpaticolitice: ",
+    "variante": [
+      "Pilocarpina, arecolina ",
+      "Adrenalina ",
+      "Atropina, scopolamina "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 268,
+    "materie": "Farmacologie",
+    "intrebare": "Care substante sunt simpaticomimetice: ",
+    "variante": [
+      "Adrenalina, noradrenalina, efedrina, nafazolina ",
+      "Adrenalina, noradrenalina ",
+      "Atropina, scopolamina "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 269,
+    "materie": "Farmacologie",
+    "intrebare": "Care substante sunt antihistaminice: ",
+    "variante": [
+      "Romergan, feniramina, nilfam, tripelenamina ",
+      "Numai romergan si feniramina ",
+      "Numai nilfam si tripelenamina "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 270,
+    "materie": "Farmacologie",
+    "intrebare": "Ce fel de substante sunt narcoticele: ",
+    "variante": [
+      "Anestezice locale ",
+      "Anestezice generale ",
+      "Anestezice de contact "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 271,
+    "materie": "Farmacologie",
+    "intrebare": "Substantele hipnotice au actiune: ",
+    "variante": [
+      "Deprimanta asupra SNC si favorizeaza instalarea somnului fiziologic si a schimburilor nutritive din tesutul nervos ",
+      "Stimulanta asupra SNC si favorizeaza instalarea somnului fiziologic si a schimburilor nutritive din tesutul nervos ",
+      "Nu actioneaza asupra SNC "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 272,
+    "materie": "Farmacologie",
+    "intrebare": "Substantele analgezice se utilizeaza ca: ",
+    "variante": [
+      "Antiflogistice ",
+      "Antihistaminice ",
+      "Pentru combaterea durerii "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 273,
+    "materie": "Farmacologie",
+    "intrebare": "Substantele sedative sau linistitoare se utilizeaza ",
+    "variante": [
+      "In stari de surescitare, nevroze, epilepsie, forma nervoasa a jogodiei, nimfomanie si ca anafrodisiace ",
+      "In stari de deprimare ",
+      "Numai in stari de deprimare "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 274,
+    "materie": "Farmacologie",
+    "intrebare": "Ce fel de actiune produc substantele tranchilizante: ",
+    "variante": [
+      "Stimulanta ",
+      "Deprimanta ",
+      "Linistitoare asupra sferei psihice producand linistirea "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 275,
+    "materie": "Farmacologie",
+    "intrebare": "Tranchilizantele minore se mai numesc: ",
+    "variante": [
+      "Ataractice sau anxiolitice ",
+      "Numai ataractice ",
+      "Numai anxiolitice "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 276,
+    "materie": "Farmacologie",
+    "intrebare": "Tranchilizantele majore se mai numesc: ",
+    "variante": [
+      "Neuroleptice sau neuroplegice ",
+      "Numai neuroplegice ",
+      "Numai neuroleptice "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 277,
+    "materie": "Farmacologie",
+    "intrebare": "Stresnil sau rompun este un tranchlizant: ",
+    "variante": [
+      "Minor ",
+      "Major ",
+      "Nu este un tranchilizant "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 278,
+    "materie": "Farmacologie",
+    "intrebare": "Care dintre substante au actiune cardioexcitanta: ",
+    "variante": [
+      "Cafeina, camfor, pentetrazol ",
+      "Numai cafeina ",
+      "Numai pentetrazol "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 279,
+    "materie": "Farmacologie",
+    "intrebare": "Substantele cu actiune hemostatica se utilizeaza: ",
+    "variante": [
+      "In scop curativ in hemoragii interne sau externe care se produc consecutiv unor raniri accidentale, a unor ulcere perforate, diateza hemoragica, intoxicatii sau boli infectioase ",
+      "In scop curativ in hemoragii interne sau externe care se produc consecutiv unor raniri accidentale, a unor ulcere perforate, diateza hemoragica, intoxicatii sau boli infectioase si profilactic inaintea unor interventii chirurgicale ",
+      "Numai in scop profilactic inaintea unor interventii chirurgicale "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 280,
+    "materie": "Farmacologie",
+    "intrebare": "Substantele anticoagulante sunt: ",
+    "variante": [
+      "Substante care diminua procesul de coagulare a sangelui impiedicand astfel aparitia trombusurilor in organism ",
+      "Favorizeaza procesul de coagulare a sangelui ",
+      "Creste procesul de coagulare a sangelui "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 281,
+    "materie": "Farmacologie",
+    "intrebare": "Substantele bronhodilatatoare si mucolitice se utilizeaza pentru: ",
+    "variante": [
+      "A induce bronhodilatatia ",
+      "A induce bronhodilatatia, reduce inflamatia, relaxa musculatura neteda contractata a bronhiilor si a elimina mucusul ",
+      "A elimina mucusul "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 282,
+    "materie": "Farmacologie",
+    "intrebare": "Substantele behice se utilizeaza pentru: ",
+    "variante": [
+      "A combate tusea uscata extenuanta si dureroasa, inutila, fara rost fiziologic",
+      "A combate tusea productiva ",
+      "In ambele situatii "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 283,
+    "materie": "Farmacologie",
+    "intrebare": "Substantele fluidifiante ale secretiilor bronhice se numesc: ",
+    "variante": [
+      "Expectorante ",
+      "Secretolitice sau mucolitice ",
+      "Secretolitice "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 284,
+    "materie": "Farmacologie",
+    "intrebare": "Bromhexina are actiune: ",
+    "variante": [
+      "Secretolica si excretomotorie ",
+      "Numai secretolitica ",
+      "Numai excretomotorie "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 285,
+    "materie": "Farmacologie",
+    "intrebare": "Furosemid este: ",
+    "variante": [
+      "Diuretic care actioneaza asupra aparatului juxtaglomerular ",
+      "Diuretic care actioneaza la nivelul tubului contort proximal ",
+      "Diuretic care actioneaza la nivelul ansei Henle "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 286,
+    "materie": "Farmacologie",
+    "intrebare": "In tratamentul glomerulonefritelor produse de germeni Gram negativi se utilizeaza: ",
+    "variante": [
+      "Chimioterapice din grupa quinolone sau antibiotice din grupa aminoglicozide ",
+      "Numai chimioterapice din grupa quinolone ",
+      "Numai antibiotice din grupa aminoglicozide "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 287,
+    "materie": "Farmacologie",
+    "intrebare": "Substantele mucilaginoase: ",
+    "variante": [
+      "Formeaza cu apa solutii si au actiune de protectie la nivelul mucoaselor ",
+      "Formeaza cu apa solutii coloidale si se aplica pe rani ",
+      "Formeaza cu apa solutii coloidale, se aseamana cu mucusul si au actiune de protectie la nivelul mucoaselor "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 288,
+    "materie": "Farmacologie",
+    "intrebare": "Substantele adsorbante sunt: ",
+    "variante": [
+      "Pulberi inerte, cu suprafata mare de adsorbtie, capabile sa retina fizic sau chimic acid clorhidric, saruri biliare, toxine, gaze sau alte produse nocive ",
+      "Pulberi inerte, cu suprafata mica de adsorbtie ",
+      "Pulberi inerte, cu suprafata mare de adsorbtie incapabile sa retina fizic sau chimic acid clorhidric, saruri biliare, toxine, gaze sau alte produse nocive "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 289,
+    "materie": "Farmacologie",
+    "intrebare": "Substantele eupeptice: ",
+    "variante": [
+      "Cresc procesul de ndigestie ",
+      "Scad pofta de mancare ",
+      "Imbunatatesc apetitul si digestia "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 290,
+    "materie": "Farmacologie",
+    "intrebare": "Digestivele fiziologice sunt cele care: ",
+    "variante": [
+      "Se gasesc in mod obisnuit in secretiile tubului digestiv ",
+      "Nu se gasesc in mod obisnuit in secretiile stomacale ",
+      "Se gasesc in mod obisnuit in secretiile stomacale "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 291,
+    "materie": "Farmacologie",
+    "intrebare": "Substantele ruminatorii se utilizeaza pentru: ",
+    "variante": [
+      "A stimula actul rumegarii in mod direct sau reflex ",
+      "A stimula actul rumegarii in mod direct sau reflex prin excitarea elementelor morfofunctionale inervate de nervul pneumogastric",
+      "A inhiba actul rumegarii in mod direct sau reflex "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 292,
+    "materie": "Farmacologie",
+    "intrebare": "Substantele vomitive sau emetice se utilizeaza pentru a provoca voma la: ",
+    "variante": [
+      "Numai la carnivoree ",
+      "Carnivore si omnivore ",
+      "Numai la omnivore "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 293,
+    "materie": "Farmacologie",
+    "intrebare": "Substantele antiemetice se utilizeaza pentru: ",
+    "variante": [
+      "A combate voma incoercibila care este daunatoare pentru organism ",
+      "A combate voma ",
+      "Nu se utilizeaza pentru a combate voma "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 294,
+    "materie": "Farmacologie",
+    "intrebare": "Substantele antidiareice se mai numesc: ",
+    "variante": [
+      "Constipante ",
+      "Constipante sau stiptice ",
+      "Numai stiptice "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 295,
+    "materie": "Farmacologie",
+    "intrebare": "Substantele antipiretice se folosesc pentru: ",
+    "variante": [
+      "A scade temperatura ridicata a corpului ",
+      "A creste temperatura ",
+      "Nu se folosesc pentru a scade temperatura "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 296,
+    "materie": "Farmacologie",
+    "intrebare": "Substantele anestezice locale actioneaza astfel: ",
+    "variante": [
+      "Produc disparitia sensibilitatii locale ",
+      "In contact cu fibrele nervoase suspenda temporar functiile lor si produc disparitia sensibilitatii locale ",
+      "Nu produc disparitia temporara a sensibilitatii locale "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 297,
+    "materie": "Farmacologie",
+    "intrebare": "Care dintre substante sunt excitante ale SNC: ",
+    "variante": [
+      "Cafeina, camfor, pentetrazol, lobelina, stricnina ",
+      "Numai cafeina, camfor, stricnina ",
+      "Numai cafeina, camfor, lobelina "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 298,
+    "materie": "Farmacologie",
+    "intrebare": "Care dintre substante fac parte din grupa antihelmintice benzimidazoli: ",
+    "variante": [
+      "Morantel, pirantel ",
+      "Albendazol, fenbendazol, flubendazol, mebendazol, oxfendazol, oxibendazol, parbendazol, cambendazol ",
+      "Praziquantel "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 299,
+    "materie": "Farmacologie",
+    "intrebare": "Abamectina, ivermectina, doramectina si moxidectina fac parte din grupa macrolide endectocide si actioneaza: ",
+    "variante": [
+      "Asupra nematodelor ",
+      "Numai asupra ectoparazitilor ",
+      "Asupra nematodelor si ectoparazitilor "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 300,
+    "materie": "Farmacologie",
+    "intrebare": "Preparatele antiparazitare pour on si spot on se aplica pe piele si actioneaza: ",
+    "variante": [
+      "Local ",
+      "Se absorb in organism, se elimina prin piele si actioneaza sistemic ",
+      "Nu actioneaza sistemic "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 301,
+    "materie": "Fiziologie",
+    "intrebare": "Pompa ionică de Na/K reprezintă:",
+    "variante": [
+      "Un mod de transport transmembranar activ primar",
+      "Un mod de transport transmembranar prin difuziune facilitată",
+      "Un mod de transport transmembranar prin fenomenul de exocitoză "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 302,
+    "materie": "Fiziologie",
+    "intrebare": "Semnalarea paracrină reprezintă un mod de comunicare intercelulară prin care: ",
+    "variante": [
+      "Ligandul este recepționat de celula emițătoare",
+      "Ligandul este recepționat de celulele din vecinătate",
+      "Ligandul este transportat prin sânge către celule receptoare aflate la distanțe mari față de celula emițătoare "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 303,
+    "materie": "Fiziologie",
+    "intrebare": "„Spinii” dendritici au un rol important în: ",
+    "variante": [
+      "Mărirea suprafeței de contact dintre neuroni ",
+      "Izolarea electrică a dentritelor",
+      "Generarea potențialului de acțiune "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 304,
+    "materie": "Fiziologie",
+    "intrebare": "Neuronii de tip Golgi I și Golgi II sunt:",
+    "variante": [
+      "Neuroni Bipolari și Multipolari",
+      "Neuroni cu axon mielinizat și nemielinizat ",
+      "Neuroni cu axon lung și axon scurt "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 305,
+    "materie": "Fiziologie",
+    "intrebare": "Celulele plexului coroid au rol în:",
+    "variante": [
+      "Transportul lichidului cefalorahidian ",
+      "Sinteza lichidului cefalorahidian",
+      "Realizarea barierei hematoencefalice "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 306,
+    "materie": "Fiziologie",
+    "intrebare": "Celulele gliale cu roluri în dezvoltarea țesutului nervos, reglarea comunicării interneuronale și a funcției barierei creier-sânge, sunt reprezentate de:",
+    "variante": [
+      "Astrocite",
+      "Oligodendrocite ",
+      "Celulele ependimale "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 307,
+    "materie": "Fiziologie",
+    "intrebare": "Celula glială satelit este întâlnită în: ",
+    "variante": [
+      "Hipotalamus",
+      "Sistemul nervos periferic",
+      "Retină "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 308,
+    "materie": "Fiziologie",
+    "intrebare": "Teaca de mielină este sintetizată de: ",
+    "variante": [
+      "Oligodendrocite și Astrocite",
+      "Celulele Schwann și Celulele satelit ",
+      "Celulele Schwann și Oligodendrocite "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 309,
+    "materie": "Fiziologie",
+    "intrebare": "Care dintre următoarele categorii de celule gliale au rol în apărarea locală a sistemului nervos: ",
+    "variante": [
+      "Celulele gliale radiale ",
+      "Celulele satelit",
+      "Microgliile "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 310,
+    "materie": "Fiziologie",
+    "intrebare": "Glutamatul și glicina au roluri importante în sistemul nervos central, fiind utilizate ca:",
+    "variante": [
+      "Substrat principal pentru sinteza tecii de mielină",
+      "Precursori pentru Serotonină și Acetilcolină ",
+      "Neurotransmițători "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 311,
+    "materie": "Fiziologie",
+    "intrebare": "Care dintre următoarele descriu efecte ale sistemului nervos vegetativ simpatic: ",
+    "variante": [
+      "Bronhodilatație, mioză, scăderea motilității intestinale",
+      "Vasodilatație în arterele coronare și mușchii striați scheletici; stimularea secreției biliare prin relaxarea sfincterului și contracția pereților organului ",
+      "Contracția sfincetrului uretral intern, relaxarea mușchiului detrusor, stimularea lipolizei în țesutul adipos alb, midriază "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 312,
+    "materie": "Fiziologie",
+    "intrebare": "Receptorii sistemului auditiv sunt reprezentați de: ",
+    "variante": [
+      "Membrana timpanică și cele 3 oase ale urechii medii ",
+      "Celulele păroase din organul Corti",
+      "Pavilionul urechii și canalul auditiv vertical "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 313,
+    "materie": "Fiziologie",
+    "intrebare": "Care dintre componentele sistemului vestibular percep mișcările de rotație ale capului:",
+    "variante": [
+      "Canalele semicirculare",
+      "Sacula ",
+      "Utricula "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 314,
+    "materie": "Fiziologie",
+    "intrebare": "Reflexul vestibulo-ocular are rol în:",
+    "variante": [
+      "Menținerea posturii",
+      "Realizarea orientării spațiale",
+      "Satbilizarea imaginii în timpul mișcărilor capului "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 315,
+    "materie": "Fiziologie",
+    "intrebare": "Celulele cu bastonașe din structura retinei:",
+    "variante": [
+      "Sunt responsabile de realizarea vederii scotoptice ",
+      "Sunt responsabile de realizarea vederii fotoptice ",
+      "Sunt aglomerate într-o zonă denumită pata galbenă "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 316,
+    "materie": "Fiziologie",
+    "intrebare": "Contracția mușchiului striat scheletic este inițiată la nivelul joncțiunii neuromusculare sub acțiunea neurotransmițătorului:",
+    "variante": [
+      "Epinefrină",
+      "GABA ",
+      "Acetilcolină "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 317,
+    "materie": "Fiziologie",
+    "intrebare": "Fibrele musculare striate scheletice de tip I au următoarele caracteristici:",
+    "variante": [
+      "Fibre subțiri, adaptate pentru activitate musculară intensă, cu rezerve mari de glicogen",
+      "Fibre subțiri, cu contracție lentă, bogate în mioglobină și sărace în glicogen ",
+      "Fibre medii și groase, cu contracție rapidă, puternic vascularizate, bogate în mioglogină și glicogen "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 318,
+    "materie": "Fiziologie",
+    "intrebare": "pH-ul sângelui variază îl limite foarte restrânse în jurul valorii de: ",
+    "variante": [
+      7.4,
+      7.3,
+      7.5
+    ],
+    "corect": 0
+  },
+  {
+    "id": 319,
+    "materie": "Fiziologie",
+    "intrebare": "Procesul de formare a hematiilor noi în măduva osoasă hematogenă este reglat în principal de:",
+    "variante": [
+      "Renină",
+      "Eritropoietină ",
+      "Factorul de creștere insulin-like 1 "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 320,
+    "materie": "Fiziologie",
+    "intrebare": "Reticulocitele și metarubricitele reprezintă:",
+    "variante": [
+      "Celule dendritice specializate din piele și mucoase ",
+      "Celule de susținere ale țesutului conjunctiv",
+      "Hematii tinere întâlnite în sângele periferic "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 321,
+    "materie": "Fiziologie",
+    "intrebare": "În hemostaza primară, procesul de vasoconstricție este inițiat prin eliberarea locală de:",
+    "variante": [
+      "Trombomodulină",
+      "Endotelină și heparină ",
+      "Serotonină și endotelină "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 322,
+    "materie": "Fiziologie",
+    "intrebare": "Calea extrinsecă a procesului de hemostază secundară debutează prin: ",
+    "variante": [
+      "Activarea factorului tisular (III)",
+      "Activarea factorului Hageman (XII)",
+      "Activarea factorului Stuart - Prower (X) "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 323,
+    "materie": "Fiziologie",
+    "intrebare": "Hormonul eliberator de tirotropină are efect stimulator asupra sintezei hipofizare de:",
+    "variante": [
+      "Prolactină și Hormon de stimulare tiroidiană",
+      "Hormon adrenocorticotrop și prolactină ",
+      "Hormon de creștere și hormon de stimulare tiroidiană "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 324,
+    "materie": "Fiziologie",
+    "intrebare": "Care dintre următorii hormoni au rol în stimularea contracției celulelor mioepiteliale ale alveolelor glandei mamare?",
+    "variante": [
+      "Hormonul foliculostimulant",
+      "Vasopresina ",
+      "Oxitocina "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 325,
+    "materie": "Fiziologie",
+    "intrebare": "Hormonul antidiuretic este eliberat de: ",
+    "variante": [
+      "Rinichi",
+      "Ficat și țesut adipos brun",
+      "Hipofiză "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 326,
+    "materie": "Fiziologie",
+    "intrebare": "Care dintre următorii hormoni au un rol important în stimularea procesului de spermatogeneză?",
+    "variante": [
+      "Hormonul foliculostimulant",
+      "Prolactina ",
+      "Hormonul de creștere "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 327,
+    "materie": "Fiziologie",
+    "intrebare": "Hormonul adrenocorticotrop acționează aspura glandelor suprarenale unde stimulează eliberarea de:",
+    "variante": [
+      "Aldosteron",
+      "Cortizol și hormoni androgeni ",
+      "Norepinefrină și epinefrină "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 328,
+    "materie": "Fiziologie",
+    "intrebare": "Transtiretrina și globulina de legare a tiroxinei sunt:",
+    "variante": [
+      "Precursori pentru sinteza hormonilor tiroidieni",
+      "Proteine de transport pentru hormonii tiroidieni",
+      "Proteine de transport pentru transaminaze și hormoni tiroidieni "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 329,
+    "materie": "Fiziologie",
+    "intrebare": "În timpul perioadei de creștere, hormonii tiroidieni: ",
+    "variante": [
+      "Au acțiune sinergică cu hormonul de creștere",
+      "Au efecte opuse hormonului de creștere",
+      "Inhibă efectele hormonilor glucocorticoizi "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 330,
+    "materie": "Fiziologie",
+    "intrebare": "Transcortina este:",
+    "variante": [
+      "Precursor pentru sinteza transaminazelor",
+      "Proteină de transport pentru corticosteroizi",
+      "Proteină de transport pentru hormonii tiroidieni "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 331,
+    "materie": "Fiziologie",
+    "intrebare": "Hormonii glucocorticoizi:",
+    "variante": [
+      "Inhibă gluconeogeneza prin stimularea conversiei aminoacizilor în carbohidrați ",
+      "Stimulează preluarea și metabolizarea glucozei de către țesuturi",
+      "Au efect anti-insulinic "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 332,
+    "materie": "Fiziologie",
+    "intrebare": "Aldosteronul are rol în menținerea balanței electrolitice prin stimularea: ",
+    "variante": [
+      "Excreției sodiului, potasiului și a ionilor de hidrogen",
+      "Reabsorbției sodiului și potasiului și excreției ionilor de hidrogen",
+      "Reabsorbției sodiului și excreției potasiului și a ionilor de hidrogen "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 333,
+    "materie": "Fiziologie",
+    "intrebare": "Celulele cromafine din structura medulosuprarenalei sintetizează: ",
+    "variante": [
+      "Aldosteron și hormoni androgeni",
+      "Norepinefrină și epinefrină",
+      "Cortizol și hormoni androgeni "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 334,
+    "materie": "Fiziologie",
+    "intrebare": "Insulina are următoarele efecte:",
+    "variante": [
+      "Creștere a concentrației plasmatice de glucoză și acizi grași, precum și de scădere a concentrației plasmatice de aminoacizi",
+      "Scădere a concentrației plasmatice de glucoză și creștere a concentrației plasmatice de acizi grași și aminoacizi",
+      "Scădere a concentrației plasmatice de glucoză, acizi grași și aminoacizi "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 335,
+    "materie": "Fiziologie",
+    "intrebare": "Produs secundar în sinteza pancreatică de insulină, cu utilitate clinică în monitorizarea pacienților diabetici:",
+    "variante": [
+      "Peptidul C",
+      "Amilina ",
+      "Glucagonul "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 336,
+    "materie": "Fiziologie",
+    "intrebare": "Somatostatina este un hormon sintetizat în:",
+    "variante": [
+      "Pancreas, hipotalamus, rinichi și ficat",
+      "Hipotalamus și pancreas",
+      "Intestin, hipotalamus, pancreas și țesutul adipos brun "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 337,
+    "materie": "Fiziologie",
+    "intrebare": "Hormonul paratiroidian are ca rol principal:",
+    "variante": [
+      "Reglarea metabolismului apei și a presiunii arteriale",
+      "Creșterea concentrației plasmatice de glucoză și scăderea concentrației plasmatice de acizi grași",
+      "Reglarea metabolismului calciului "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 338,
+    "materie": "Fiziologie",
+    "intrebare": "Calcitriolul are ca roluri:",
+    "variante": [
+      "Creșterea absorbției calciului la nivel intestinal și creșterea excreției renale de fosfat",
+      "Creșterea absorbției calciului la nivel intestinal, creșterea excreției renale de fosfat și mobilizarea rezervelor de calciu din oase",
+      "Inhibarea absorbței renale de calciu la nivel intestinal și inhibarea excreției renale de fosfat "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 339,
+    "materie": "Fiziologie",
+    "intrebare": "Grelina are ca roluri:",
+    "variante": [
+      "Inhibarea golirii stomacului și a secreției hormonului de creștere ",
+      "Stimularea apetitului și a secreției hormonului de creștere",
+      "Scăderea motilității stomacului și producerea senzației de sațietate "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 340,
+    "materie": "Fiziologie",
+    "intrebare": "Leptina este un hormon sintetizat în principal în: ",
+    "variante": [
+      "Ficat, țesut mamar și placentă",
+      "Stomac",
+      "Țesut adipos "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 341,
+    "materie": "Fiziologie",
+    "intrebare": "Gastrina este un hormon sintetizat la nivelul stomacului și are ca roluri:",
+    "variante": [
+      "Inhibarea secreției de acid gastric și stimularea motilității gastrice",
+      "Stimularea secreției de acid gastric, stimularea motilității gastrice și stimularea proliferării epiteliului gastric",
+      "Stimularea proliferării epiteliului gastric, inhibarea motilității gastrice și stimularea secreției de acid gastric "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 342,
+    "materie": "Fiziologie",
+    "intrebare": "Colecistokinina are ca rol principal stimularea secreției de enzime pancreatice și este sintetizată în:",
+    "variante": [
+      "Pancreas",
+      "Peretele vezicii biliare ",
+      "Duoden "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 343,
+    "materie": "Fiziologie",
+    "intrebare": "Secretina este un hormon cu roluri în:",
+    "variante": [
+      "Stimularea secreției de acid gastric",
+      "Stimularea secreției de bicarbonat în sucul pancreatic și bilă ",
+      "Stimularea secreției de enzime pancreatice "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 344,
+    "materie": "Fiziologie",
+    "intrebare": "La nivelul intestinului subțire, undele peristltice de segmentație au rol: ",
+    "variante": [
+      "În amestecarea conținutului intestinal",
+      "În stimularea mecanică a secreției de bilă și suc pancreatic ",
+      "În propulsia conținutului intestinal "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 345,
+    "materie": "Fiziologie",
+    "intrebare": "Saliva căror specii are un pH alcalin (în jurul valorii de 8,3)? ",
+    "variante": [
+      "Canide și feline",
+      "Suine",
+      "Rumegătoare "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 346,
+    "materie": "Fiziologie",
+    "intrebare": "La mamiferele domestice, care dintre următoarele secreții digestive nu conține enzime cu rol în realizarea digestiei chimice?",
+    "variante": [
+      "Bila",
+      "Sucul pancretic ",
+      "Saliva "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 347,
+    "materie": "Fiziologie",
+    "intrebare": "Secreția salivară este stimulată de:",
+    "variante": [
+      "Sistemul nervos vegetativ simpatic",
+      "Sistemul nervos vegetativ parasimpatic ",
+      "Secretină "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 348,
+    "materie": "Fiziologie",
+    "intrebare": "Printre rolurile stomacului putem enumera:",
+    "variante": [
+      "Realizarea digestiei chimice a carbohidraților prin secreția locală de pepsină ",
+      "Realizarea digestiei chimice a proteinelor prin secreția locală de pepsină",
+      "Realizarea digestiei chimice a lipidelor prin secreția locală de pepsină "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 349,
+    "materie": "Fiziologie",
+    "intrebare": "La nivelul stomacului, histamina are ca efect: ",
+    "variante": [
+      "Inhibarea secreției de acid gastric",
+      "Stimularea secreției de gastrină și factor intrinsec ",
+      "Stimularea secreției de acid gastric "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 350,
+    "materie": "Fiziologie",
+    "intrebare": "Termenul de „zimogen” descrie:",
+    "variante": [
+      "O proteină cu rol particular în digestia chimică a alimentelor",
+      "O enzimă digestivă sintetizată într-o formă inactivă",
+      "O enzimă digestivă cu rol în reglarea activității sistemului nervos enteric "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 351,
+    "materie": "Fiziologie",
+    "intrebare": "Elastaza și Carboxipeptidazele A și B sunt enzime proteolitice pancretice și sunt activate în lumenul intestinal de:",
+    "variante": [
+      "pH-ul acid al chimului intestinal",
+      "Alimente cu conținut proteic ridicat ",
+      "Tripsină "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 352,
+    "materie": "Fiziologie",
+    "intrebare": "Bila este sintetizată de: ",
+    "variante": [
+      "Epiteliul vezicii biliare ",
+      "Hepatocite",
+      "Ductele hepatice "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 353,
+    "materie": "Fiziologie",
+    "intrebare": "Bila este eliberată în lumenul intestinal în perioadele interdigestive la: ",
+    "variante": [
+      "Ecvine",
+      "Suine",
+      "Canide "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 354,
+    "materie": "Fiziologie",
+    "intrebare": "Sărurile de sodiu și potasiu ale acizilor glicocolic și taurocolic intră în compoziția secreției biliare și au roluri importante în:",
+    "variante": [
+      "Emulsionarea lipidelor și stimularea secreției de bilă",
+      "Neutralizarea acidității chimului gastric ",
+      "Stimularea secreției de secretină "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 355,
+    "materie": "Fiziologie",
+    "intrebare": "Carbohidrații și lipidele sunt absorbite în cea mai mare parte în: ",
+    "variante": [
+      "Duoden",
+      "Ileon și cecum",
+      "Jejun "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 356,
+    "materie": "Fiziologie",
+    "intrebare": "Celuloza este digerată:",
+    "variante": [
+      "Cu ajutorul celulazei, enzimă ce intră în compoziția sucului intestinal",
+      "Prin procesul de digestie fermentativă cu ajutorul microflorei rumenale sau cecale ",
+      "Prin procesul de digestie chimică cu ajutorul enzimelor pancreatice "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 357,
+    "materie": "Fiziologie",
+    "intrebare": "La nivelul rumenului, motilitatea secundară are ca scop: ",
+    "variante": [
+      "Realizarea eructației",
+      "Realizarea rumegării",
+      "Evacuarea conținutului rumenal în rețea "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 358,
+    "materie": "Fiziologie",
+    "intrebare": "Mușchiul stritat cardiac:",
+    "variante": [
+      "Necesita prezența unui potențial de acțiune generat de structuri ale sistemului nervos central pentru a realiza o contracție",
+      "Este permeabil pentru calciul extracelular",
+      "Este compus din celule izolate electric, asemănător structurii mușchiului striat scheletic "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 359,
+    "materie": "Fiziologie",
+    "intrebare": "În condiții fiziologice, structura sistemului excitoconducător al cordului, rolul de pace-maker este atribuit:",
+    "variante": [
+      "Nodulului atrio-ventricular",
+      "Nodulului sino-atrial ",
+      "Ganglionului Ludwig "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 360,
+    "materie": "Fiziologie",
+    "intrebare": "Zgomotul cardiac I apare:",
+    "variante": [
+      "Odată cu închiderea valvelor sigmoide la sfarsitul sistolei ventriculare B. La începutul sistolei ventriculare",
+      "La începutul sistolei ventriculare",
+      "La începutul diastolei ventriculare "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 361,
+    "materie": "Fiziologie",
+    "intrebare": "Funcția iotropa descrie:",
+    "variante": [
+      "Proprietatea celulelor musculare striate cardiace de a-și menține un tonus bazal în absența unei depolarizări",
+      "Proprietatea sistemului excitoconducător al cordului de a transmite potențialul de acțiune într-o direcție specifică și cu o viteză particulară pentru fiecare structură cardiacă",
+      "Proprietatea mușchiului striat cardiac de a se contracta în urma depolarizării generate de potențialul de acțiune "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 362,
+    "materie": "Fiziologie",
+    "intrebare": "Volumul telediastolic reprezintă:",
+    "variante": [
+      "Volumul de sânge din ventricule la sfârșitul diastolei ventriculare ",
+      "Vomulul de sânge din ventricule la sfârșitul sistolei ventriculare",
+      "Volumul de sânge ejectat din ventricule în timpul unui ciclu cardiac "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 363,
+    "materie": "Fiziologie",
+    "intrebare": "Sistemul nervos vegetativ simpatic are următoarele efecte asupra activității cordului:",
+    "variante": [
+      "Crește frecvența cardiacă și forța de contracție a mușchiului cardiac",
+      "Crește frecvența cardiacă și scade forța de contracție a mușchiului cardiac ",
+      "Scade frecvența cardiacă și crește forța de contracție a mușchiului cardiac "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 364,
+    "materie": "Fiziologie",
+    "intrebare": "Conform legii Frank-Starling:",
+    "variante": [
+      "Creșterea volumului telesistolic va produce o creștere a presiunii intraventriculare, ceea ce va determina creșterea reflexă a frecvenței cardiace",
+      "Creșterea volumului bătaie va produce o scădere a presiunii intraventriculare, ceea ce va determina creșterea reflexă a forței de contracție a mușchiului cardiac",
+      "Creșterea volumului telediastolic va produce o creștere a presiunii intraventriculare, ceea ce va determina creșterea reflexă a forței de contracție a mușchiului cardiac "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 365,
+    "materie": "Fiziologie",
+    "intrebare": "Metarteriolele reprezintă:",
+    "variante": [
+      "Arteriole cu structură distinctă, bogate în fibre elastice, localizate în apropierea cordului",
+      "Prezintă un sfincter muscular și reglează volumul de sânge distribut către capilare ",
+      "Au o structură asemănătoare venulelor și prezintă sensibilitate redusă la acțiunea hormonilor și sistemului nervos vegetativ "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 366,
+    "materie": "Fiziologie",
+    "intrebare": "Care dintre următoarele mecanisme previne scăderea excesivă a presiunii arteriale în momentul schimbării poziției corpului:",
+    "variante": [
+      "Reflexul receptorilor atriali pentru vomul",
+      "Legea Frank - Straling ",
+      "Reflexul baroreceptorilor "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 367,
+    "materie": "Fiziologie",
+    "intrebare": "Care dintre următoarele structuri anexe ale sistemului reproducător mascul elaborează o secreție cu rol în lubrefierea uretrei și neutralizarea acidității locale? ",
+    "variante": [
+      "Porțiunea diseminată a prostatei",
+      "Veziculele seminale ",
+      "Glandele Cowper "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 368,
+    "materie": "Fiziologie",
+    "intrebare": "La nivelul testiculelor, sinteza de testosteron este stimulată de: ",
+    "variante": [
+      "LH (hormonul luteinizant)",
+      "FSH (hormonul de stimulare foliculară)",
+      "Prostaglandine specifice cu origine prostatică "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 369,
+    "materie": "Fiziologie",
+    "intrebare": "În structura ovarului, corpul albicans reprezintă:",
+    "variante": [
+      "O structură foliculară cu rol în sinteza de progesteron și menținerea gestației ",
+      "Un corp galben inactiv aflat în proces de degenerare",
+      "Un folicul atrezic matur "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 370,
+    "materie": "Fiziologie",
+    "intrebare": "Fertilizarea ovulului (fecundația) are loc la nivelul: ",
+    "variante": [
+      "Uterului",
+      "Joncțiunii utero-tubare",
+      "Oviductului "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 371,
+    "materie": "Fiziologie",
+    "intrebare": "Care dintre următoarele specii sunt poliestrice de tip continuu? ",
+    "variante": [
+      "Pisică și iepuroaică",
+      "Vacă și scroafă",
+      "Cățea și iapă "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 372,
+    "materie": "Fiziologie",
+    "intrebare": "A doua diviziune meiotică a ovulului are loc în oviduct la speciile: ",
+    "variante": [
+      "Cățea și iapă",
+      "Pisică și vacă",
+      "Pisică și scroafă "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 373,
+    "materie": "Fiziologie",
+    "intrebare": "Ovulația este realizată cu ajutorul unui mecanism neuroreflex la: ",
+    "variante": [
+      "Scroafă și vacă",
+      "Pisică",
+      "Cățea "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 374,
+    "materie": "Fiziologie",
+    "intrebare": "Unitatea funcțională a rinichiului este: ",
+    "variante": [
+      "Ansa Henle",
+      "Piramida Malpighi",
+      "Nefronul "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 375,
+    "materie": "Fiziologie",
+    "intrebare": "Care dintre următoarele reprezintă un exemplu de moleculă fără prag de reabsorbție tubulară renală:",
+    "variante": [
+      "Glucoză",
+      "Creatinină ",
+      "Acid uric "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 376,
+    "materie": "Fiziologie",
+    "intrebare": "Apartaul juxtaglomerular este format din celule cu rol contractil, dar și endocrin, fiind responsbile pentru sinteza și eliberarea de:",
+    "variante": [
+      "Eritropoietină",
+      "Renină ",
+      "Angiotensinogen "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 377,
+    "materie": "Fiziologie",
+    "intrebare": "Faza de golire a vezicii urinare este reglată cu ajutorul:",
+    "variante": [
+      "Sistemului nervos vegetativ parasimpatic",
+      "Sistemului nervos vegetativ simpatic",
+      "Unui mecanism neuroreflex de inhibare a eliberării hipofizare de hormon antidiuretic "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 378,
+    "materie": "Fiziologie",
+    "intrebare": "Componentă a nefronului responsbilă de concentrarea urinei: ",
+    "variante": [
+      "Ansa Henle",
+      "Glomerulul renal",
+      "Tubii distali "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 379,
+    "materie": "Fiziologie",
+    "intrebare": "Celulele alveolare de tip II:",
+    "variante": [
+      "Reprezintă suportul structural al alveolei pulmonare",
+      "Secretă surfactantul pulmonar",
+      "Au rol funcție fagocitară și asigură protecția locală a țesutului "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 380,
+    "materie": "Fiziologie",
+    "intrebare": "În timpul inspirației, aerul pătrunde în pulmoni datorită: ",
+    "variante": [
+      "Creșterii presiunii intra-alveolare ",
+      "Scăderii presiunii intra-alveolare ",
+      "Scăderii presiunii intrapleurale "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 381,
+    "materie": "Fiziologie",
+    "intrebare": "Expirația este:",
+    "variante": [
+      "Facilitată de contracția mușchilor intercostali și a mușchului diafragm ",
+      "Caracterizată de o scădere a presiunii intrapleurale",
+      "Un proces pasiv "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 382,
+    "materie": "Fiziologie",
+    "intrebare": "Scăderea concentrației de oxigen la nivelul alveolei pulmonare, va avea ca efect: ",
+    "variante": [
+      "Producerea vasodilataței locale",
+      "Producerea vasoconstricției locale",
+      "Creșterea secreției alveolare de surfactant pulmonar și mucus "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 383,
+    "materie": "Fiziologie",
+    "intrebare": "Alegeți afirmația corectă:",
+    "variante": [
+      "Creșterea temperaturii va duce la scăderea afinității hemoglobinei pentru oxigen ",
+      "Scăderea pH-ului va duce la creșterea afinității hemoglobinei pentru oxigen",
+      "Creșterea presiunii parțiale a dioxidului de carbon va duce la creșterea afinității hemoglobinei pentru oxigen "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 384,
+    "materie": "Fiziologie",
+    "intrebare": "Legarea dioxidului de carbon de hemoglobină duce la formarea: ",
+    "variante": [
+      "Carbaminohemoglobinei",
+      "Carboxihemoglobinei",
+      "Methemoglobinei "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 385,
+    "materie": "Fiziologie",
+    "intrebare": "Volumul total de aer ce poate fi inspirat și expirat în timpul unui ciclu respirator hiperpneic reprezintă:",
+    "variante": [
+      "Volumul curent",
+      "Volum de rezervă ",
+      "Capacitate vitală "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 386,
+    "materie": "Fiziologie",
+    "intrebare": "La pasăre, schimburile de gaze respiratorii au loc la nivelul: ",
+    "variante": [
+      "Alveolelor pulmonare",
+      "Sacilor aerieni",
+      "Capilarelor respiratorii cilindrice "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 387,
+    "materie": "Fiziologie",
+    "intrebare": "La pasăre, cea mai mare parte a aerului inspirat ajunge inițial în: ",
+    "variante": [
+      "Pulmoni",
+      "Sacii aerieni craniali",
+      "Sacii aerieni caudali "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 388,
+    "materie": "Fiziologie",
+    "intrebare": "Consumul specific de oxigen al animalelor este: ",
+    "variante": [
+      "Direct proporțional cu talia animalului",
+      "Invers proporțional cu talia naimalului",
+      "Nu este influențat de talia animalului "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 389,
+    "materie": "Fiziologie",
+    "intrebare": "Glicogenul muscular este utilizat:",
+    "variante": [
+      "Ca sursă locală de energie",
+      "Pentru reglarea glicemiei",
+      "Ca sursă de energie locală și pentru reglarea glicemiei "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 390,
+    "materie": "Fiziologie",
+    "intrebare": "Glucoza din sânge este utilizată ca sursă de energie de către celulele organismului, stocată sub formă de glicogen sau transformată în acizi grași la nivelul:",
+    "variante": [
+      "Sistemului digestiv",
+      "Țesutului adipos și țesutului hepatic ",
+      "Pancreasului și ficatului "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 391,
+    "materie": "Fiziologie",
+    "intrebare": "Gluconeogeneza reprezintă:",
+    "variante": [
+      "Procesul de formare al rezervelor de glicogen",
+      "Procesul de decompunere a glucozei pentru obținerea ATP-ului utilizat ca sursă de energie pentru celule",
+      "Procesul de formare a glucozei din molecule intermediare "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 392,
+    "materie": "Fiziologie",
+    "intrebare": "Aminoacizii din sânge sunt preluați de către celulele musculare sub controlul: ",
+    "variante": [
+      "Glucagonului",
+      "Glucocorticoizilor",
+      "Insulinei "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 393,
+    "materie": "Fiziologie",
+    "intrebare": "Corpii cetonici sunt produși în țesutul hepatic prin metabolizarea: ",
+    "variante": [
+      "Excesului de glucoză din sânge",
+      "Aminoacizilor",
+      "Acizilor grași "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 394,
+    "materie": "Fiziologie",
+    "intrebare": "itamină cu roluri importante în medierea absorbției intesinale a fierului și în sinteza unor molecule precum catecolamine, colagen și elastină:",
+    "variante": [
+      "Vitamina A",
+      "Vitamina E ",
+      "Vitamina C "
+    ],
+    "corect": 2
+  },
+  {
+    "id": 395,
+    "materie": "Fiziologie",
+    "intrebare": "Vitamină cu rol important în sinteza unor facori de coagulare: ",
+    "variante": [
+      "Vitamina K",
+      "Vitamina C",
+      "Vitamina B9 "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 396,
+    "materie": "Fiziologie",
+    "intrebare": "Vitamină cu rol important în sinteza ADN-ului, ARN-ului și a proteinelor: ",
+    "variante": [
+      "Vitamina C",
+      "Vitamina B12",
+      "Vitamina A"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 397,
+    "materie": "Fiziologie",
+    "intrebare": "Testosteronul este implicat în: ",
+    "variante": [
+      "Scăderea densității osoase",
+      "Dezvoltarea masei musculare ",
+      "Scăderea metabolismului bazal "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 398,
+    "materie": "Fiziologie",
+    "intrebare": "Hormon cu rol în realizarea unor procese complexe precum reglarea secreției de hormon de stimulare foliculară (FSH), spermatogeneză și menținerea gestației:",
+    "variante": [
+      "Inhibină",
+      "Secretină ",
+      "Relaxină "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 399,
+    "materie": "Fiziologie",
+    "intrebare": "Homeostazia clorului este reglată:",
+    "variante": [
+      "La nivel renal sub acțiunea aldosteronului",
+      "La nivel hepatic și digestiv sub acțiunea glucagonului, insulinei și grelinei ",
+      "La nivel hepatic sub acțiunea vasopresinei "
+    ],
+    "corect": 0
+  },
+  {
+    "id": 400,
+    "materie": "Fiziologie",
+    "intrebare": "Calcitonina are rol în:",
+    "variante": [
+      "Stimularea mobilizării osoase de calciu",
+      "Inhibarea mobilizării osoase de calciu",
+      "Stimularea resorbției renale de calciu și potasiu "
+    ],
+    "corect": 1
+  },
+  {
+    "id": 401,
+    "materie": "Patologie",
+    "intrebare": "Hipotermia reprezinta:",
+    "variante": [
+      "scaderea temperaturii corporale sub limita fiziologica a speciei.",
+      "cresterea temperaturii corporale peste limita fiziologica a speciei.",
+      "cresterea temperaturii corporale peste limita fiziologica a speciei atat in ambiante calde cat si reci."
+    ],
+    "corect": 0
+  },
+  {
+    "id": 402,
+    "materie": "Patologie",
+    "intrebare": "Hipotermia poate fi:",
+    "variante": [
+      "fiziologica.",
+      "patologica.",
+      "fiziologica, patologica, indusa."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 403,
+    "materie": "Patologie",
+    "intrebare": "Actiunea generala a frigului asupra organismului animal se manifesta prin:",
+    "variante": [
+      "arsuri.",
+      "hipotermie.",
+      "degeraturi."
+    ],
+    "corect": 1
+  },
+  {
+    "id": 404,
+    "materie": "Patologie",
+    "intrebare": "Actiunea locala a frigului asupra organismului animal se manifesta prin:",
+    "variante": [
+      "arsuri.",
+      "degeraturi.",
+      "hipotermie."
+    ],
+    "corect": 1
+  },
+  {
+    "id": 405,
+    "materie": "Patologie",
+    "intrebare": "Hipertermia reprezinta:",
+    "variante": [
+      "cresterea temperaturii corporale peste limita fiziologica a speciei numai in ambiante calde.",
+      "cresterea temperaturii corporale peste limita fiziologica a speciei atat in ambiante calde cat si reci.",
+      "scaderea temperaturii corporale sub limita fiziologica a speciei."
+    ],
+    "corect": 0
+  },
+  {
+    "id": 406,
+    "materie": "Patologie",
+    "intrebare": "Hipertermia se manifesta clinic prin:",
+    "variante": [
+      "frison.",
+      "cresterea temperaturii corporale.",
+      "cresterea temperaturii corporale, transpiratie, vasodilatatie, tahicardie."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 407,
+    "materie": "Patologie",
+    "intrebare": "Arsurile de diferite grade sunt consecinta:",
+    "variante": [
+      "actiunii generale a caldurii asupra organismului animal.",
+      "actiunii locale a caldurii asupra organismului animal.",
+      "actiunii combinate a caldurii asupra organismului animal."
+    ],
+    "corect": 1
+  },
+  {
+    "id": 408,
+    "materie": "Patologie",
+    "intrebare": "Caldura actioneaza general asupra organismului animal si produce:",
+    "variante": [
+      "soc termic.",
+      "insolatie",
+      "hipertermie, soc termic, insolatie."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 409,
+    "materie": "Patologie",
+    "intrebare": "Radiatiile ultraviolete actioneaza asupra organismului animal si produc:",
+    "variante": [
+      "soc termic.",
+      "arsuri.",
+      "arsuri, fotosensibilizare, eritem cutanat."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 410,
+    "materie": "Patologie",
+    "intrebare": "Hipobarismul si hiperbarismul sunt produse de:",
+    "variante": [
+      "temperatura.",
+      "radiatiile ultraviolete.",
+      "presiunea atmosferica."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 411,
+    "materie": "Patologie",
+    "intrebare": "Hiperemia sau congestia poate fi:",
+    "variante": [
+      "fiziologica.",
+      "patologica.",
+      "fiziologica, patologica."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 412,
+    "materie": "Patologie",
+    "intrebare": "Acumularea de singe intr-un organ sau tesut cu modificarea structurii acestuia se numeste:",
+    "variante": [
+      "embolie.",
+      "hiperemie.",
+      "tromboza."
+    ],
+    "corect": 1
+  },
+  {
+    "id": 413,
+    "materie": "Patologie",
+    "intrebare": "Vehicularea in torentul sanguin a unor substante straine de structura acestuia poarta denumirea de:",
+    "variante": [
+      "staza sanguina.",
+      "hemoragie.",
+      "embolie."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 414,
+    "materie": "Patologie",
+    "intrebare": "Coagularea intravasculara a sangelui in timpul vietii animalului poarta denumirea de:",
+    "variante": [
+      "hemoragie.",
+      "tromboza.",
+      "edem."
+    ],
+    "corect": 1
+  },
+  {
+    "id": 415,
+    "materie": "Patologie",
+    "intrebare": "Cauzele trombozei sunt reprezentate de:",
+    "variante": [
+      "alterarea integritatii epiteliului vascular.",
+      "scaderea vitezei de circulatie a sangelui.",
+      "alterarea integritatii epiteliului vascular, scaderea vitezei de circulatie a sangelui, cresterea coagulabilitatii sanguine."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 416,
+    "materie": "Patologie",
+    "intrebare": "Consecintele trombozei sunt reprezentate de:",
+    "variante": [
+      "hiperemie.",
+      "hemoragie.",
+      "embolie, ischemie, infarct."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 417,
+    "materie": "Patologie",
+    "intrebare": "Oprirea totala a aprovizionarii cu sange a unui tesut sau organ se numeste:",
+    "variante": [
+      "ischemie.",
+      "staza sanguina.",
+      "hiperemie."
+    ],
+    "corect": 1
+  },
+  {
+    "id": 418,
+    "materie": "Patologie",
+    "intrebare": "Staza sanguina poate fi:",
+    "variante": [
+      "capilara.",
+      "venoasa.",
+      "arteriala, venoasa, capilara."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 419,
+    "materie": "Patologie",
+    "intrebare": "Deficitul circulator intr-un tesut sau organ se numeste:",
+    "variante": [
+      "edem.",
+      "hiperemie.",
+      "ischemie."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 420,
+    "materie": "Patologie",
+    "intrebare": "Iesirea sangelui din patul vascular ca urmare a unor traume se numeste:",
+    "variante": [
+      "infarct.",
+      "hemoragie.",
+      "edem."
+    ],
+    "corect": 1
+  },
+  {
+    "id": 421,
+    "materie": "Patologie",
+    "intrebare": "Hemoragia poate fi produsa prin:",
+    "variante": [
+      "ruperea vasului.",
+      "diapedeza.",
+      "ruperea vasului, diapedeza, eroziunea vasului."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 422,
+    "materie": "Patologie",
+    "intrebare": "Edemul reprezinta:",
+    "variante": [
+      "acumularea unor cantitati mari de fluide in spatiile intracelulare si in cavitatile corporale.",
+      "staza sanguina.",
+      "acumularea de sange in tesuturi."
+    ],
+    "corect": 0
+  },
+  {
+    "id": 423,
+    "materie": "Patologie",
+    "intrebare": "Infarctul poate fi:",
+    "variante": [
+      "alb.",
+      "rosu.",
+      "alb si rosu."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 424,
+    "materie": "Patologie",
+    "intrebare": "Consecinta infarctului este reprezentata de:",
+    "variante": [
+      "edem.",
+      "necroza si moartea tesutului afectat.",
+      "embolie."
+    ],
+    "corect": 1
+  },
+  {
+    "id": 425,
+    "materie": "Patologie",
+    "intrebare": "Transudatul este un lichid:",
+    "variante": [
+      "bogat in proteine.",
+      "cu o concentratie proteica scazuta.",
+      "cu o concentratie proteica scazuta, sarac in elemente celulare."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 426,
+    "materie": "Patologie",
+    "intrebare": "Transsudatul este consecinta:",
+    "variante": [
+      "proceselor inflamatorii.",
+      "proceselor neinflamatorii.",
+      "hemoragiei."
+    ],
+    "corect": 1
+  },
+  {
+    "id": 427,
+    "materie": "Patologie",
+    "intrebare": "Exsudatul este consecinta:",
+    "variante": [
+      "edemului.",
+      "hemoragiei.",
+      "proceselor inflamatorii."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 428,
+    "materie": "Patologie",
+    "intrebare": "Reactia febrila se traduce prin:",
+    "variante": [
+      "scaderea temperaturii corporale sub limita fiziologica a speciei.",
+      "cresterea temperaturii corporale peste limita fiziologica a speciei atat in ambiante calde cat si in ambiante reci.",
+      "cresterea temperaturii corporale peste limita fiziologica a speciei."
+    ],
+    "corect": 1
+  },
+  {
+    "id": 429,
+    "materie": "Patologie",
+    "intrebare": "Febra poate fi:",
+    "variante": [
+      "aseptica.",
+      "septica.",
+      "septica si aseptica."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 430,
+    "materie": "Patologie",
+    "intrebare": "Febra septica poate fi produsa de:",
+    "variante": [
+      "substante chimice.",
+      "traumatisme.",
+      "bacterii, virusuri, paraziti, miceti."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 431,
+    "materie": "Patologie",
+    "intrebare": "Febra aseptica poate fi produsa de:",
+    "variante": [
+      "structuri proteice, medicamente, substante chimice.",
+      "bacterii.",
+      "virusuri, paraziti, miceti."
+    ],
+    "corect": 0
+  },
+  {
+    "id": 432,
+    "materie": "Patologie",
+    "intrebare": "Reactia febrila poate fi:",
+    "variante": [
+      "acuta.",
+      "subacuta.",
+      "acuta, subacuta, cronica."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 433,
+    "materie": "Patologie",
+    "intrebare": "Semnele clinice ale inflamatiei sunt reprezentate de :",
+    "variante": [
+      "caldura locala.",
+      "durere.",
+      "durere, tumefiere, inrosire, caldura locala, lezionare functionala."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 434,
+    "materie": "Patologie",
+    "intrebare": "Inflamatia pulmonului se numeste:",
+    "variante": [
+      "pleurita.",
+      "pneumonie",
+      "laringita."
+    ],
+    "corect": 1
+  },
+  {
+    "id": 435,
+    "materie": "Patologie",
+    "intrebare": "Stomatita este inflamatia:",
+    "variante": [
+      "stomacului.",
+      "pulpei dentare.",
+      "mucoasei bucale."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 436,
+    "materie": "Patologie",
+    "intrebare": "Procesul inflamator cuprinde urmatoarele etape:",
+    "variante": [
+      "etapa vasculara.",
+      "etapa proliferativa.",
+      "etapa vasculara, celulara si proliferativa."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 437,
+    "materie": "Patologie",
+    "intrebare": "Exsudatul poate fi: ",
+    "variante": [
+      "seros.",
+      "purulent",
+      "mucos, seros, purulent."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 438,
+    "materie": "Patologie",
+    "intrebare": "Tumorile se clasifica in:",
+    "variante": [
+      "maligne.",
+      "benigne",
+      "maligne si benigne."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 439,
+    "materie": "Patologie",
+    "intrebare": "Factorii etiologici implicati in declansarea tumorilor sunt reprezentati de:",
+    "variante": [
+      "factori fizici.",
+      "factori chimici.",
+      "factori fizici, chimici, factori biologici."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 440,
+    "materie": "Patologie",
+    "intrebare": "Tumora tesutului glandular se numeste:",
+    "variante": [
+      "adenom.",
+      "melanom.",
+      "sarcom."
+    ],
+    "corect": 0
+  },
+  {
+    "id": 441,
+    "materie": "Patologie",
+    "intrebare": "Hipoglicemia reprezinta:",
+    "variante": [
+      "cresterea cantitatii de glucoza din sange.",
+      "scaderea cantitatii de glucoza din sange.",
+      "cresterea cantitatii de proteine din sange."
+    ],
+    "corect": 1
+  },
+  {
+    "id": 442,
+    "materie": "Patologie",
+    "intrebare": "Hiperglicemia reprezinta:",
+    "variante": [
+      "cresterea cantitatii de glucoza din sange.",
+      "cresterea cantitatii de proteine din sange.",
+      "scaderea cantitatii de glucoza din sange."
+    ],
+    "corect": 0
+  },
+  {
+    "id": 443,
+    "materie": "Patologie",
+    "intrebare": "Principalele proteine plasmatice sunt:",
+    "variante": [
+      "albumina.",
+      "hemoglobina.",
+      "albumina, globulinele."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 444,
+    "materie": "Patologie",
+    "intrebare": "Hipoproteinemia si hiperproteinemia sunt tulburari ale:",
+    "variante": [
+      "metabolismului glucidic.",
+      "metabolismului protidic.",
+      "metabolismului lipidic."
+    ],
+    "corect": 1
+  },
+  {
+    "id": 445,
+    "materie": "Patologie",
+    "intrebare": "Hipolipemia si hiperlipemia sunt tulburari ale:",
+    "variante": [
+      "metabolismului protidic.",
+      "metabolismului glucidic.",
+      "metabolismului lipidic."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 446,
+    "materie": "Patologie",
+    "intrebare": "Obezitatea reprezinta o tulburare a metabolismului:",
+    "variante": [
+      "energetic.",
+      "lipidic.",
+      "protidic."
+    ],
+    "corect": 1
+  },
+  {
+    "id": 447,
+    "materie": "Patologie",
+    "intrebare": "Scaderea ph-ului mediului intern determina aparitia:",
+    "variante": [
+      "alcalozei.",
+      "acidozei.",
+      "hemoconcentratiei."
+    ],
+    "corect": 1
+  },
+  {
+    "id": 448,
+    "materie": "Patologie",
+    "intrebare": "Cresterea ph-ului mediului intern determina aparitia:",
+    "variante": [
+      "acidozei.",
+      "hipoxiei",
+      "alcalozei."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 449,
+    "materie": "Patologie",
+    "intrebare": "Acidoza poate fi:",
+    "variante": [
+      "metabolica.",
+      "respiratorie.",
+      "metabolica, respiratorie."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 450,
+    "materie": "Patologie",
+    "intrebare": "Deshidratarea reprezinta:",
+    "variante": [
+      "un bilant pozitiv al apei in organism si apare atunci cand pierderile depasesc aportul.",
+      "un bilant negativ al apei in organism si apare atunci cand pierderile depasesc aportul.",
+      "o hiperhidratare."
+    ],
+    "corect": 1
+  },
+  {
+    "id": 451,
+    "materie": "Patologie",
+    "intrebare": "Deshidratatrea se manifesta prin:",
+    "variante": [
+      "cresterea hematocritului.",
+      "pierderea elasticitatii pielii.",
+      "pierderea elasticitatii pielii, cresterea hematocritului."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 452,
+    "materie": "Patologie",
+    "intrebare": "Hiperhidratarea se manifesta prin:",
+    "variante": [
+      "pierderea elasticitatii pielii.",
+      "edem.",
+      "febra."
+    ],
+    "corect": 1
+  },
+  {
+    "id": 453,
+    "materie": "Patologie",
+    "intrebare": "Tulburarile seriei eritrocitare sunt reprezentate de:",
+    "variante": [
+      "anemie.",
+      "poliglobulie.",
+      "anemie, poliglobulie."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 454,
+    "materie": "Patologie",
+    "intrebare": "Anemia se manifesta prin:",
+    "variante": [
+      "paliditatea pielii si mucoaselor.",
+      "cresterea numarului de eritrocite.",
+      "paliditatea pielii si mucoaselor, scaderea cantitatii de hemoglobina si a numarului de eritrocite."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 455,
+    "materie": "Patologie",
+    "intrebare": "Eritrocitele tinere imature ce contin un rest de nucleu poarta denumirea de :",
+    "variante": [
+      "hematii.",
+      "reticulocite.",
+      "leucocite."
+    ],
+    "corect": 1
+  },
+  {
+    "id": 456,
+    "materie": "Patologie",
+    "intrebare": "Leucocitoza reprezinta:",
+    "variante": [
+      "scaderea numarului de eritrocite sub limita fiziologica.",
+      "cresterea numarului de leucocite peste limita fiziologica.",
+      "cresterea numarului de eritrocite peste limita fiziologica."
+    ],
+    "corect": 1
+  },
+  {
+    "id": 457,
+    "materie": "Patologie",
+    "intrebare": "Leucopenia reprezinta:",
+    "variante": [
+      "scaderea numarului de eritrocite sub limita fiziologica.",
+      "scaderea numarului de leucocite sub limita fiziologica.",
+      "cresterea numarului de eritrocite peste limita fiziologica."
+    ],
+    "corect": 1
+  },
+  {
+    "id": 458,
+    "materie": "Patologie",
+    "intrebare": "Neutrofilia si neutropenia sunt tulburari ale:",
+    "variante": [
+      "granulocitelor eozinofile.",
+      "granulocitelor neutrofile.",
+      "granulocitelor bazofile."
+    ],
+    "corect": 1
+  },
+  {
+    "id": 459,
+    "materie": "Patologie",
+    "intrebare": "Eozinofilia si eozinopenia sunt tulburari ale:",
+    "variante": [
+      "granulocitelor neutrofile.",
+      "granulocitelor eozinofile.",
+      "granulocitelor bazofile."
+    ],
+    "corect": 1
+  },
+  {
+    "id": 460,
+    "materie": "Patologie",
+    "intrebare": "Bazofilia si bazopenia sunt tulburari ale:",
+    "variante": [
+      "granulocitelor eozinofile.",
+      "granulocitelor neutrofile.",
+      "granulocitelor bazofile."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 461,
+    "materie": "Patologie",
+    "intrebare": "Limfocitoza si limfopenia sunt tulburari ale:",
+    "variante": [
+      "granulocitelor eozinofile.",
+      "granulocitelor neutrofile.",
+      "limfocitelor."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 462,
+    "materie": "Patologie",
+    "intrebare": "Monocitoza si monocitopenia sunt tulburari ale:",
+    "variante": [
+      "granulocitelor eozinofile.",
+      "limfocitelor.",
+      "monocitelor."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 463,
+    "materie": "Patologie",
+    "intrebare": "Trombocitele si factorii plasmatici ai coagularii intervin in:",
+    "variante": [
+      "mecanismul termoreglarii.",
+      "mecanismul hemostazei.",
+      "mecanismul procesului inflamator."
+    ],
+    "corect": 1
+  },
+  {
+    "id": 464,
+    "materie": "Patologie",
+    "intrebare": "Tulburarile aparatului cardiovascular sunt reprezentate de:",
+    "variante": [
+      "insuficienta cardiaca.",
+      "hipertensiunea si hipotensiunea arteriala.",
+      "insuficienta cardiaca, hipertensiunea si hipotensiunea arteriala."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 465,
+    "materie": "Patologie",
+    "intrebare": "Tulburarile de conductibilitate cardiaca poarta denumirea de:",
+    "variante": [
+      "aritmi cardiace.",
+      "tahicardie.",
+      "bloc cardiac de diferite grade."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 466,
+    "materie": "Patologie",
+    "intrebare": "Tulburarile cailor respiratorii sunt reprezentate de:",
+    "variante": [
+      "pleurite.",
+      "laringite.",
+      "rinite, sinuzite, laringite, traheite."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 467,
+    "materie": "Patologie",
+    "intrebare": "Congestia pulmonara, edemul pulmonar, hemoragia pulmonara sunt:",
+    "variante": [
+      "procese inflamatorii",
+      "tulburari circulatorii.",
+      "neoplazii."
+    ],
+    "corect": 1
+  },
+  {
+    "id": 468,
+    "materie": "Patologie",
+    "intrebare": "Hipoxia reprezinta:",
+    "variante": [
+      "lipsa oxigenului dintr-un tesut.",
+      "o hipersaturatie cu oxigen a unui tesut.",
+      "o cantitate scazuta de oxigen intr-un tesut."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 469,
+    "materie": "Patologie",
+    "intrebare": "Tulburarile functiei secretorii a aparatului digestiv sunt reprezentate de:",
+    "variante": [
+      "hiposecretia.",
+      "hipersecretia.",
+      "hiposecretia, hipersecretia."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 470,
+    "materie": "Patologie",
+    "intrebare": "Hipoperistaltismul si hiperperistaltismul sunt tulburari ale:",
+    "variante": [
+      "functiei secretorii.",
+      "functiei motorii.",
+      "functiei enzimatice."
+    ],
+    "corect": 1
+  },
+  {
+    "id": 471,
+    "materie": "Patologie",
+    "intrebare": "Enteritele sunt produse de:",
+    "variante": [
+      "factori genetici",
+      "cauze alimentare",
+      "cauze alimentare, bacterii, virusuri, paraziti."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 472,
+    "materie": "Patologie",
+    "intrebare": "Tulburarile ficatului sunt reprezentate de:",
+    "variante": [
+      "marea insuficienta hepatica.",
+      "hepatite.",
+      "marea insuficienta hepatica, congestia hepatica, hepatite, ciroze."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 473,
+    "materie": "Patologie",
+    "intrebare": "Marea insuficienta hepatica se caracterizeaza prin:",
+    "variante": [
+      "tulburari digestive.",
+      "simptome cutanate.",
+      "tulburari digestive, simptome cutanate, tulburari de coagulare."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 474,
+    "materie": "Patologie",
+    "intrebare": "Mica insuficienta hepatica se caracterizeaza prin:",
+    "variante": [
+      "semne clinice discrete.",
+      "modificari paraclinice.",
+      "tulburari cardiovasculare."
+    ],
+    "corect": 0
+  },
+  {
+    "id": 475,
+    "materie": "Patologie",
+    "intrebare": "Sindromul de icter reprezinta:",
+    "variante": [
+      "inflamatia ficatului.",
+      "colorarea in galben a pielii si mucoaselor ca urmare a impregnarii cu pigmenti biliari.",
+      "congestia ficatului."
+    ],
+    "corect": 1
+  },
+  {
+    "id": 476,
+    "materie": "Patologie",
+    "intrebare": "Patogenetic icterul poate fi:",
+    "variante": [
+      "mecanic.",
+      "parenchimatos",
+      "mecanic, hemolitic, parenchimatos."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 477,
+    "materie": "Patologie",
+    "intrebare": "Icterul hemolitic este produs de:",
+    "variante": [
+      "traumatisme hepatice.",
+      "hemoliza masiva a hematiilor.",
+      "tulburari circulatorii."
+    ],
+    "corect": 1
+  },
+  {
+    "id": 478,
+    "materie": "Patologie",
+    "intrebare": "Icterul mecanic este produs de:",
+    "variante": [
+      "obstructii ale cailor biliare.",
+      "hemoliza masiva a eritrocitelor.",
+      "distrofia hepatica."
+    ],
+    "corect": 0
+  },
+  {
+    "id": 479,
+    "materie": "Patologie",
+    "intrebare": "Icterul parenchimatos sau hepatic este produs de:",
+    "variante": [
+      "hemoliza masiva a eritrocitelor.",
+      "substante toxice.",
+      "obstructii ale cailor biliare."
+    ],
+    "corect": 1
+  },
+  {
+    "id": 480,
+    "materie": "Patologie",
+    "intrebare": "Tulburarile aparatului urinar sunt reprezentate de:",
+    "variante": [
+      "insuficienta renala.",
+      "nefrite.",
+      "insuficienta renala, glomerulonefrite, cistite."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 481,
+    "materie": "Patologie",
+    "intrebare": "Cauzele insuficientei renale sunt reprezentate de:",
+    "variante": [
+      "procese inflamatorii ale nefronului.",
+      "tulburari circulatorii renale.",
+      "procese inflamatorii ale nefronului, tulburari circulatorii renale."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 482,
+    "materie": "Patologie",
+    "intrebare": "Prezenta sangelui in urina poate avea drept cauze:",
+    "variante": [
+      "litiaza renala.",
+      "cistite.",
+      "litiaza renala, cistite."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 483,
+    "materie": "Patologie",
+    "intrebare": "Prezenta glucozei in urina se numeste:",
+    "variante": [
+      "proteinurie.",
+      "glicozurie.",
+      "hematurie."
+    ],
+    "corect": 1
+  },
+  {
+    "id": 484,
+    "materie": "Patologie",
+    "intrebare": "Cauzele determinante ale bolilor sunt reprezentate de:",
+    "variante": [
+      "agenti bacterieni.",
+      "agenti virali.",
+      "agenti bacterieni, agenti virali, agenti parazitari."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 485,
+    "materie": "Patologie",
+    "intrebare": "Cauzele predispozante ale bolilor sunt reprezentate de:",
+    "variante": [
+      "varsta.",
+      "rasa.",
+      "varsta, rasa."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 486,
+    "materie": "Patologie",
+    "intrebare": "Cauzele favorizante ale bolilor sunt reprezentate de:",
+    "variante": [
+      "frig.",
+      "caldura.",
+      "frig, caldura, umiditate."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 487,
+    "materie": "Patologie",
+    "intrebare": "Faza de alarma, faza de rezistenta, faza de epuizare sunt fazele de evolutie ale:",
+    "variante": [
+      "mecanismului predominant patochimic.",
+      "sindromului general de adaptare.",
+      "reactiei oscilante postagresive."
+    ],
+    "corect": 1
+  },
+  {
+    "id": 488,
+    "materie": "Patologie",
+    "intrebare": "Principalele tipuri de soc sunt:",
+    "variante": [
+      "socul anafilactic.",
+      "socul hemoragic.",
+      "socul anafilactic, socul hemoragic, socul septic."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 489,
+    "materie": "Patologie",
+    "intrebare": "Dupa criteriul antomoclinic bolile se impart in:",
+    "variante": [
+      "cardiopati.",
+      "viroze",
+      "cardiopati, nefropati, hepatopatii, hemopatii."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 490,
+    "materie": "Patologie",
+    "intrebare": "Durerea poate fi:",
+    "variante": [
+      "durere viscerala.",
+      "durere musculara.",
+      "durere cutanata, durere musculara, durere viscerala, durere vasculara."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 491,
+    "materie": "Patologie",
+    "intrebare": "Temperatura, umiditatea, curentii de aer sunt factori:",
+    "variante": [
+      "ocazionali.",
+      "determinanti.",
+      "favorizanti."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 492,
+    "materie": "Patologie",
+    "intrebare": "Raspunsul organismului la actiunea factorilor patogeni se incadreaza in urmatoarele sindroame:",
+    "variante": [
+      "Sindromul general de adaptare.",
+      "Sindromul general de adaptare, Reactia oscilanta postagresiva, Sindromul de iritatie vegetativa .",
+      "Sindromul de iritatie vegetativa."
+    ],
+    "corect": 1
+  },
+  {
+    "id": 493,
+    "materie": "Patologie",
+    "intrebare": "Etapa vasculara a procesului inflamator secaracterizeaza prin:",
+    "variante": [
+      "vasoconstrictie, vasodilatatie, tulburari de permeabilitate vasculara.",
+      "chemotactism, leucodiapedeza si fagocitoza.",
+      "fenomene proliferative."
+    ],
+    "corect": 0
+  },
+  {
+    "id": 494,
+    "materie": "Patologie",
+    "intrebare": "Etapa de vindecare a procesului inflamator se caracterizeaza prin:",
+    "variante": [
+      "plasmexodie.",
+      "fenomene proliferative ale celulelor din focarul inflamator dar si a celulelor care au migrat in acest loc.",
+      "chemotactism"
+    ],
+    "corect": 1
+  },
+  {
+    "id": 495,
+    "materie": "Patologie",
+    "intrebare": "Febra septica are drept cauze urmatorii agenti patogeni.",
+    "variante": [
+      "Babesia bigemina.",
+      "substante chimice, medicamente, traumatisme hipotalamice.",
+      "adrenalina."
+    ],
+    "corect": 1
+  },
+  {
+    "id": 496,
+    "materie": "Patologie",
+    "intrebare": "Oligocitemiile pot fi :",
+    "variante": [
+      "posthemoragice.",
+      "centrale.",
+      "centrale, carentiale, posthemoragice."
+    ],
+    "corect": 2
+  },
+  {
+    "id": 497,
+    "materie": "Patologie",
+    "intrebare": "Bazofilia este caracteristica:",
+    "variante": [
+      "bolilor infectioase",
+      "bolilor alergice",
+      "bolilor parazitare."
+    ],
+    "corect": 1
+  },
+  {
+    "id": 498,
+    "materie": "Patologie",
+    "intrebare": "Hipertensiunea arteriala este produsa de:",
+    "variante": [
+      "parasimpaticomimetice",
+      "ateromatoza",
+      "ateromatoza, simpaticomimetice"
+    ],
+    "corect": 2
+  },
+  {
+    "id": 499,
+    "materie": "Patologie",
+    "intrebare": "Ruminitele si reticulitele sunt:",
+    "variante": [
+      "indigestii biochimice simple",
+      "tulburari inflamatorii",
+      "indigestii spumoase."
+    ],
+    "corect": 1
+  },
+  {
+    "id": 500,
+    "materie": "Patologie",
+    "intrebare": "Congestia pulmonara reprezinta:",
+    "variante": [
+      "un proces inflamator al pulmonului.",
+      "o neoplazie a pulmonului",
+      "o tulburare circulatorie pulmonara."
+    ],
+    "corect": 2
+  }
+]
