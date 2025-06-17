@@ -1,5 +1,7 @@
 let allQuestions = [];
 let selectedQuestions = [];
+let currentIndex = 0;
+let score = 0;
 
 document.getElementById("start").addEventListener("click", async () => {
   const select = document.getElementById("selector").value;
@@ -16,38 +18,55 @@ document.getElementById("start").addEventListener("click", async () => {
     selectedQuestions = shuffle(filtered).slice(0, 100);
   }
 
-  showQuiz();
+  currentIndex = 0;
+  score = 0;
+  document.getElementById("result").innerHTML = "";
+  showCurrentQuestion();
 });
 
-function showQuiz() {
+function showCurrentQuestion() {
+  const q = selectedQuestions[currentIndex];
   const quizDiv = document.getElementById("quiz");
-  quizDiv.innerHTML = "";
-  selectedQuestions.forEach((q, idx) => {
-    const qDiv = document.createElement("div");
-    qDiv.classList.add("question");
-    qDiv.innerHTML = `<h3>${idx + 1}. ${q.intrebare}</h3>` +
-      q.variante.map((opt, i) => `
+  quizDiv.innerHTML = `
+    <div class="question">
+      <h3>${currentIndex + 1}. ${q.intrebare}</h3>
+      ${q.variante.map((opt, i) => `
         <label>
-          <input type="radio" name="q${idx}" value="${i}"> ${opt}
+          <input type="radio" name="q" value="${i}"> ${opt}
         </label>
-      `).join("");
-    quizDiv.appendChild(qDiv);
-  });
+      `).join("")}
+    </div>
+    <button id="next">Următoarea întrebare</button>
+  `;
 
-  document.getElementById("submit").style.display = "block";
-  document.getElementById("result").innerHTML = "";
-}
+  document.getElementById("submit").style.display = "none";
 
-document.getElementById("submit").addEventListener("click", () => {
-  let score = 0;
-  selectedQuestions.forEach((q, idx) => {
-    const selected = document.querySelector(`input[name="q${idx}"]:checked`);
-    if (selected && parseInt(selected.value) === q.corect) {
+  document.getElementById("next").addEventListener("click", () => {
+    const selected = document.querySelector(`input[name="q"]:checked`);
+    if (!selected) {
+      alert("Te rog selectează un răspuns.");
+      return;
+    }
+
+    if (parseInt(selected.value) === q.corect) {
       score++;
     }
+
+    currentIndex++;
+    if (currentIndex < selectedQuestions.length) {
+      showCurrentQuestion();
+    } else {
+      showResult();
+    }
   });
-  document.getElementById("result").innerHTML = `<h2>Ai răspuns corect la ${score} din ${selectedQuestions.length} întrebări.</h2>`;
-});
+}
+
+function showResult() {
+  document.getElementById("quiz").innerHTML = "";
+  document.getElementById("result").innerHTML = `
+    <h2>Ai răspuns corect la ${score} din ${selectedQuestions.length} întrebări.</h2>
+  `;
+}
 
 // Funcție pentru amestecare
 function shuffle(array) {
