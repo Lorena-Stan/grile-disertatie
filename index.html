@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Grilă Anatomie Patologică</title>
+  <style>
+    body { font-family: sans-serif; max-width: 600px; margin: auto; padding: 20px; }
+    .question { margin-bottom: 20px; }
+    .answers label { display: block; margin: 5px 0; }
+    button { padding: 10px 20px; font-size: 1rem; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <h1>Test Grilă Anatomie Patologică</h1>
+  <div id="quiz">
+    <div class="question" id="question"></div>
+    <div class="answers" id="answers"></div>
+    <button id="nextButton">Următoarea întrebare</button>
+  </div>
+  <div id="result" style="display:none;"></div>
+
+  <script>
+    let allQuestions = [];
+    let selectedQuestions = [];
+    let current = 0;
+    let score = 0;
+
+    fetch('intrebari_grile.json')
+      .then(res => res.json())
+      .then(data => {
+        allQuestions = data;
+        selectedQuestions = shuffle(allQuestions).slice(0, 80);
+        showQuestion();
+      });
+
+    function shuffle(array) {
+      return array.sort(() => Math.random() - 0.5);
+    }
+
+    function showQuestion() {
+      const q = selectedQuestions[current];
+      document.getElementById('question').textContent = (current + 1) + '. ' + q.intrebare;
+      const answersDiv = document.getElementById('answers');
+      answersDiv.innerHTML = '';
+      q.variante.forEach((opt, i) => {
+        const label = document.createElement('label');
+        label.innerHTML = `<input type="radio" name="answer" value="${i}"> ${opt}`;
+        answersDiv.appendChild(label);
+      });
+    }
+
+    document.getElementById('nextButton').addEventListener('click', () => {
+      const selected = document.querySelector('input[name="answer"]:checked');
+      if (!selected) return alert('Selectează un răspuns!');
+      if (parseInt(selected.value) === selectedQuestions[current].corect) {
+        score++;
+      }
+      current++;
+      if (current < selectedQuestions.length) {
+        showQuestion();
+      } else {
+        document.getElementById('quiz').style.display = 'none';
+        document.getElementById('result').style.display = 'block';
+        document.getElementById('result').innerHTML = `<h2>Ai obtinut ${score} din 80 puncte</h2>`;
+      }
+    });
+  </script>
+</body>
+</html>
