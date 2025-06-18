@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Test Grilă Medicină Veterinară</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body class="light">
   <div class="container">
     <h1>Test Grilă Medicină Veterinară</h1>
+
     <div class="config">
       <label for="theme-select">Tema:</label>
       <select id="theme-select">
@@ -36,9 +37,10 @@
     <div id="result"></div>
   </div>
 
-  <!-- 1) Firebase App + Firestore (compat) -->
+  <!-- 1) Firebase compat -->
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
   <!-- 2) Config & Init -->
   <script>
     const firebaseConfig = {
@@ -49,22 +51,19 @@
       messagingSenderId: "301926337403",
       appId: "1:301926337403:web:9e930b5adb54870bce8bde"
     };
+    // init
     firebase.initializeApp(firebaseConfig);
     const db = firebase.firestore();
-    // expune pentru script.js
+    const FieldValue = firebase.firestore.FieldValue;
+
+    // expune global
     window.db = db;
-    window.collection = firebase.firestore().collection;
-    window.addDoc = (colRef, data) => colRef.add(data);
-    window.serverTimestamp = firebase.firestore.FieldValue.serverTimestamp;
-    console.log("🏁 FIRESTORE READY", {
-      db: !!window.db,
-      collection: typeof window.collection,
-      addDoc: typeof window.addDoc,
-      serverTimestamp: typeof window.serverTimestamp
-    });
+    window.FieldValue = FieldValue;
+
+    console.log("✅ Firebase compat initialized", { db, FieldValue });
   </script>
 
-  <!-- 3) Scriptul aplicației -->
+  <!-- 3) Aplicația ta -->
   <script src="script.js"></script>
 </body>
 </html>
