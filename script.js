@@ -5,7 +5,7 @@ let score = 0;
 
 document.getElementById("start").addEventListener("click", async () => {
   const sel = document.getElementById("selector").value;
-  const res  = await fetch("intrebari_toate_materii_corect.json");
+  const res  = await fetch("intrebari_toate_materii_rebuilt.json");
   allQuestions = await res.json();
 
   // filtru și alegere set
