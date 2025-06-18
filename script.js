@@ -1,21 +1,40 @@
 // script.js
 
-let allQuestions = [];
-let queue = [];
-let answered = [];
-let score = 0;
+// --- FIREBASE (exportat din script-ul <module> din index.html) ---
+const db = window.db;
+const { collection, addDoc, serverTimestamp } = window.firestore;
 
-// Tema light/dark
+// --- VARIABILE APLICATIE ---
+let allQuestions = [];
+let queue        = [];
+let answered     = [];
+let score        = 0;
+
+// --- THEME SWITCHER ---
 document.getElementById("theme-select").addEventListener("change", e => {
   document.body.classList.toggle("dark", e.target.value === "dark");
 });
 
-// Începerea testului
+// --- START TEST ---
 document.getElementById("start").addEventListener("click", async () => {
   const sel = document.getElementById("selector").value;
-  const res = await fetch("intrebari_toate_materii_rebuilt.json");  // ajustează numele după nevoie
+
+  // 🔥 TRACKING: log start în Firestore
+  try {
+    await addDoc(collection(db, "accessLogs"), {
+      timestamp: serverTimestamp(),
+      testType: sel,
+      userAgent: navigator.userAgent
+    });
+  } catch (err) {
+    console.error("Firebase log error:", err);
+  }
+
+  // 📥 Încărcare întrebări
+  const res = await fetch("intrebari_toate_materii_rebuilt.json");
   allQuestions = await res.json();
 
+  // 🧩 Set mix / categorie
   if (sel === "mix") {
     const cats = [
       "Anatomie patologica","Bacteriologie","Farmacologie",
@@ -38,13 +57,16 @@ document.getElementById("start").addEventListener("click", async () => {
     queue = shuffle(filtered).slice(0, count);
   }
 
+  // 🔄 Reset stare
   answered = [];
-  score = 0;
+  score    = 0;
   document.getElementById("start").style.display = "none";
-  document.getElementById("selector").disabled = true;
+  document.getElementById("selector").disabled    = true;
+  document.getElementById("result").innerHTML     = "";
   showNextQuestion();
 });
 
+// --- AFIȘARE ÎNTREBARE URMĂTOARE ---
 function showNextQuestion() {
   const quiz = document.getElementById("quiz");
   quiz.innerHTML = "";
@@ -69,38 +91,40 @@ function showNextQuestion() {
     <div id="feedback"></div>
   `;
 
+  // --- SARI PESTE ---
   document.getElementById("skip").onclick = () => {
     queue.push(queue.shift());
     showNextQuestion();
   };
 
+  // --- FINISH IMEDIAT ---
   document.getElementById("finish").onclick = () => showResult();
 
+  // --- VERIFY + FEEDBACK IMEDIAT ---
   document.getElementById("verify").onclick = () => {
     const selOpt = document.querySelector("input[name=opt]:checked");
     if (!selOpt) return alert("Selectează o opțiune sau sari peste!");
-    const ans = parseInt(selOpt.value, 10);
+    const ans     = parseInt(selOpt.value, 10);
     const correct = ans === q.corect;
     if (correct) score++;
     answered.push({ q, answer: ans, correct });
 
-    // dezactivează inputurile
-    quiz.querySelectorAll("input[name=opt]").forEach(i => i.disabled = true);
+    // dezactivează opțiunile și butoanele
+    quiz.querySelectorAll("input[name=opt]").forEach(i=>i.disabled=true);
     document.getElementById("verify").disabled = true;
-    document.getElementById("skip").disabled = true;
+    document.getElementById("skip").disabled   = true;
 
+    // construiește feedback
     const fb = document.getElementById("feedback");
-    if (correct) {
-      fb.innerHTML = `<p><strong>✔ Corect!</strong></p>`;
-    } else {
-      fb.innerHTML = `
-        <p><strong>✘ Greșit!</strong></p>
-        <p>Varianta corectă: <em>${q.variante[q.corect]}</em></p>
-      `;
-    }
+    fb.innerHTML = correct
+      ? `<p><strong style="color:green">✔ Corect!</strong></p>`
+      : `<p><strong style="color:red">✘ Greșit!</strong></p>
+         <p>Varianta corectă: <em>${q.variante[q.corect]}</em></p>`;
 
+    // buton de continuare
     const cont = document.createElement("button");
     cont.textContent = "Continuă";
+    cont.style.marginTop = "8px";
     cont.onclick = () => {
       queue.shift();
       showNextQuestion();
@@ -109,21 +133,29 @@ function showNextQuestion() {
   };
 }
 
+// --- REZULTATE FINALE ---
 function showResult() {
   document.getElementById("quiz").innerHTML = "";
   const result = document.getElementById("result");
   result.innerHTML = `<h2>Ai răspuns corect la ${score} din ${answered.length} întrebări.</h2>`;
+
   answered.forEach(({ q, answer, correct }, idx) => {
     const block = document.createElement("div");
     block.classList.add("question");
-    block.style.background = correct ? "var(--correct-bg)" : "var(--wrong-bg)";
+    block.style.background = correct 
+      ? "var(--correct-bg)" 
+      : "var(--wrong-bg)";
+    block.style.padding = "10px";
+    block.style.marginBottom = "8px";
     block.innerHTML = `
       <strong>${idx+1}. ${q.intrebare}</strong><br/>
-      <div>Răspunsul tău: ${answer!=null ? q.variante[answer] : "<em>neselectat</em>"}</div>
+      <div>Răspunsul tău: ${
+        answer != null ? q.variante[answer] : "<em>neselectat</em>"
+      }</div>
       ${
-        correct
-          ? `<div>✔ Corect</div>`
-          : `<div>✘ Greșit</div>
+        correct 
+          ? `<div style="color:green">✔ Corect</div>`
+          : `<div style="color:red">✘ Greșit</div>
              <div>Varianta corectă: <em>${q.variante[q.corect]}</em></div>`
       }
     `;
@@ -131,7 +163,7 @@ function showResult() {
   });
 }
 
-// utilitar pentru amestecare
+// --- UTILITAR AMESTECARE ---
 function shuffle(arr) {
   return arr.sort(() => Math.random() - 0.5);
 }
