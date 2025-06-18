@@ -1,8 +1,10 @@
 // script.js
 
-// --- FIREBASE (exportat din script-ul <module> din index.html) ---
-const db = window.db;
-const { collection, addDoc, serverTimestamp } = window.firestore;
+// --- FIREBASE (exportat din <script type="module"> din index.html) ---
+const db              = window.db;
+const collection      = window.collection;
+const addDoc          = window.addDoc;
+const serverTimestamp = window.serverTimestamp;
 
 // --- VARIABILE APLICATIE ---
 let allQuestions = [];
@@ -62,6 +64,7 @@ document.getElementById("start").addEventListener("click", async () => {
   score    = 0;
   document.getElementById("start").style.display = "none";
   document.getElementById("selector").disabled    = true;
+  document.getElementById("theme-select").disabled = true;
   document.getElementById("result").innerHTML     = "";
   showNextQuestion();
 });
@@ -91,16 +94,13 @@ function showNextQuestion() {
     <div id="feedback"></div>
   `;
 
-  // --- SARI PESTE ---
   document.getElementById("skip").onclick = () => {
     queue.push(queue.shift());
     showNextQuestion();
   };
 
-  // --- FINISH IMEDIAT ---
   document.getElementById("finish").onclick = () => showResult();
 
-  // --- VERIFY + FEEDBACK IMEDIAT ---
   document.getElementById("verify").onclick = () => {
     const selOpt = document.querySelector("input[name=opt]:checked");
     if (!selOpt) return alert("Selectează o opțiune sau sari peste!");
@@ -114,14 +114,14 @@ function showNextQuestion() {
     document.getElementById("verify").disabled = true;
     document.getElementById("skip").disabled   = true;
 
-    // construiește feedback
+    // feedback
     const fb = document.getElementById("feedback");
     fb.innerHTML = correct
       ? `<p><strong style="color:green">✔ Corect!</strong></p>`
       : `<p><strong style="color:red">✘ Greșit!</strong></p>
          <p>Varianta corectă: <em>${q.variante[q.corect]}</em></p>`;
 
-    // buton de continuare
+    // buton continuă
     const cont = document.createElement("button");
     cont.textContent = "Continuă";
     cont.style.marginTop = "8px";
