@@ -55,6 +55,15 @@ select, button {
   border-radius: 4px;
 }
 
+/* -----------------------------------------------------------------------------
+   Asigurăm afișarea verticală a label-urilor de răspuns și forțăm cu !important
+-----------------------------------------------------------------------------*/
+.question label {
+  display: block !important;
+  margin: 8px 0 !important;
+  cursor: pointer;
+}
+
 .buttons {
   margin-top: 10px;
   display: flex;
@@ -64,11 +73,4 @@ select, button {
 /* Feedback sub întrebări */
 #feedback p {
   margin: 5px 0;
-}
-
-/* Variantele de răspuns una sub alta */
-.question label {
-  display: block;
-  margin: 6px 0;
-  cursor: pointer;
 }
