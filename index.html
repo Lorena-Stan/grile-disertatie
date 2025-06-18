@@ -11,12 +11,14 @@
     <h1>Test Grilă Medicină</h1>
 
     <div class="config">
+      <!-- Selector temă -->
       <label for="theme-select">Tema:</label>
       <select id="theme-select">
         <option value="light">Light</option>
         <option value="dark">Dark</option>
       </select>
 
+      <!-- Selector test -->
       <label for="selector">Alege testul:</label>
       <select id="selector">
         <option value="mix">80 grile random din toate materiile</option>
@@ -37,6 +39,42 @@
     <div id="result"></div>
   </div>
 
+  <!-- Firebase + Firestore setup (ES modules from CDN) -->
+  <script type="module">
+    // 1) Importă Firebase App, Analytics și Firestore
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
+    import { getAnalytics }    from "https://www.gstatic.com/firebasejs/11.9.1/firebase-analytics.js";
+    import {
+      getFirestore,
+      collection,
+      addDoc,
+      serverTimestamp
+    } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-firestore.js";
+
+    // 2) Configurația ta din consola Firebase
+    const firebaseConfig = {
+      apiKey: "AIzaSyB4KxE4U_475bcqwzY85vCqLwLrqgIgQbk",
+      authDomain: "grile-disertatie.firebaseapp.com",
+      projectId: "grile-disertatie",
+      storageBucket: "grile-disertatie.appspot.com",
+      messagingSenderId: "301926337403",
+      appId: "1:301926337403:web:9e930b5adb54870bce8bde",
+      measurementId: "G-4SLYNLD0RB"
+    };
+
+    // 3) Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const db = getFirestore(app);
+
+    // 4) Expune global pentru script.js
+    window.db = db;
+    window.collection = collection;
+    window.addDoc = addDoc;
+    window.serverTimestamp = serverTimestamp;
+  </script>
+
+  <!-- Scriptul principal al aplicației -->
   <script src="script.js"></script>
 </body>
 </html>
