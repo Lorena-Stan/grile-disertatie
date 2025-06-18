@@ -1,56 +1,51 @@
 // script.js
 
 document.addEventListener("DOMContentLoaded", () => {
-  const auth        = window.auth;
-  const db          = window.db;
-  const FieldValue  = window.FieldValue;
-  const phoneInput  = document.getElementById("phone-number");
-  const sendBtn     = document.getElementById("btn-send-code");
-  const codeDiv     = document.getElementById("code-container");
-  const codeInput   = document.getElementById("verification-code");
-  const verifyBtn   = document.getElementById("btn-verify-code");
-  const errorP      = document.getElementById("auth-error");
-  const authUI      = document.getElementById("auth-container");
-  const appUI       = document.getElementById("app-container");
+  const auth       = window.auth;
+  const db         = window.db;
+  const FieldValue = window.FieldValue;
 
-  // 1) Setup reCAPTCHA
-  window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier(
-    "recaptcha-container",
-    { size: "normal" }
-  );
-  recaptchaVerifier.render();
+  const emailIn    = document.getElementById("email");
+  const passIn     = document.getElementById("password");
+  const btnLogin   = document.getElementById("btn-login");
+  const btnSignup  = document.getElementById("btn-signup");
+  const btnLogout  = document.getElementById("btn-logout");
+  const authErr    = document.getElementById("auth-error");
+  const authUI     = document.getElementById("auth-container");
+  const appUI      = document.getElementById("app-container");
 
-  // 2) Send SMS code
-  sendBtn.addEventListener("click", async () => {
-    errorP.textContent = "";
+  // SIGN UP
+  btnSignup.addEventListener("click", async () => {
+    authErr.textContent = "";
     try {
-      const result = await auth.signInWithPhoneNumber(
-        phoneInput.value,
-        recaptchaVerifier
+      await auth.createUserWithEmailAndPassword(
+        emailIn.value,
+        passIn.value
       );
-      window.confirmationResult = result;
-      codeDiv.style.display = "block";
     } catch (e) {
-      errorP.textContent = e.message;
+      authErr.textContent = e.message;
     }
   });
 
-  // 3) Verify SMS code
-  verifyBtn.addEventListener("click", async () => {
-    errorP.textContent = "";
+  // LOGIN
+  btnLogin.addEventListener("click", async () => {
+    authErr.textContent = "";
     try {
-      const cred = await window.confirmationResult.confirm(codeInput.value);
-      // user is now signed in
-      // show the app
-      authUI.style.display = "none";
-      appUI.style.display  = "block";
-      startApp(cred.user);
+      await auth.signInWithEmailAndPassword(
+        emailIn.value,
+        passIn.value
+      );
     } catch (e) {
-      errorP.textContent = e.message;
+      authErr.textContent = e.message;
     }
   });
 
-  // 4) Listen for auth state
+  // LOGOUT
+  btnLogout.addEventListener("click", () => {
+    auth.signOut();
+  });
+
+  // AUTH STATE
   auth.onAuthStateChanged(user => {
     if (user) {
       authUI.style.display = "none";
@@ -63,56 +58,44 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Once authenticated, run your quiz and tracking logic here:
+// După autentificare, inițializează quiz + tracking
 function startApp(user) {
-  console.log("Logged in as:", user.phoneNumber);
+  const db         = window.db;
+  const FieldValue = window.FieldValue;
 
-  // Log page_load
-  (async () => {
-    try {
-      await db.collection("accessLogs").add({
-        timestamp: FieldValue.serverTimestamp(),
-        action: "page_load",
-        user: user.phoneNumber,
-        page: location.pathname
-      });
-    } catch (e) {
-      console.error("page_load error:", e);
-    }
-  })();
+  // LOG page_load
+  db.collection("accessLogs").add({
+    timestamp: FieldValue.serverTimestamp(),
+    action: "page_load",
+    user: user.email,
+    page: location.pathname
+  }).catch(console.error);
 
-  // Quiz variables
-  let allQuestions = [];
-  let queue        = [];
-  let answered     = [];
-  let score        = 0;
+  // Variabile quiz
+  let allQuestions = [], queue = [], answered = [], score = 0;
 
   // Theme switcher
-  document.getElementById("theme-select").addEventListener("change", e =>
-    document.body.classList.toggle("dark", e.target.value === "dark")
-  );
+  document.getElementById("theme-select")
+    .addEventListener("change", e =>
+      document.body.classList.toggle("dark", e.target.value === "dark")
+    );
 
-  // Start quiz
-  document.getElementById("start").addEventListener("click", async () => {
+  // START TEST
+  document.getElementById("start").onclick = async () => {
     const sel = document.getElementById("selector").value;
 
-    // Log start_test
-    try {
-      await db.collection("accessLogs").add({
-        timestamp: FieldValue.serverTimestamp(),
-        action: "start_test",
-        user: user.phoneNumber,
-        testType: sel
-      });
-    } catch (e) {
-      console.error("start_test error:", e);
-    }
+    // LOG start_test
+    db.collection("accessLogs").add({
+      timestamp: FieldValue.serverTimestamp(),
+      action: "start_test",
+      user: user.email,
+      testType: sel
+    }).catch(console.error);
 
-    // Load questions
+    // Încarcă și afișează întrebările
     const res = await fetch("intrebari_toate_materii_rebuilt.json");
     allQuestions = await res.json();
 
-    // Build queue
     if (sel === "mix") {
       const cats = [
         "Anatomie patologica","Bacteriologie","Farmacologie",
@@ -135,17 +118,16 @@ function startApp(user) {
       queue = shuffle(filtered).slice(0, count);
     }
 
-    // Prepare UI
     answered = [];
     score    = 0;
-    document.getElementById("start").style.display      = "none";
-    document.getElementById("selector").disabled         = true;
-    document.getElementById("theme-select").disabled     = true;
-    document.getElementById("result").innerHTML          = "";
+    document.getElementById("start").style.display       = "none";
+    document.getElementById("selector").disabled          = true;
+    document.getElementById("theme-select").disabled      = true;
+    document.getElementById("result").innerHTML           = "";
     showNextQuestion();
-  });
+  };
 
-  // Show next question
+  // Show next question, verify, skip, finalize…
   function showNextQuestion() {
     const quiz = document.getElementById("quiz");
     quiz.innerHTML = "";
@@ -201,7 +183,6 @@ function startApp(user) {
     };
   }
 
-  // Show final results
   function showResult() {
     document.getElementById("quiz").innerHTML = "";
     const result = document.getElementById("result");
@@ -226,7 +207,6 @@ function startApp(user) {
     });
   }
 
-  // Shuffle util
   function shuffle(arr) {
     return arr.sort(() => Math.random() - 0.5);
   }
