@@ -39,9 +39,9 @@ document.getElementById("start").addEventListener("click", async () => {
   // 🧩 Set mix / categorie
   if (sel === "mix") {
     const cats = [
-      "Anatomie patologica","Bacteriologie","Farmacologie",
-      "Fiziologie","Patologie","Anatomie",
-      "Histologie","Semiologie"
+      "Anatomie patologica", "Bacteriologie", "Farmacologie",
+      "Fiziologie", "Patologie", "Anatomie",
+      "Histologie", "Semiologie"
     ];
     let mix = [];
     cats.forEach(cat => {
@@ -62,10 +62,10 @@ document.getElementById("start").addEventListener("click", async () => {
   // 🔄 Reset stare
   answered = [];
   score    = 0;
-  document.getElementById("start").style.display = "none";
-  document.getElementById("selector").disabled    = true;
-  document.getElementById("theme-select").disabled = true;
-  document.getElementById("result").innerHTML     = "";
+  document.getElementById("start").style.display     = "none";
+  document.getElementById("selector").disabled        = true;
+  document.getElementById("theme-select").disabled    = true;
+  document.getElementById("result").innerHTML         = "";
   showNextQuestion();
 });
 
@@ -82,7 +82,7 @@ function showNextQuestion() {
   quiz.innerHTML = `
     <div class="question">
       <h3>${answered.length + 1}. ${q.intrebare}</h3>
-      ${q.variante.map((opt,i)=>
+      ${q.variante.map((opt,i) =>
         `<label><input type="radio" name="opt" value="${i}"> ${opt}</label>`
       ).join("")}
     </div>
@@ -110,7 +110,7 @@ function showNextQuestion() {
     answered.push({ q, answer: ans, correct });
 
     // dezactivează opțiunile și butoanele
-    quiz.querySelectorAll("input[name=opt]").forEach(i=>i.disabled=true);
+    quiz.querySelectorAll("input[name=opt]").forEach(i => i.disabled = true);
     document.getElementById("verify").disabled = true;
     document.getElementById("skip").disabled   = true;
 
@@ -148,7 +148,7 @@ function showResult() {
     block.style.padding = "10px";
     block.style.marginBottom = "8px";
     block.innerHTML = `
-      <strong>${idx+1}. ${q.intrebare}</strong><br/>
+      <strong>${idx + 1}. ${q.intrebare}</strong><br/>
       <div>Răspunsul tău: ${
         answer != null ? q.variante[answer] : "<em>neselectat</em>"
       }</div>
