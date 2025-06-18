@@ -6,6 +6,20 @@ const collection      = window.collection;
 const addDoc          = window.addDoc;
 const serverTimestamp = window.serverTimestamp;
 
+// 🖵 LOG PAGINA ÎNCĂRCATĂ
+(async () => {
+  try {
+    await addDoc(collection(db, "accessLogs"), {
+      timestamp: serverTimestamp(),
+      action: "page_load",
+      page: window.location.pathname,
+      userAgent: navigator.userAgent
+    });
+  } catch (err) {
+    console.error("Firebase page_load log error:", err);
+  }
+})();
+
 // --- VARIABILE APLICATIE ---
 let allQuestions = [];
 let queue        = [];
@@ -21,15 +35,16 @@ document.getElementById("theme-select").addEventListener("change", e => {
 document.getElementById("start").addEventListener("click", async () => {
   const sel = document.getElementById("selector").value;
 
-  // 🔥 TRACKING: log start în Firestore
+  // 🔥 TRACKING: log START TEST
   try {
     await addDoc(collection(db, "accessLogs"), {
       timestamp: serverTimestamp(),
+      action: "start_test",
       testType: sel,
       userAgent: navigator.userAgent
     });
   } catch (err) {
-    console.error("Firebase log error:", err);
+    console.error("Firebase start_test log error:", err);
   }
 
   // 📥 Încărcare întrebări
@@ -39,9 +54,9 @@ document.getElementById("start").addEventListener("click", async () => {
   // 🧩 Set mix / categorie
   if (sel === "mix") {
     const cats = [
-      "Anatomie patologica", "Bacteriologie", "Farmacologie",
-      "Fiziologie", "Patologie", "Anatomie",
-      "Histologie", "Semiologie"
+      "Anatomie patologica","Bacteriologie","Farmacologie",
+      "Fiziologie","Patologie","Anatomie",
+      "Histologie","Semiologie"
     ];
     let mix = [];
     cats.forEach(cat => {
