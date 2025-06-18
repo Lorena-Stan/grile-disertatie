@@ -71,6 +71,14 @@
     window.collection       = collection;
     window.addDoc           = addDoc;
     window.serverTimestamp  = serverTimestamp;
+
+    // Debug: confirmă setup-ul
+    console.log("FIRESTORE READY:", {
+      db: !!window.db,
+      collection: !!window.collection,
+      addDoc: typeof window.addDoc,
+      serverTimestamp: typeof window.serverTimestamp
+    });
   </script>
 
   <!-- Scriptul aplicației -->
