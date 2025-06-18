@@ -1,35 +1,98 @@
 // script.js
 
 document.addEventListener("DOMContentLoaded", () => {
-  const db         = window.db;
-  const FieldValue = window.FieldValue;
+  const auth        = window.auth;
+  const db          = window.db;
+  const FieldValue  = window.FieldValue;
+  const phoneInput  = document.getElementById("phone-number");
+  const sendBtn     = document.getElementById("btn-send-code");
+  const codeDiv     = document.getElementById("code-container");
+  const codeInput   = document.getElementById("verification-code");
+  const verifyBtn   = document.getElementById("btn-verify-code");
+  const errorP      = document.getElementById("auth-error");
+  const authUI      = document.getElementById("auth-container");
+  const appUI       = document.getElementById("app-container");
 
-  // 1) Log page_load
+  // 1) Setup reCAPTCHA
+  window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier(
+    "recaptcha-container",
+    { size: "normal" }
+  );
+  recaptchaVerifier.render();
+
+  // 2) Send SMS code
+  sendBtn.addEventListener("click", async () => {
+    errorP.textContent = "";
+    try {
+      const result = await auth.signInWithPhoneNumber(
+        phoneInput.value,
+        recaptchaVerifier
+      );
+      window.confirmationResult = result;
+      codeDiv.style.display = "block";
+    } catch (e) {
+      errorP.textContent = e.message;
+    }
+  });
+
+  // 3) Verify SMS code
+  verifyBtn.addEventListener("click", async () => {
+    errorP.textContent = "";
+    try {
+      const cred = await window.confirmationResult.confirm(codeInput.value);
+      // user is now signed in
+      // show the app
+      authUI.style.display = "none";
+      appUI.style.display  = "block";
+      startApp(cred.user);
+    } catch (e) {
+      errorP.textContent = e.message;
+    }
+  });
+
+  // 4) Listen for auth state
+  auth.onAuthStateChanged(user => {
+    if (user) {
+      authUI.style.display = "none";
+      appUI.style.display  = "block";
+      startApp(user);
+    } else {
+      authUI.style.display = "block";
+      appUI.style.display  = "none";
+    }
+  });
+});
+
+// Once authenticated, run your quiz and tracking logic here:
+function startApp(user) {
+  console.log("Logged in as:", user.phoneNumber);
+
+  // Log page_load
   (async () => {
     try {
       await db.collection("accessLogs").add({
         timestamp: FieldValue.serverTimestamp(),
         action: "page_load",
-        page: location.pathname,
-        userAgent: navigator.userAgent
+        user: user.phoneNumber,
+        page: location.pathname
       });
     } catch (e) {
-      console.error("page_load log error:", e);
+      console.error("page_load error:", e);
     }
   })();
 
-  // 2) Theme switcher
-  document.getElementById("theme-select").addEventListener("change", e => {
-    document.body.classList.toggle("dark", e.target.value === "dark");
-  });
-
-  // 3) Quiz variables
+  // Quiz variables
   let allQuestions = [];
   let queue        = [];
   let answered     = [];
   let score        = 0;
 
-  // 4) Start test handler
+  // Theme switcher
+  document.getElementById("theme-select").addEventListener("change", e =>
+    document.body.classList.toggle("dark", e.target.value === "dark")
+  );
+
+  // Start quiz
   document.getElementById("start").addEventListener("click", async () => {
     const sel = document.getElementById("selector").value;
 
@@ -38,18 +101,18 @@ document.addEventListener("DOMContentLoaded", () => {
       await db.collection("accessLogs").add({
         timestamp: FieldValue.serverTimestamp(),
         action: "start_test",
-        testType: sel,
-        userAgent: navigator.userAgent
+        user: user.phoneNumber,
+        testType: sel
       });
     } catch (e) {
-      console.error("start_test log error:", e);
+      console.error("start_test error:", e);
     }
 
-    // Load questions JSON
+    // Load questions
     const res = await fetch("intrebari_toate_materii_rebuilt.json");
     allQuestions = await res.json();
 
-    // Build queue based on selection
+    // Build queue
     if (sel === "mix") {
       const cats = [
         "Anatomie patologica","Bacteriologie","Farmacologie",
@@ -79,15 +142,13 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("selector").disabled         = true;
     document.getElementById("theme-select").disabled     = true;
     document.getElementById("result").innerHTML          = "";
-
     showNextQuestion();
   });
 
-  // 5) Show next question
+  // Show next question
   function showNextQuestion() {
     const quiz = document.getElementById("quiz");
     quiz.innerHTML = "";
-
     if (queue.length === 0) return showResult();
 
     const q = queue[0];
@@ -119,12 +180,10 @@ document.addEventListener("DOMContentLoaded", () => {
       if (correct) score++;
       answered.push({ q, answer: ans, correct });
 
-      // Disable options
       quiz.querySelectorAll("input[name=opt]").forEach(i => i.disabled = true);
       document.getElementById("verify").disabled = true;
       document.getElementById("skip").disabled   = true;
 
-      // Feedback
       const fb = document.getElementById("feedback");
       fb.innerHTML = correct
         ? `<p><strong style="color:green">✔ Corect!</strong></p>`
@@ -142,7 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   }
 
-  // 6) Show results
+  // Show final results
   function showResult() {
     document.getElementById("quiz").innerHTML = "";
     const result = document.getElementById("result");
@@ -167,8 +226,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 7) Shuffle util
+  // Shuffle util
   function shuffle(arr) {
     return arr.sort(() => Math.random() - 0.5);
   }
-});
+}
