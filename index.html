@@ -7,8 +7,26 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="light">
-  <div class="container">
+
+  <!-- AUTH UI -->
+  <div id="auth-container" class="container">
+    <h2>Autentificare prin telefon</h2>
+    <input type="tel" id="phone-number" placeholder="+40 712 345 678">
+    <div id="recaptcha-container"></div>
+    <button id="btn-send-code">Trimite cod</button>
+
+    <div id="code-container" style="display:none; margin-top:1em;">
+      <input type="text" id="verification-code" placeholder="Introdu codul SMS">
+      <button id="btn-verify-code">Verifică cod</button>
+    </div>
+
+    <p id="auth-error" style="color:red;"></p>
+  </div>
+
+  <!-- APP UI (ascuns până la login) -->
+  <div id="app-container" class="container" style="display:none;">
     <h1>Test Grilă Medicină Veterinară</h1>
+
     <div class="config">
       <label for="theme-select">Tema:</label>
       <select id="theme-select">
@@ -38,9 +56,10 @@
 
   <!-- 1) Firebase compat libraries -->
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
-  
-  <!-- 2) Init Firebase și expunere globală -->
+
+  <!-- 2) Init Firebase & expose globals -->
   <script>
     const firebaseConfig = {
       apiKey: "AIzaSyB4KxE4U_475bcqwzY85vCqLwLrqgIgQbk",
@@ -51,12 +70,12 @@
       appId: "1:301926337403:web:9e930b5adb54870bce8bde"
     };
     firebase.initializeApp(firebaseConfig);
-    const fbDB = firebase.firestore();
-    window.db = fbDB;
+    window.auth = firebase.auth();
+    window.db   = firebase.firestore();
     window.FieldValue = firebase.firestore.FieldValue;
   </script>
 
-  <!-- 3) Scriptul aplicației (defer ca să fie DOM gata) -->
+  <!-- 3) Your app logic -->
   <script src="script.js" defer></script>
 </body>
 </html>
