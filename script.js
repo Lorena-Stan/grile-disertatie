@@ -7,7 +7,8 @@ let score = 0;
 
 document.getElementById("start").addEventListener("click", async () => {
   const sel = document.getElementById("selector").value;
-  const res = await fetch("intrebari_toate_materii_rebuilt.json");  // ajustează numele dacă e cazul
+  // Pune aici numele fișierului tău JSON
+  const res = await fetch("intrebari_toate_materii_rebuilt.json");
   allQuestions = await res.json();
 
   if (sel === "mix") {
@@ -32,6 +33,7 @@ document.getElementById("start").addEventListener("click", async () => {
     queue = shuffle(filtered).slice(0, count);
   }
 
+  // Reset
   answered = [];
   score = 0;
   document.getElementById("start").style.display = "none";
@@ -42,6 +44,8 @@ document.getElementById("start").addEventListener("click", async () => {
 
 function showNextQuestion() {
   const quiz = document.getElementById("quiz");
+  quiz.innerHTML = "";
+
   if (queue.length === 0) {
     return showResult();
   }
@@ -56,27 +60,81 @@ function showNextQuestion() {
     </div>
     <div class="buttons">
       <button id="skip">Sari peste</button>
-      <button id="next">Următoarea</button>
+      <button id="verify">Verifică</button>
       <button id="finish">Încheie testul</button>
     </div>
+    <div id="feedback" style="margin-top:10px;"></div>
   `;
 
-  document.getElementById("next").onclick = () => {
+  document.getElementById("skip").onclick = () => {
+    queue.push(queue.shift()); // mută întrebarea la final
+    showNextQuestion();
+  };
+
+  document.getElementById("finish").onclick = () => showResult();
+
+  document.getElementById("verify").onclick = () => {
     const selOpt = document.querySelector("input[name=opt]:checked");
     if (!selOpt) return alert("Selectează o opțiune sau sari peste!");
-    recordAnswer(parseInt(selOpt.value, 10));
-    queue.shift();
-    showNextQuestion();
-  };
+    const ans = parseInt(selOpt.value, 10);
+    const correct = ans === q.corect;
+    if (correct) score++;
+    answered.push({ q, answer: ans, correct });
 
-  document.getElementById("skip").onclick = () => {
-    queue.push(queue.shift());
-    showNextQuestion();
-  };
+    // dezactivează inputuri și butoane
+    quiz.querySelectorAll("input[name=opt]").forEach(i => i.disabled = true);
+    document.getElementById("verify").disabled = true;
+    document.getElementById("skip").disabled = true;
 
-  document.getElementById("finish").onclick = () => {
-    showResult();
+    // arată feedback
+    const fb = document.getElementById("feedback");
+    if (correct) {
+      fb.innerHTML = `<p style="color: green"><strong>✔ Corect!</strong></p>`;
+    } else {
+      fb.innerHTML = `
+        <p style="color: red"><strong>✘ Greșit!</strong></p>
+        <p>Varianta corectă: <em>${q.variante[q.corect]}</em></p>
+      `;
+    }
+
+    // buton continuă
+    const cont = document.createElement("button");
+    cont.textContent = "Continuă";
+    cont.style.marginTop = "8px";
+    cont.onclick = () => {
+      queue.shift();
+      showNextQuestion();
+    };
+    fb.appendChild(cont);
   };
 }
 
-function recordAnswer(ans)
+function showResult() {
+  document.getElementById("quiz").innerHTML = "";
+  const result = document.getElementById("result");
+  result.innerHTML = `<h2>Ai răspuns corect la ${score} din ${answered.length} întrebări.</h2>`;
+
+  answered.forEach(({ q, answer, correct }, idx) => {
+    const block = document.createElement("div");
+    block.classList.add("question");
+    block.style.background = correct ? "#e6ffec" : "#ffecec";
+    block.style.padding = "10px";
+    block.style.marginBottom = "10px";
+    block.innerHTML = `
+      <strong>${idx + 1}. ${q.intrebare}</strong><br/>
+      <div>Răspunsul tău: ${answer != null ? q.variante[answer] : "<em>neselectat</em>"}</div>
+      ${
+        correct
+          ? `<div style="color:green">✔ Corect</div>`
+          : `<div style="color:red">✘ Greșit</div>
+             <div>Varianta corectă: <em>${q.variante[q.corect]}</em></div>`
+      }
+    `;
+    result.appendChild(block);
+  });
+}
+
+// utilitar pentru amestecare
+function shuffle(arr) {
+  return arr.sort(() => Math.random() - 0.5);
+}
