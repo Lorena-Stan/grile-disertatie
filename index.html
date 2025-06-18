@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Test Grilă Medicină Veterinară</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body class="light">
   <div class="container">
@@ -20,7 +20,12 @@
       <select id="selector">
         <option value="mix">80 grile random din toate materiile</option>
         <option value="Anatomie patologica">100 grile Anatomie Patologică</option>
-        <!-- restul opţiunilor... -->
+        <option value="Farmacologie">100 grile Farmacologie</option>
+        <option value="Fiziologie">100 grile Fiziologie</option>
+        <option value="Patologie">100 grile Patologie</option>
+        <option value="Bacteriologie">100 grile Bacteriologie</option>
+        <option value="Anatomie">100 grile Anatomie</option>
+        <option value="Histologie">100 grile Histologie</option>
         <option value="Semiologie">110 grile Semiologie</option>
       </select>
 
@@ -31,11 +36,11 @@
     <div id="result"></div>
   </div>
 
-  <!-- 1) Firebase compat -->
+  <!-- 1) Firebase compat libraries -->
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
-
-  <!-- 2) Firebase Init -->
+  
+  <!-- 2) Init Firebase și expunere globală -->
   <script>
     const firebaseConfig = {
       apiKey: "AIzaSyB4KxE4U_475bcqwzY85vCqLwLrqgIgQbk",
@@ -46,12 +51,12 @@
       appId: "1:301926337403:web:9e930b5adb54870bce8bde"
     };
     firebase.initializeApp(firebaseConfig);
-    // expunem global
-    window.db = firebase.firestore();
+    const fbDB = firebase.firestore();
+    window.db = fbDB;
     window.FieldValue = firebase.firestore.FieldValue;
   </script>
 
-  <!-- 3) Aplicația, cu defer -->
+  <!-- 3) Scriptul aplicației (defer ca să fie DOM gata) -->
   <script src="script.js" defer></script>
 </body>
 </html>
