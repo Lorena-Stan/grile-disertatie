@@ -1,32 +1,26 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Test Grilă Medicină Veterinară</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body class="light">
 
-  <!-- AUTH UI -->
+  <!-- AUTENTIFICARE EMAIL -->
   <div id="auth-container" class="container">
-    <h2>Autentificare prin telefon</h2>
-    <input type="tel" id="phone-number" placeholder="+40 712 345 678">
-    <div id="recaptcha-container"></div>
-    <button id="btn-send-code">Trimite cod</button>
-
-    <div id="code-container" style="display:none; margin-top:1em;">
-      <input type="text" id="verification-code" placeholder="Introdu codul SMS">
-      <button id="btn-verify-code">Verifică cod</button>
-    </div>
-
+    <h2>Autentificare</h2>
+    <input type="email"    id="email"        placeholder="Email" style="display:block; margin:0.5em 0;">
+    <input type="password" id="password"     placeholder="Parolă" style="display:block; margin:0.5em 0;">
+    <button id="btn-signup">Înregistrează cont</button>
+    <button id="btn-login">Autentifică-te</button>
     <p id="auth-error" style="color:red;"></p>
   </div>
 
-  <!-- APP UI (ascuns până la login) -->
+  <!-- UI APLICAȚIE -->
   <div id="app-container" class="container" style="display:none;">
     <h1>Test Grilă Medicină Veterinară</h1>
-
     <div class="config">
       <label for="theme-select">Tema:</label>
       <select id="theme-select">
@@ -48,6 +42,7 @@
       </select>
 
       <button id="start">Începe testul</button>
+      <button id="btn-logout" style="margin-left:1em;">Deconectează-te</button>
     </div>
 
     <div id="quiz"></div>
@@ -75,7 +70,7 @@
     window.FieldValue = firebase.firestore.FieldValue;
   </script>
 
-  <!-- 3) Your app logic -->
+  <!-- 3) Scriptul aplicației -->
   <script src="script.js" defer></script>
 </body>
 </html>
