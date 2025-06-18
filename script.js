@@ -6,21 +6,35 @@ const collection      = window.collection;
 const addDoc          = window.addDoc;
 const serverTimestamp = window.serverTimestamp;
 
+// Debug: confirmăm că Firestore SDK a fost expus corect
+console.log("FIRESTORE READY:", {
+  db: !!db,
+  collection: typeof collection,
+  addDoc: typeof addDoc,
+  serverTimestamp: typeof serverTimestamp
+});
+
 // 🖵 LOG PAGINA ÎNCĂRCATĂ
-(async () => {
+;(async () => {
+  console.log("→ about to log page_load");
+  console.log("window.db, collection, addDoc, serverTimestamp:", db, collection, addDoc, serverTimestamp);
   try {
-    await addDoc(collection(db, "accessLogs"), {
-      timestamp: serverTimestamp(),
-      action: "page_load",
-      page: window.location.pathname,
-      userAgent: navigator.userAgent
-    });
+    const ref = await addDoc(
+      collection(db, "accessLogs"),
+      {
+        timestamp: serverTimestamp(),
+        action: "page_load",
+        page: window.location.pathname,
+        userAgent: navigator.userAgent
+      }
+    );
+    console.log("page_load logged, doc ID:", ref.id);
   } catch (err) {
     console.error("Firebase page_load log error:", err);
   }
 })();
 
-// --- VARIABILE APLICATIE ---
+// --- VARIABILE APLICAȚIE ---
 let allQuestions = [];
 let queue        = [];
 let answered     = [];
@@ -36,13 +50,18 @@ document.getElementById("start").addEventListener("click", async () => {
   const sel = document.getElementById("selector").value;
 
   // 🔥 TRACKING: log START TEST
+  console.log("→ about to log start_test with type:", sel);
   try {
-    await addDoc(collection(db, "accessLogs"), {
-      timestamp: serverTimestamp(),
-      action: "start_test",
-      testType: sel,
-      userAgent: navigator.userAgent
-    });
+    const ref = await addDoc(
+      collection(db, "accessLogs"),
+      {
+        timestamp: serverTimestamp(),
+        action: "start_test",
+        testType: sel,
+        userAgent: navigator.userAgent
+      }
+    );
+    console.log("start_test logged, doc ID:", ref.id);
   } catch (err) {
     console.error("Firebase start_test log error:", err);
   }
@@ -54,9 +73,9 @@ document.getElementById("start").addEventListener("click", async () => {
   // 🧩 Set mix / categorie
   if (sel === "mix") {
     const cats = [
-      "Anatomie patologica","Bacteriologie","Farmacologie",
-      "Fiziologie","Patologie","Anatomie",
-      "Histologie","Semiologie"
+      "Anatomie patologica", "Bacteriologie", "Farmacologie",
+      "Fiziologie", "Patologie", "Anatomie",
+      "Histologie", "Semiologie"
     ];
     let mix = [];
     cats.forEach(cat => {
@@ -77,10 +96,10 @@ document.getElementById("start").addEventListener("click", async () => {
   // 🔄 Reset stare
   answered = [];
   score    = 0;
-  document.getElementById("start").style.display     = "none";
-  document.getElementById("selector").disabled        = true;
-  document.getElementById("theme-select").disabled    = true;
-  document.getElementById("result").innerHTML         = "";
+  document.getElementById("start").style.display      = "none";
+  document.getElementById("selector").disabled         = true;
+  document.getElementById("theme-select").disabled     = true;
+  document.getElementById("result").innerHTML          = "";
   showNextQuestion();
 });
 
@@ -124,19 +143,16 @@ function showNextQuestion() {
     if (correct) score++;
     answered.push({ q, answer: ans, correct });
 
-    // dezactivează opțiunile și butoanele
     quiz.querySelectorAll("input[name=opt]").forEach(i => i.disabled = true);
     document.getElementById("verify").disabled = true;
     document.getElementById("skip").disabled   = true;
 
-    // feedback
     const fb = document.getElementById("feedback");
     fb.innerHTML = correct
       ? `<p><strong style="color:green">✔ Corect!</strong></p>`
       : `<p><strong style="color:red">✘ Greșit!</strong></p>
          <p>Varianta corectă: <em>${q.variante[q.corect]}</em></p>`;
 
-    // buton continuă
     const cont = document.createElement("button");
     cont.textContent = "Continuă";
     cont.style.marginTop = "8px";
@@ -157,8 +173,8 @@ function showResult() {
   answered.forEach(({ q, answer, correct }, idx) => {
     const block = document.createElement("div");
     block.classList.add("question");
-    block.style.background = correct 
-      ? "var(--correct-bg)" 
+    block.style.background = correct
+      ? "var(--correct-bg)"
       : "var(--wrong-bg)";
     block.style.padding = "10px";
     block.style.marginBottom = "8px";
@@ -168,7 +184,7 @@ function showResult() {
         answer != null ? q.variante[answer] : "<em>neselectat</em>"
       }</div>
       ${
-        correct 
+        correct
           ? `<div style="color:green">✔ Corect</div>`
           : `<div style="color:red">✘ Greșit</div>
              <div>Varianta corectă: <em>${q.variante[q.corect]}</em></div>`
