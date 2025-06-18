@@ -9,7 +9,6 @@
 <body class="light">
   <div class="container">
     <h1>Test Grilă Medicină Veterinară</h1>
-
     <div class="config">
       <label for="theme-select">Tema:</label>
       <select id="theme-select">
@@ -37,10 +36,9 @@
     <div id="result"></div>
   </div>
 
-  <!-- 1) Firebase compat -->
+  <!-- 1) Firebase compat libraries -->
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
-
   <!-- 2) Config & Init -->
   <script>
     const firebaseConfig = {
@@ -51,19 +49,15 @@
       messagingSenderId: "301926337403",
       appId: "1:301926337403:web:9e930b5adb54870bce8bde"
     };
-    // init
     firebase.initializeApp(firebaseConfig);
-    const db = firebase.firestore();
-    const FieldValue = firebase.firestore.FieldValue;
-
-    // expune global
-    window.db = db;
-    window.FieldValue = FieldValue;
-
-    console.log("✅ Firebase compat initialized", { db, FieldValue });
+    const fbDB = firebase.firestore();
+    // expunem global pentru script.js
+    window.db = fbDB;
+    window.FieldValue = firebase.firestore.FieldValue;
+    console.log("✅ Firebase compat initialized", { db: !!window.db });
   </script>
 
-  <!-- 3) Aplicația ta -->
+  <!-- 3) Scriptul aplicației -->
   <script src="script.js"></script>
 </body>
 </html>
