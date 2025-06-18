@@ -27,7 +27,7 @@ body {
   background: var(--card-bg);
   padding: 30px;
   border-radius: 5px;
-  box-shadow: 0 0 10px #ccc;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 h1 {
@@ -61,6 +61,14 @@ select, button {
   gap: 8px;
 }
 
+/* Feedback sub întrebări */
 #feedback p {
   margin: 5px 0;
+}
+
+/* Variantele de răspuns una sub alta */
+.question label {
+  display: block;
+  margin: 6px 0;
+  cursor: pointer;
 }
