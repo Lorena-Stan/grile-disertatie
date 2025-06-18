@@ -1,24 +1,21 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Test Grilă Medicină Veterinară</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body class="light">
   <div class="container">
     <h1>Test Grilă Medicină Veterinară</h1>
-
     <div class="config">
-      <!-- Tema light/dark -->
       <label for="theme-select">Tema:</label>
       <select id="theme-select">
         <option value="light" selected>Light</option>
         <option value="dark">Dark</option>
       </select>
 
-      <!-- Selector test -->
       <label for="selector">Alege testul:</label>
       <select id="selector">
         <option value="mix">80 grile random din toate materiile</option>
@@ -39,38 +36,27 @@
     <div id="result"></div>
   </div>
 
-  <!-- Firebase & Firestore setup (ES modules) -->
-  <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
-    import { getAnalytics }    from "https://www.gstatic.com/firebasejs/11.9.1/firebase-analytics.js";
-    import {
-      getFirestore,
-      collection,
-      addDoc,
-      serverTimestamp
-    } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-firestore.js";
-
+  <!-- 1) Firebase App + Firestore (compat) -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <!-- 2) Config & Init -->
+  <script>
     const firebaseConfig = {
       apiKey: "AIzaSyB4KxE4U_475bcqwzY85vCqLwLrqgIgQbk",
       authDomain: "grile-disertatie.firebaseapp.com",
       projectId: "grile-disertatie",
       storageBucket: "grile-disertatie.appspot.com",
       messagingSenderId: "301926337403",
-      appId: "1:301926337403:web:9e930b5adb54870bce8bde",
-      measurementId: "G-4SLYNLD0RB"
+      appId: "1:301926337403:web:9e930b5adb54870bce8bde"
     };
-
-    const app = initializeApp(firebaseConfig);
-    getAnalytics(app);
-    const db = getFirestore(app);
-
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
     // expune pentru script.js
-    window.db              = db;
-    window.collection      = collection;
-    window.addDoc          = addDoc;
-    window.serverTimestamp = serverTimestamp;
-
-    console.log("FIRESTORE READY:", {
+    window.db = db;
+    window.collection = firebase.firestore().collection;
+    window.addDoc = (colRef, data) => colRef.add(data);
+    window.serverTimestamp = firebase.firestore.FieldValue.serverTimestamp;
+    console.log("🏁 FIRESTORE READY", {
       db: !!window.db,
       collection: typeof window.collection,
       addDoc: typeof window.addDoc,
@@ -78,6 +64,7 @@
     });
   </script>
 
+  <!-- 3) Scriptul aplicației -->
   <script src="script.js"></script>
 </body>
 </html>
