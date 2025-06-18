@@ -50,7 +50,6 @@
       serverTimestamp
     } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-firestore.js";
 
-    // Configurația ta Firebase
     const firebaseConfig = {
       apiKey: "AIzaSyB4KxE4U_475bcqwzY85vCqLwLrqgIgQbk",
       authDomain: "grile-disertatie.firebaseapp.com",
@@ -61,27 +60,24 @@
       measurementId: "G-4SLYNLD0RB"
     };
 
-    // Initialize Firebase & Firestore
     const app = initializeApp(firebaseConfig);
     getAnalytics(app);
     const db = getFirestore(app);
 
-    // Expune pe window pentru script.js
-    window.db               = db;
-    window.collection       = collection;
-    window.addDoc           = addDoc;
-    window.serverTimestamp  = serverTimestamp;
+    // expune pentru script.js
+    window.db              = db;
+    window.collection      = collection;
+    window.addDoc          = addDoc;
+    window.serverTimestamp = serverTimestamp;
 
-    // Debug: confirmă setup-ul
     console.log("FIRESTORE READY:", {
       db: !!window.db,
-      collection: !!window.collection,
+      collection: typeof window.collection,
       addDoc: typeof window.addDoc,
       serverTimestamp: typeof window.serverTimestamp
     });
   </script>
 
-  <!-- Scriptul aplicației -->
   <script src="script.js"></script>
 </body>
 </html>
