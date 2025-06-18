@@ -2,13 +2,18 @@
 
 let allQuestions = [];
 let queue = [];
-let answered = []; // { q, answer, correct }
+let answered = [];
 let score = 0;
 
+// Tema light/dark
+document.getElementById("theme-select").addEventListener("change", e => {
+  document.body.classList.toggle("dark", e.target.value === "dark");
+});
+
+// Începerea testului
 document.getElementById("start").addEventListener("click", async () => {
   const sel = document.getElementById("selector").value;
-  // Pune aici numele fișierului tău JSON
-  const res = await fetch("intrebari_toate_materii_rebuilt.json");
+  const res = await fetch("intrebari_toate_materii_rebuilt.json");  // ajustează numele după nevoie
   allQuestions = await res.json();
 
   if (sel === "mix") {
@@ -33,12 +38,10 @@ document.getElementById("start").addEventListener("click", async () => {
     queue = shuffle(filtered).slice(0, count);
   }
 
-  // Reset
   answered = [];
   score = 0;
   document.getElementById("start").style.display = "none";
   document.getElementById("selector").disabled = true;
-  document.getElementById("result").innerHTML = "";
   showNextQuestion();
 });
 
@@ -63,11 +66,11 @@ function showNextQuestion() {
       <button id="verify">Verifică</button>
       <button id="finish">Încheie testul</button>
     </div>
-    <div id="feedback" style="margin-top:10px;"></div>
+    <div id="feedback"></div>
   `;
 
   document.getElementById("skip").onclick = () => {
-    queue.push(queue.shift()); // mută întrebarea la final
+    queue.push(queue.shift());
     showNextQuestion();
   };
 
@@ -81,26 +84,23 @@ function showNextQuestion() {
     if (correct) score++;
     answered.push({ q, answer: ans, correct });
 
-    // dezactivează inputuri și butoane
+    // dezactivează inputurile
     quiz.querySelectorAll("input[name=opt]").forEach(i => i.disabled = true);
     document.getElementById("verify").disabled = true;
     document.getElementById("skip").disabled = true;
 
-    // arată feedback
     const fb = document.getElementById("feedback");
     if (correct) {
-      fb.innerHTML = `<p style="color: green"><strong>✔ Corect!</strong></p>`;
+      fb.innerHTML = `<p><strong>✔ Corect!</strong></p>`;
     } else {
       fb.innerHTML = `
-        <p style="color: red"><strong>✘ Greșit!</strong></p>
+        <p><strong>✘ Greșit!</strong></p>
         <p>Varianta corectă: <em>${q.variante[q.corect]}</em></p>
       `;
     }
 
-    // buton continuă
     const cont = document.createElement("button");
     cont.textContent = "Continuă";
-    cont.style.marginTop = "8px";
     cont.onclick = () => {
       queue.shift();
       showNextQuestion();
@@ -113,20 +113,17 @@ function showResult() {
   document.getElementById("quiz").innerHTML = "";
   const result = document.getElementById("result");
   result.innerHTML = `<h2>Ai răspuns corect la ${score} din ${answered.length} întrebări.</h2>`;
-
   answered.forEach(({ q, answer, correct }, idx) => {
     const block = document.createElement("div");
     block.classList.add("question");
-    block.style.background = correct ? "#e6ffec" : "#ffecec";
-    block.style.padding = "10px";
-    block.style.marginBottom = "10px";
+    block.style.background = correct ? "var(--correct-bg)" : "var(--wrong-bg)";
     block.innerHTML = `
-      <strong>${idx + 1}. ${q.intrebare}</strong><br/>
-      <div>Răspunsul tău: ${answer != null ? q.variante[answer] : "<em>neselectat</em>"}</div>
+      <strong>${idx+1}. ${q.intrebare}</strong><br/>
+      <div>Răspunsul tău: ${answer!=null ? q.variante[answer] : "<em>neselectat</em>"}</div>
       ${
         correct
-          ? `<div style="color:green">✔ Corect</div>`
-          : `<div style="color:red">✘ Greșit</div>
+          ? `<div>✔ Corect</div>`
+          : `<div>✘ Greșit</div>
              <div>Varianta corectă: <em>${q.variante[q.corect]}</em></div>`
       }
     `;
