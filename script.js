@@ -1,104 +1,90 @@
 let allQuestions = [];
-let selectedQuestions = [];
-let currentIndex = 0;
+let queue = [];
+let answered = []; // { q, answer, correct }
 let score = 0;
-let userAnswers = [];
 
 document.getElementById("start").addEventListener("click", async () => {
-  const select = document.getElementById("selector").value;
-  const response = await fetch("intrebari_grila_complet_corectat.json");
-  allQuestions = await response.json();
+  const sel = document.getElementById("selector").value;
+  const res  = await fetch("intrebari_toate_materii_corect.json");
+  allQuestions = await res.json();
 
-  if (select === "mix") {
-    const filtered = allQuestions.filter(q =>
-      ["Anatomie patologica", "Farmacologie", "Fiziologie", "Patologie", "Bacteriologie"].includes(q.materie)
-    );
-    selectedQuestions = shuffle(filtered).slice(0, 80);
+  // filtru și alegere set
+  if (sel === "mix") {
+    queue = shuffle(allQuestions).slice(0, 80);
   } else {
-    const filtered = allQuestions.filter(q => q.materie === select);
-    selectedQuestions = shuffle(filtered).slice(0, 100);
+    let filtered = allQuestions.filter(q => q.materie === sel);
+    const count = sel === "Semiologie" ? 110 : 100;
+    queue = shuffle(filtered).slice(0, count);
   }
 
-  currentIndex = 0;
-  score = 0;
-  userAnswers = [];
-  document.getElementById("result").innerHTML = "";
-  showCurrentQuestion();
+  // inițializare
+  answered = [];
+  score    = 0;
+  document.getElementById("start").style.display = "none";
+  document.getElementById("selector").disabled    = true;
+  document.getElementById("result").innerHTML     = "";
+  showNextQuestion();
 });
 
-function showCurrentQuestion() {
-  const q = selectedQuestions[currentIndex];
-  const quizDiv = document.getElementById("quiz");
-  quizDiv.innerHTML = `
+function showNextQuestion() {
+  const quiz = document.getElementById("quiz");
+  if (queue.length === 0) {
+    return showResult();
+  }
+  const q = queue[0];
+  quiz.innerHTML = `
     <div class="question">
-      <h3>${currentIndex + 1}. ${q.intrebare}</h3>
-      ${q.variante.map((opt, i) => `
-        <label>
-          <input type="radio" name="q" value="${i}"> ${opt}
-        </label>
-      `).join("")}
-    </div>
-    <button id="skip">Sari peste</button>
-    <button id="next">Următoarea întrebare</button>
+      <h3>${answered.length + 1}. ${q.intrebare}</h3>
+      ${q.variante.map((opt,i)=>
+        `<label><input type="radio" name="opt" value="${i}"> ${opt}</label>`
+      ).join("")}
+    ` + 
+    `<div class="buttons">
+       <button id="skip">Sari peste</button>
+       <button id="next">Următoarea</button>
+     </div>
   `;
 
-  document.getElementById("submit").style.display = "none";
+  document.getElementById("next").onclick = () => {
+    const sel = document.querySelector("input[name=opt]:checked");
+    if (!sel) return alert("Selectează o opțiune sau sari peste!");
+    const ans = parseInt(sel.value, 10);
+    const correct = ans === q.corect;
+    if (correct) score++;
+    answered.push({ q, answer: ans, correct });
+    queue.shift();       // scoate curentul
+    showNextQuestion();
+  };
 
-  document.getElementById("next").addEventListener("click", () => {
-    const selected = document.querySelector("input[name='q']:checked");
-    const answer = selected ? parseInt(selected.value) : null;
-    userAnswers.push(answer);
-
-    if (answer === selectedQuestions[currentIndex].corect) {
-      score++;
-    }
-
-    nextStep();
-  });
-
-  document.getElementById("skip").addEventListener("click", () => {
-    userAnswers.push(null);
-    nextStep();
-  });
-}
-
-function nextStep() {
-  currentIndex++;
-  if (currentIndex < selectedQuestions.length) {
-    showCurrentQuestion();
-  } else {
-    showResult();
-  }
+  document.getElementById("skip").onclick = () => {
+    queue.push(queue.shift()); // mută la coadă
+    showNextQuestion();
+  };
 }
 
 function showResult() {
-  const resultDiv = document.getElementById("result");
-  document.getElementById("quiz").innerHTML = "";
-  resultDiv.innerHTML = `<h2>Ai răspuns corect la ${score} din ${selectedQuestions.length} întrebări.</h2>`;
+  const quiz   = document.getElementById("quiz");
+  const result = document.getElementById("result");
+  quiz.innerHTML = "";
+  result.innerHTML = `<h2>Ai răspuns corect la ${score} din ${answered.length} întrebări.</h2>`;
 
-  selectedQuestions.forEach((q, i) => {
-    const userAns = userAnswers[i];
-    const isCorrect = userAns === q.corect;
-
-    const questionBlock = document.createElement("div");
-    questionBlock.classList.add("question");
-    questionBlock.style.border = "1px solid #ccc";
-    questionBlock.style.padding = "10px";
-    questionBlock.style.marginBottom = "10px";
-    questionBlock.style.background = isCorrect ? "#e6ffec" : "#ffecec";
-
-    questionBlock.innerHTML = `
-      <strong>${i + 1}. ${q.intrebare}</strong><br/>
-      <div>Răspunsul tău: ${userAns === null ? "<em>neselectat</em>" : q.variante[userAns]}</div>
-      ${isCorrect 
-        ? "<div><strong>✔ Corect</strong></div>" 
-        : "<div><strong>✘ Greșit</strong></div><div>Varianta corectă: " + q.variante[q.corect] + "</div>"}
+  answered.forEach(({ q, answer, correct }, idx) => {
+    const block = document.createElement("div");
+    block.classList.add("question");
+    block.style.background = correct ? "#e6ffec" : "#ffecec";
+    block.innerHTML = `
+      <strong>${idx+1}. ${q.intrebare}</strong><br/>
+      <div>Răspunsul tău: ${answer != null ? q.variante[answer] : "<em>neselectat</em>"}</div>
+      ${correct 
+        ? `<div>✔ Corect</div>`
+        : `<div>✘ Greșit</div>
+           <div>Varianta corectă: ${q.variante[q.corect]}</div>`}
     `;
-
-    resultDiv.appendChild(questionBlock);
+    result.appendChild(block);
   });
 }
 
-function shuffle(array) {
-  return array.sort(() => Math.random() - 0.5);
+// utilitar
+function shuffle(arr) {
+  return arr.sort(() => Math.random() - 0.5);
 }
