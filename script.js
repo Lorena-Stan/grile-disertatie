@@ -1,12 +1,13 @@
 // script.js
 
-// --- FIREBASE (exportat din <script type="module"> din index.html) ---
+// --- FIREBASE exposed via index.html ---
 const db              = window.db;
 const collection      = window.collection;
 const addDoc          = window.addDoc;
 const serverTimestamp = window.serverTimestamp;
 
-// Debug: confirmăm că Firestore SDK a fost expus corect
+// Debug startup
+console.log("🚀 script.js loaded");
 console.log("FIRESTORE READY:", {
   db: !!db,
   collection: typeof collection,
@@ -15,9 +16,8 @@ console.log("FIRESTORE READY:", {
 });
 
 // 🖵 LOG PAGINA ÎNCĂRCATĂ
-;(async () => {
-  console.log("→ about to log page_load");
-  console.log("window.db, collection, addDoc, serverTimestamp:", db, collection, addDoc, serverTimestamp);
+(async () => {
+  console.log("✉️ about to log page_load");
   try {
     const ref = await addDoc(
       collection(db, "accessLogs"),
@@ -28,19 +28,19 @@ console.log("FIRESTORE READY:", {
         userAgent: navigator.userAgent
       }
     );
-    console.log("page_load logged, doc ID:", ref.id);
+    console.log("✅ page_load logged, doc ID:", ref.id);
   } catch (err) {
-    console.error("Firebase page_load log error:", err);
+    console.error("❌ Firebase page_load error:", err);
   }
 })();
 
-// --- VARIABILE APLICAȚIE ---
+// --- APLICAȚIE ---
 let allQuestions = [];
 let queue        = [];
 let answered     = [];
 let score        = 0;
 
-// --- THEME SWITCHER ---
+// Theme switcher
 document.getElementById("theme-select").addEventListener("change", e => {
   document.body.classList.toggle("dark", e.target.value === "dark");
 });
@@ -49,8 +49,7 @@ document.getElementById("theme-select").addEventListener("change", e => {
 document.getElementById("start").addEventListener("click", async () => {
   const sel = document.getElementById("selector").value;
 
-  // 🔥 TRACKING: log START TEST
-  console.log("→ about to log start_test with type:", sel);
+  console.log("✉️ about to log start_test:", sel);
   try {
     const ref = await addDoc(
       collection(db, "accessLogs"),
@@ -61,21 +60,21 @@ document.getElementById("start").addEventListener("click", async () => {
         userAgent: navigator.userAgent
       }
     );
-    console.log("start_test logged, doc ID:", ref.id);
+    console.log("✅ start_test logged, doc ID:", ref.id);
   } catch (err) {
-    console.error("Firebase start_test log error:", err);
+    console.error("❌ Firebase start_test error:", err);
   }
 
-  // 📥 Încărcare întrebări
+  // load questions
   const res = await fetch("intrebari_toate_materii_rebuilt.json");
   allQuestions = await res.json();
 
-  // 🧩 Set mix / categorie
+  // build queue
   if (sel === "mix") {
     const cats = [
-      "Anatomie patologica", "Bacteriologie", "Farmacologie",
-      "Fiziologie", "Patologie", "Anatomie",
-      "Histologie", "Semiologie"
+      "Anatomie patologica","Bacteriologie","Farmacologie",
+      "Fiziologie","Patologie","Anatomie",
+      "Histologie","Semiologie"
     ];
     let mix = [];
     cats.forEach(cat => {
@@ -93,7 +92,6 @@ document.getElementById("start").addEventListener("click", async () => {
     queue = shuffle(filtered).slice(0, count);
   }
 
-  // 🔄 Reset stare
   answered = [];
   score    = 0;
   document.getElementById("start").style.display      = "none";
@@ -103,14 +101,12 @@ document.getElementById("start").addEventListener("click", async () => {
   showNextQuestion();
 });
 
-// --- AFIȘARE ÎNTREBARE URMĂTOARE ---
+// --- NEXT QUESTION ---
 function showNextQuestion() {
   const quiz = document.getElementById("quiz");
   quiz.innerHTML = "";
 
-  if (queue.length === 0) {
-    return showResult();
-  }
+  if (queue.length === 0) return showResult();
 
   const q = queue[0];
   quiz.innerHTML = `
@@ -132,9 +128,7 @@ function showNextQuestion() {
     queue.push(queue.shift());
     showNextQuestion();
   };
-
   document.getElementById("finish").onclick = () => showResult();
-
   document.getElementById("verify").onclick = () => {
     const selOpt = document.querySelector("input[name=opt]:checked");
     if (!selOpt) return alert("Selectează o opțiune sau sari peste!");
@@ -164,7 +158,7 @@ function showNextQuestion() {
   };
 }
 
-// --- REZULTATE FINALE ---
+// --- SHOW RESULT ---
 function showResult() {
   document.getElementById("quiz").innerHTML = "";
   const result = document.getElementById("result");
@@ -173,16 +167,12 @@ function showResult() {
   answered.forEach(({ q, answer, correct }, idx) => {
     const block = document.createElement("div");
     block.classList.add("question");
-    block.style.background = correct
-      ? "var(--correct-bg)"
-      : "var(--wrong-bg)";
+    block.style.background = correct ? "var(--correct-bg)" : "var(--wrong-bg)";
     block.style.padding = "10px";
     block.style.marginBottom = "8px";
     block.innerHTML = `
-      <strong>${idx + 1}. ${q.intrebare}</strong><br/>
-      <div>Răspunsul tău: ${
-        answer != null ? q.variante[answer] : "<em>neselectat</em>"
-      }</div>
+      <strong>${idx+1}. ${q.intrebare}</strong><br/>
+      <div>Răspunsul tău: ${answer!=null ? q.variante[answer] : "<em>neselectat</em>"}</div>
       ${
         correct
           ? `<div style="color:green">✔ Corect</div>`
@@ -194,7 +184,7 @@ function showResult() {
   });
 }
 
-// --- UTILITAR AMESTECARE ---
+// --- SHUFFLE UTIL ---
 function shuffle(arr) {
   return arr.sort(() => Math.random() - 0.5);
 }
