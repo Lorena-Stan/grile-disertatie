@@ -8,17 +8,17 @@
 </head>
 <body class="light">
 
-  <!-- AUTENTIFICARE EMAIL -->
+  <!-- AUTENTIFICARE EMAIL/PAROLĂ -->
   <div id="auth-container" class="container">
     <h2>Autentificare</h2>
-    <input type="email"    id="email"        placeholder="Email" style="display:block; margin:0.5em 0;">
-    <input type="password" id="password"     placeholder="Parolă" style="display:block; margin:0.5em 0;">
+    <input type="email"    id="email"        placeholder="Email"     style="display:block; margin:0.5em 0;">
+    <input type="password" id="password"     placeholder="Parolă"    style="display:block; margin:0.5em 0;">
     <button id="btn-signup">Înregistrează cont</button>
     <button id="btn-login">Autentifică-te</button>
     <p id="auth-error" style="color:red;"></p>
   </div>
 
-  <!-- UI APLICAȚIE -->
+  <!-- INTERFAȚA APLICAȚIEI -->
   <div id="app-container" class="container" style="display:none;">
     <h1>Test Grilă Medicină Veterinară</h1>
     <div class="config">
@@ -49,12 +49,12 @@
     <div id="result"></div>
   </div>
 
-  <!-- 1) Firebase compat libraries -->
+  <!-- Firebase compat -->
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
 
-  <!-- 2) Init Firebase & expose globals -->
+  <!-- Init Firebase & expuneri -->
   <script>
     const firebaseConfig = {
       apiKey: "AIzaSyB4KxE4U_475bcqwzY85vCqLwLrqgIgQbk",
@@ -65,12 +65,12 @@
       appId: "1:301926337403:web:9e930b5adb54870bce8bde"
     };
     firebase.initializeApp(firebaseConfig);
-    window.auth = firebase.auth();
-    window.db   = firebase.firestore();
+    window.auth       = firebase.auth();
+    window.db         = firebase.firestore();
     window.FieldValue = firebase.firestore.FieldValue;
   </script>
 
-  <!-- 3) Scriptul aplicației -->
+  <!-- Aplicația -->
   <script src="script.js" defer></script>
 </body>
 </html>
