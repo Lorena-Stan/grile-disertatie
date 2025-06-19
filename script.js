@@ -6,14 +6,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const TS    = window.FieldValue.serverTimestamp;
 
   // Elemente UI
-  const emailIn   = document.getElementById("email");
-  const passIn    = document.getElementById("password");
-  const btnLogin  = document.getElementById("btn-login");
-  const btnSignup = document.getElementById("btn-signup");
-  const btnLogout = document.getElementById("btn-logout");
-  const authErr   = document.getElementById("auth-error");
-  const authUI    = document.getElementById("auth-container");
-  const appUI     = document.getElementById("app-container");
+  const emailIn       = document.getElementById("email");
+  const passIn        = document.getElementById("password");
+  const btnLogin      = document.getElementById("btn-login");
+  const btnSignup     = document.getElementById("btn-signup");
+  const btnLogout     = document.getElementById("btn-logout");
+  const authErr       = document.getElementById("auth-error");
+  const authUI        = document.getElementById("auth-container");
+  const appUI         = document.getElementById("app-container");
+  const selector      = document.getElementById("selector");
+  const themeSelect   = document.getElementById("theme-select");
+  const startButton   = document.getElementById("start");
+  const resultDiv     = document.getElementById("result");
+  const quizDiv       = document.getElementById("quiz");
 
   // Signup
   btnSignup.onclick = async () => {
@@ -51,8 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
-function startApp(userEmail) {
+async function startApp(userEmail) {
   const db  = window.db;
   const TS  = window.FieldValue.serverTimestamp;
 
@@ -65,8 +69,10 @@ function startApp(userEmail) {
   }).catch(console.error);
 
   // Quiz vars
-  let allQ = [], queue = [], answered = [], score = 0;
-  let attemptsLeft = 0;   // ← contorul nostru
+  let queue = [];
+  let answered = [];
+  let score = 0;
+  let attemptsLeft = 0;
 
   // Theme switcher
   document.getElementById("theme-select")
@@ -78,6 +84,25 @@ function startApp(userEmail) {
   document.getElementById("start").onclick = async () => {
     const sel = document.getElementById("selector").value;
 
+    // Load questions
+    const res = await fetch("intrebari_toate_materii_rebuilt.json");
+    const allQ = await res.json();
+
+    // Determine pool and size
+    let pool;
+    let size;
+    if (sel === "mix") {
+      pool = allQ;
+      size = 80;
+    } else {
+      pool = allQ.filter(q => q.materie === sel);
+      size = sel === "Semiologie" ? 110 : 100;
+    }
+
+    // Build and trim queue
+    queue = shuffle(pool).slice(0, size);
+    attemptsLeft = queue.length;
+
     // Log start_test
     db.collection("accessLogs").add({
       timestamp: TS(),
@@ -86,57 +111,29 @@ function startApp(userEmail) {
       testType:  sel
     }).catch(console.error);
 
-    // Load questions
-    const res = await fetch("intrebari_toate_materii_rebuilt.json");
-    allQ = await res.json();
-
-    // Build queue
-    if (sel === "mix") {
-      const cats = ["Anatomie patologica","Bacteriologie","Farmacologie","Fiziologie","Patologie","Anatomie","Histologie","Semiologie"];
-      let mix = [];
-      cats.forEach(cat => {
-        const pool = allQ.filter(q => q.materie === cat);
-        mix = mix.concat(shuffle(pool).slice(0,15));
-      });
-      if (mix.length < 80) {
-        const rest = allQ.filter(q=> !mix.includes(q));
-        mix = mix.concat(shuffle(rest).slice(0,80-mix.length));
-      }
-      queue = shuffle(mix);
-    } else {
-      const filt = allQ.filter(q=> q.materie === sel);
-      const cnt  = sel === "Semiologie" ? 110 : 100;
-      queue = shuffle(filt).slice(0, cnt);
-    }
-
-    // Set attemptsLeft la dimensiunea initiala a cozii
-    attemptsLeft = queue.length;
-
     // Reset UI
-    answered = []; score = 0;
-    document.getElementById("start").style.display      = "none";
-    document.getElementById("selector").disabled        = true;
-    document.getElementById("theme-select").disabled    = true;
-    document.getElementById("result").innerHTML         = "";
+    answered = [];
+    score = 0;
+    startButton.style.display    = "none";
+    selector.disabled            = true;
+    themeSelect.disabled         = true;
+    resultDiv.innerHTML          = "";
 
-    // Afiseaza prima intrebare
+    // Show first question
     showNextQuestion();
   };
 
-  // Afișează următoarea întrebare, ținând cont de attemptsLeft
+  // Display next question
   function showNextQuestion() {
     if (attemptsLeft <= 0) {
       return showResult();
     }
 
-    const quiz = document.getElementById("quiz");
-    quiz.innerHTML = "";
-
     const q = queue[0];
-    quiz.innerHTML = `
+    quizDiv.innerHTML = `
       <div class="question">
-        <h3>${answered.length+1}. ${q.intrebare}</h3>
-        ${q.variante.map((opt,i)=>
+        <h3>${answered.length + 1}. ${q.intrebare}</h3>
+        ${q.variante.map((opt,i) =>
           `<label><input type="radio" name="opt" value="${i}"> ${opt}</label>`
         ).join("")}
       </div>
@@ -164,8 +161,8 @@ function startApp(userEmail) {
       if (correct) score++;
       answered.push({q,answer:ans,correct});
 
-      // dezactivează opțiunile
-      quiz.querySelectorAll("input[name=opt]").forEach(i=>i.disabled=true);
+      // disable inputs
+      quizDiv.querySelectorAll("input[name=opt]").forEach(i=>i.disabled=true);
       document.getElementById("verify").disabled = true;
       document.getElementById("skip").disabled   = true;
 
@@ -176,7 +173,6 @@ function startApp(userEmail) {
         : `<p><strong style="color:red">✘ Greșit!</strong></p>
            <p>Varianta corectă: <em>${q.variante[q.corect]}</em></p>`;
 
-      // buton “Continuă”
       const cont = document.createElement("button");
       cont.textContent = "Continuă";
       cont.style.marginTop = "8px";
@@ -189,11 +185,10 @@ function startApp(userEmail) {
     };
   }
 
-  // Afișează rezultatele
+  // Display results
   function showResult() {
-    document.getElementById("quiz").innerHTML = "";
-    const result = document.getElementById("result");
-    result.innerHTML = `<h2>Ai răspuns corect la ${score} din ${answered.length} întrebări.</h2>`;
+    quizDiv.innerHTML = "";
+    resultDiv.innerHTML = `<h2>Ai răspuns corect la ${score} din ${answered.length} întrebări.</h2>`;
     answered.forEach(({q,answer,correct},idx) => {
       const block = document.createElement("div");
       block.classList.add("question");
@@ -210,12 +205,12 @@ function startApp(userEmail) {
                <div>Varianta corectă: <em>${q.variante[q.corect]}</em></div>`
         }
       `;
-      result.appendChild(block);
+      resultDiv.appendChild(block);
     });
   }
 
   // util shuffle
   function shuffle(a) {
-    return a.sort(()=>Math.random()-0.5);
+    return a.sort(() => Math.random() - 0.5);
   }
 }
