@@ -1,24 +1,19 @@
 // script.js
 
 document.addEventListener("DOMContentLoaded", () => {
-  const auth  = window.auth;
-  const db    = window.db;
-  const TS    = window.FieldValue.serverTimestamp;
+  const auth        = window.auth;
+  const db          = window.db;
+  const TS          = window.FieldValue.serverTimestamp;
 
-  // Elemente UI
-  const emailIn       = document.getElementById("email");
-  const passIn        = document.getElementById("password");
-  const btnLogin      = document.getElementById("btn-login");
-  const btnSignup     = document.getElementById("btn-signup");
-  const btnLogout     = document.getElementById("btn-logout");
-  const authErr       = document.getElementById("auth-error");
-  const authUI        = document.getElementById("auth-container");
-  const appUI         = document.getElementById("app-container");
-  const selector      = document.getElementById("selector");
-  const themeSelect   = document.getElementById("theme-select");
-  const startButton   = document.getElementById("start");
-  const resultDiv     = document.getElementById("result");
-  const quizDiv       = document.getElementById("quiz");
+  // Elemente UI principale
+  const emailIn     = document.getElementById("email");
+  const passIn      = document.getElementById("password");
+  const btnLogin    = document.getElementById("btn-login");
+  const btnSignup   = document.getElementById("btn-signup");
+  const btnLogout   = document.getElementById("btn-logout");
+  const authErr     = document.getElementById("auth-error");
+  const authUI      = document.getElementById("auth-container");
+  const appUI       = document.getElementById("app-container");
 
   // Signup
   btnSignup.onclick = async () => {
@@ -43,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Logout
   btnLogout.onclick = () => auth.signOut();
 
-  // Auth state change
+  // Monitor auth state
   auth.onAuthStateChanged(user => {
     if (user) {
       authUI.style.display = "none";
@@ -57,8 +52,15 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 async function startApp(userEmail) {
-  const db  = window.db;
-  const TS  = window.FieldValue.serverTimestamp;
+  const db        = window.db;
+  const TS        = window.FieldValue.serverTimestamp;
+
+  // Elemente UI din aplicație (în startApp pentru scope local)
+  const selector    = document.getElementById("selector");
+  const themeSelect = document.getElementById("theme-select");
+  const startButton = document.getElementById("start");
+  const quizDiv     = document.getElementById("quiz");
+  const resultDiv   = document.getElementById("result");
 
   // Log page_load
   db.collection("accessLogs").add({
@@ -75,20 +77,19 @@ async function startApp(userEmail) {
   let attemptsLeft = 0;
 
   // Theme switcher
-  document.getElementById("theme-select")
-    .addEventListener("change", e =>
-      document.body.classList.toggle("dark", e.target.value === "dark")
-    );
+  themeSelect.addEventListener("change", e => {
+    document.body.classList.toggle("dark", e.target.value === "dark");
+  });
 
   // Start test
-  document.getElementById("start").onclick = async () => {
-    const sel = document.getElementById("selector").value;
+  startButton.onclick = async () => {
+    const sel = selector.value;
 
     // Load questions
     const res = await fetch("intrebari_toate_materii_rebuilt.json");
     const allQ = await res.json();
 
-    // Determine pool and size
+    // Determine pool și size
     let pool;
     let size;
     if (sel === "mix") {
@@ -99,7 +100,7 @@ async function startApp(userEmail) {
       size = sel === "Semiologie" ? 110 : 100;
     }
 
-    // Build and trim queue
+    // Build și trim queue
     queue = shuffle(pool).slice(0, size);
     attemptsLeft = queue.length;
 
@@ -118,12 +119,13 @@ async function startApp(userEmail) {
     selector.disabled            = true;
     themeSelect.disabled         = true;
     resultDiv.innerHTML          = "";
+    quizDiv.innerHTML            = "";
 
     // Show first question
     showNextQuestion();
   };
 
-  // Display next question
+  // Afișează următoarea întrebare
   function showNextQuestion() {
     if (attemptsLeft <= 0) {
       return showResult();
@@ -135,7 +137,7 @@ async function startApp(userEmail) {
         <h3>${answered.length + 1}. ${q.intrebare}</h3>
         ${q.variante.map((opt,i) =>
           `<label><input type="radio" name="opt" value="${i}"> ${opt}</label>`
-        ).join("")}
+        ).join('')}
       </div>
       <div class="buttons">
         <button id="skip">Sari peste</button>
@@ -151,27 +153,28 @@ async function startApp(userEmail) {
       showNextQuestion();
     };
 
-    document.getElementById("finish").onclick = () => showResult();
+    document.getElementById("finish").onclick = showResult;
 
     document.getElementById("verify").onclick = () => {
       const selOpt = document.querySelector("input[name=opt]:checked");
-      if (!selOpt) return alert("Selectează o opțiune sau sari peste!");
-      const ans     = parseInt(selOpt.value, 10);
+      if (!selOpt) {
+        return alert("Selectează o opțiune sau sari peste!");
+      }
+      const ans = parseInt(selOpt.value, 10);
       const correct = ans === q.corect;
       if (correct) score++;
-      answered.push({q,answer:ans,correct});
+      answered.push({ q, answer: ans, correct });
 
-      // disable inputs
-      quizDiv.querySelectorAll("input[name=opt]").forEach(i=>i.disabled=true);
+      // Disable options și butoane
+      quizDiv.querySelectorAll("input[name=opt]").forEach(i => i.disabled = true);
       document.getElementById("verify").disabled = true;
-      document.getElementById("skip").disabled   = true;
+      document.getElementById("skip").disabled = true;
 
-      // feedback
+      // Feedback
       const fb = document.getElementById("feedback");
       fb.innerHTML = correct
         ? `<p><strong style="color:green">✔ Corect!</strong></p>`
-        : `<p><strong style="color:red">✘ Greșit!</strong></p>
-           <p>Varianta corectă: <em>${q.variante[q.corect]}</em></p>`;
+        : `<p><strong style="color:red">✘ Greșit!</strong></p><p>Varianta corectă: <em>${q.variante[q.corect]}</em></p>`;
 
       const cont = document.createElement("button");
       cont.textContent = "Continuă";
@@ -185,24 +188,23 @@ async function startApp(userEmail) {
     };
   }
 
-  // Display results
+  // Afișează rezultatele
   function showResult() {
     quizDiv.innerHTML = "";
     resultDiv.innerHTML = `<h2>Ai răspuns corect la ${score} din ${answered.length} întrebări.</h2>`;
-    answered.forEach(({q,answer,correct},idx) => {
+    answered.forEach(({ q, answer, correct }, idx) => {
       const block = document.createElement("div");
       block.classList.add("question");
       block.style.background = correct ? "#e6ffec" : "#ffecec";
       block.style.padding = "10px";
       block.style.marginBottom = "8px";
       block.innerHTML = `
-        <strong>${idx+1}. ${q.intrebare}</strong><br/>
-        <div>Răspunsul tău: ${answer!=null ? q.variante[answer] : "<em>neselectat</em>"}</div>
+        <strong>${idx + 1}. ${q.intrebare}</strong><br/>
+        <div>Răspunsul tău: ${answer != null ? q.variante[answer] : "<em>neselectat</em>"}</div>
         ${
           correct
             ? `<div style="color:green">✔ Corect</div>`
-            : `<div style="color:red">✘ Greșit</div>
-               <div>Varianta corectă: <em>${q.variante[q.corect]}</em></div>`
+            : `<div style="color:red">✘ Greșit</div><div>Varianta corectă: <em>${q.variante[q.corect]}</em></div>`
         }
       `;
       resultDiv.appendChild(block);
