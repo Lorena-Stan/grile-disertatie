@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const authUI     = document.getElementById("auth-container");
   const appUI      = document.getElementById("app-container");
 
-  // Sign-up
+  // Înregistrare
   btnSignup.onclick = async () => {
     authErr.textContent = "";
     try {
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  // Login
+  // Autentificare
   btnLogin.onclick = async () => {
     authErr.textContent = "";
     try {
@@ -39,10 +39,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  // Logout
+  // Deconectare
   btnLogout.onclick = () => auth.signOut();
 
-  // Auth state listener
+  // Listener stare autentificare
   auth.onAuthStateChanged(user => {
     if (user) {
       authUI.style.display = "none";
@@ -55,14 +55,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Funcția principală a aplicației, apelată după autentificare
 async function startApp(userEmail) {
-  const db         = window.db;
-  const TS         = window.FieldValue.serverTimestamp;
-  const allQ       = await (await fetch("intrebari_toate_materii_rebuilt.json")).json();
-  let queue        = [];
-  let answered     = [];
-  let score        = 0;
-  let attemptsLeft = 0;
+  const db  = window.db;
+  const TS  = window.FieldValue.serverTimestamp;
+  const allQuestions = await (await fetch("intrebari_toate_materii_rebuilt.json")).json();
 
   // Log page_load
   db.collection("accessLogs").add({
@@ -72,32 +69,29 @@ async function startApp(userEmail) {
     page:      location.pathname
   }).catch(console.error);
 
-  // Theme switcher
+  // Configurare tema
   document.getElementById("theme-select")
     .addEventListener("change", e =>
       document.body.classList.toggle("dark", e.target.value === "dark")
     );
 
-  // Print 80-question PDF
+  // Buton Printează varianta
   document.getElementById("print").onclick = () => {
-    // build 80-mix
+    // 1) Construim max 15 din fiecare materie
     const cats = [
       "Anatomie patologica","Bacteriologie","Farmacologie",
       "Fiziologie","Patologie","Anatomie",
       "Histologie","Semiologie"
     ];
-    let mix = [];
+    let poolMix = [];
     cats.forEach(cat => {
-      const pool = allQ.filter(q => q.materie === cat);
-      mix = mix.concat(shuffle(pool).slice(0, 15));
+      const subset = allQuestions.filter(q => q.materie === cat);
+      poolMix = poolMix.concat(shuffle(subset).slice(0, 15));
     });
-    if (mix.length < 80) {
-      const rest = allQ.filter(q => !mix.includes(q));
-      mix = mix.concat(shuffle(rest).slice(0, 80 - mix.length));
-    }
-    mix = shuffle(mix);
+    // 2) Amestecăm și reducem la 80
+    const mix80 = shuffle(poolMix).slice(0, 80);
 
-    // open printable page
+    // 3) Generăm fereastră de print
     const pw = window.open("", "_blank");
     pw.document.write(`
       <html><head><title>Variantă grile (80 random)</title>
@@ -110,7 +104,7 @@ async function startApp(userEmail) {
       </head><body>
         <h1>Variantă Grile (80 random)</h1>
     `);
-    mix.forEach((q, i) => {
+    mix80.forEach((q, i) => {
       pw.document.write(`
         <div class="question">
           <strong>${i+1}. ${q.intrebare}</strong>
@@ -126,7 +120,10 @@ async function startApp(userEmail) {
     pw.print();
   };
 
-  // Start test
+  // Variabile quiz
+  let queue = [], answered = [], score = 0, attemptsLeft = 0;
+
+  // Buton Începe testul
   document.getElementById("start").onclick = async () => {
     const sel = document.getElementById("selector").value;
 
@@ -138,7 +135,7 @@ async function startApp(userEmail) {
       testType:  sel
     }).catch(console.error);
 
-    // build queue
+    // Construim coada
     if (sel === "mix") {
       const cats = [
         "Anatomie patologica","Bacteriologie","Farmacologie",
@@ -147,24 +144,20 @@ async function startApp(userEmail) {
       ];
       let mix = [];
       cats.forEach(cat => {
-        const pool = allQ.filter(q => q.materie === cat);
-        mix = mix.concat(shuffle(pool).slice(0,15));
+        const subset = allQuestions.filter(q => q.materie === cat);
+        mix = mix.concat(shuffle(subset).slice(0, 15));
       });
-      if (mix.length < 80) {
-        const rest = allQ.filter(q => !mix.includes(q));
-        mix = mix.concat(shuffle(rest).slice(0, 80 - mix.length));
-      }
-      queue = shuffle(mix);
+      queue = shuffle(mix).slice(0, 80);
     } else {
-      const filtered = allQ.filter(q => q.materie === sel);
-      const cnt = sel === "Semiologie" ? 110 : 100;
-      queue = shuffle(filtered).slice(0, cnt);
+      const filtered = allQuestions.filter(q => q.materie === sel);
+      const count = sel === "Semiologie" ? 110 : 100;
+      queue = shuffle(filtered).slice(0, count);
     }
 
     attemptsLeft = queue.length;
 
-    // hide config
-    ["print","start"].forEach(id => 
+    // Ascunde butoane și select
+    ["print","start"].forEach(id =>
       document.getElementById(id).style.display = "none"
     );
     document.getElementById("selector").disabled     = true;
@@ -174,9 +167,11 @@ async function startApp(userEmail) {
     showNextQuestion();
   };
 
+  // Afișează următoarea întrebare
   function showNextQuestion() {
-    if (attemptsLeft <= 0) return showResult();
-
+    if (attemptsLeft <= 0) {
+      return showResult();
+    }
     const quiz = document.getElementById("quiz");
     quiz.innerHTML = "";
     const q = queue[0];
@@ -204,7 +199,6 @@ async function startApp(userEmail) {
       showNextQuestion();
     };
     document.getElementById("finish").onclick = () => showResult();
-
     document.getElementById("verify").onclick = () => {
       const selOpt = document.querySelector("input[name=opt]:checked");
       if (!selOpt) return alert("Selectează o opțiune sau sari peste!");
@@ -235,6 +229,7 @@ async function startApp(userEmail) {
     };
   }
 
+  // Afișează rezultatele finale
   function showResult() {
     document.getElementById("quiz").innerHTML = "";
     const result = document.getElementById("result");
@@ -257,6 +252,7 @@ async function startApp(userEmail) {
     });
   }
 
+  // Utilitar shuffle
   function shuffle(a) {
     return a.sort(()=>Math.random()-0.5);
   }
