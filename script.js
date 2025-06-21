@@ -1,25 +1,26 @@
 // script.js
 
 document.addEventListener("DOMContentLoaded", () => {
-  const auth        = window.auth;
-  const db          = window.db;
-  const TS          = window.FieldValue.serverTimestamp;
+  const auth       = window.auth;
+  const db         = window.db;
+  const TS         = window.FieldValue.serverTimestamp;
+  const emailIn    = document.getElementById("email");
+  const passIn     = document.getElementById("password");
+  const btnLogin   = document.getElementById("btn-login");
+  const btnSignup  = document.getElementById("btn-signup");
+  const btnLogout  = document.getElementById("btn-logout");
+  const authErr    = document.getElementById("auth-error");
+  const authUI     = document.getElementById("auth-container");
+  const appUI      = document.getElementById("app-container");
 
-  // Elemente UI principale
-  const emailIn     = document.getElementById("email");
-  const passIn      = document.getElementById("password");
-  const btnLogin    = document.getElementById("btn-login");
-  const btnSignup   = document.getElementById("btn-signup");
-  const btnLogout   = document.getElementById("btn-logout");
-  const authErr     = document.getElementById("auth-error");
-  const authUI      = document.getElementById("auth-container");
-  const appUI       = document.getElementById("app-container");
-
-  // Signup
+  // Sign-up
   btnSignup.onclick = async () => {
     authErr.textContent = "";
     try {
-      await auth.createUserWithEmailAndPassword(emailIn.value, passIn.value);
+      await auth.createUserWithEmailAndPassword(
+        emailIn.value.trim(),
+        passIn.value
+      );
     } catch (e) {
       authErr.textContent = e.message;
     }
@@ -29,7 +30,10 @@ document.addEventListener("DOMContentLoaded", () => {
   btnLogin.onclick = async () => {
     authErr.textContent = "";
     try {
-      await auth.signInWithEmailAndPassword(emailIn.value, passIn.value);
+      await auth.signInWithEmailAndPassword(
+        emailIn.value.trim(),
+        passIn.value
+      );
     } catch (e) {
       authErr.textContent = e.message;
     }
@@ -38,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Logout
   btnLogout.onclick = () => auth.signOut();
 
-  // Monitor auth state
+  // Auth state listener
   auth.onAuthStateChanged(user => {
     if (user) {
       authUI.style.display = "none";
@@ -52,15 +56,13 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 async function startApp(userEmail) {
-  const db        = window.db;
-  const TS        = window.FieldValue.serverTimestamp;
-
-  // Elemente UI din aplicație (în startApp pentru scope local)
-  const selector    = document.getElementById("selector");
-  const themeSelect = document.getElementById("theme-select");
-  const startButton = document.getElementById("start");
-  const quizDiv     = document.getElementById("quiz");
-  const resultDiv   = document.getElementById("result");
+  const db         = window.db;
+  const TS         = window.FieldValue.serverTimestamp;
+  const allQ       = await (await fetch("intrebari_toate_materii_rebuilt.json")).json();
+  let queue        = [];
+  let answered     = [];
+  let score        = 0;
+  let attemptsLeft = 0;
 
   // Log page_load
   db.collection("accessLogs").add({
@@ -70,39 +72,63 @@ async function startApp(userEmail) {
     page:      location.pathname
   }).catch(console.error);
 
-  // Quiz vars
-  let queue = [];
-  let answered = [];
-  let score = 0;
-  let attemptsLeft = 0;
-
   // Theme switcher
-  themeSelect.addEventListener("change", e => {
-    document.body.classList.toggle("dark", e.target.value === "dark");
-  });
+  document.getElementById("theme-select")
+    .addEventListener("change", e =>
+      document.body.classList.toggle("dark", e.target.value === "dark")
+    );
+
+  // Print 80-question PDF
+  document.getElementById("print").onclick = () => {
+    // build 80-mix
+    const cats = [
+      "Anatomie patologica","Bacteriologie","Farmacologie",
+      "Fiziologie","Patologie","Anatomie",
+      "Histologie","Semiologie"
+    ];
+    let mix = [];
+    cats.forEach(cat => {
+      const pool = allQ.filter(q => q.materie === cat);
+      mix = mix.concat(shuffle(pool).slice(0, 15));
+    });
+    if (mix.length < 80) {
+      const rest = allQ.filter(q => !mix.includes(q));
+      mix = mix.concat(shuffle(rest).slice(0, 80 - mix.length));
+    }
+    mix = shuffle(mix);
+
+    // open printable page
+    const pw = window.open("", "_blank");
+    pw.document.write(`
+      <html><head><title>Variantă grile (80 random)</title>
+      <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        h1 { text-align: center; }
+        .question { margin-bottom: 1em; }
+        ol { margin: 0 0 1em 20px; }
+      </style>
+      </head><body>
+        <h1>Variantă Grile (80 random)</h1>
+    `);
+    mix.forEach((q, i) => {
+      pw.document.write(`
+        <div class="question">
+          <strong>${i+1}. ${q.intrebare}</strong>
+          <ol type="a">
+            ${q.variante.map(opt => `<li>${opt}</li>`).join("")}
+          </ol>
+        </div>
+      `);
+    });
+    pw.document.write("</body></html>");
+    pw.document.close();
+    pw.focus();
+    pw.print();
+  };
 
   // Start test
-  startButton.onclick = async () => {
-    const sel = selector.value;
-
-    // Load questions
-    const res = await fetch("intrebari_toate_materii_rebuilt.json");
-    const allQ = await res.json();
-
-    // Determine pool și size
-    let pool;
-    let size;
-    if (sel === "mix") {
-      pool = allQ;
-      size = 80;
-    } else {
-      pool = allQ.filter(q => q.materie === sel);
-      size = sel === "Semiologie" ? 110 : 100;
-    }
-
-    // Build și trim queue
-    queue = shuffle(pool).slice(0, size);
-    attemptsLeft = queue.length;
+  document.getElementById("start").onclick = async () => {
+    const sel = document.getElementById("selector").value;
 
     // Log start_test
     db.collection("accessLogs").add({
@@ -112,32 +138,57 @@ async function startApp(userEmail) {
       testType:  sel
     }).catch(console.error);
 
-    // Reset UI
-    answered = [];
-    score = 0;
-    startButton.style.display    = "none";
-    selector.disabled            = true;
-    themeSelect.disabled         = true;
-    resultDiv.innerHTML          = "";
-    quizDiv.innerHTML            = "";
+    // build queue
+    if (sel === "mix") {
+      const cats = [
+        "Anatomie patologica","Bacteriologie","Farmacologie",
+        "Fiziologie","Patologie","Anatomie",
+        "Histologie","Semiologie"
+      ];
+      let mix = [];
+      cats.forEach(cat => {
+        const pool = allQ.filter(q => q.materie === cat);
+        mix = mix.concat(shuffle(pool).slice(0,15));
+      });
+      if (mix.length < 80) {
+        const rest = allQ.filter(q => !mix.includes(q));
+        mix = mix.concat(shuffle(rest).slice(0, 80 - mix.length));
+      }
+      queue = shuffle(mix);
+    } else {
+      const filtered = allQ.filter(q => q.materie === sel);
+      const cnt = sel === "Semiologie" ? 110 : 100;
+      queue = shuffle(filtered).slice(0, cnt);
+    }
 
-    // Show first question
+    attemptsLeft = queue.length;
+
+    // hide config
+    ["print","start"].forEach(id => 
+      document.getElementById(id).style.display = "none"
+    );
+    document.getElementById("selector").disabled     = true;
+    document.getElementById("theme-select").disabled = true;
+    document.getElementById("result").innerHTML      = "";
+
     showNextQuestion();
   };
 
-  // Afișează următoarea întrebare
   function showNextQuestion() {
-    if (attemptsLeft <= 0) {
-      return showResult();
-    }
+    if (attemptsLeft <= 0) return showResult();
 
+    const quiz = document.getElementById("quiz");
+    quiz.innerHTML = "";
     const q = queue[0];
-    quizDiv.innerHTML = `
+
+    quiz.innerHTML = `
       <div class="question">
-        <h3>${answered.length + 1}. ${q.intrebare}</h3>
-        ${q.variante.map((opt,i) =>
-          `<label><input type="radio" name="opt" value="${i}"> ${opt}</label>`
-        ).join('')}
+        <h3>${answered.length+1}. ${q.intrebare}</h3>
+        ${q.variante.map((opt,i)=>
+          `<label style="display:block; margin:4px 0;">
+             <input type="radio" name="opt" value="${i}"> ${opt}
+           </label>`
+        ).join("")}
       </div>
       <div class="buttons">
         <button id="skip">Sari peste</button>
@@ -152,29 +203,25 @@ async function startApp(userEmail) {
       queue.push(queue.shift());
       showNextQuestion();
     };
-
-    document.getElementById("finish").onclick = showResult;
+    document.getElementById("finish").onclick = () => showResult();
 
     document.getElementById("verify").onclick = () => {
       const selOpt = document.querySelector("input[name=opt]:checked");
-      if (!selOpt) {
-        return alert("Selectează o opțiune sau sari peste!");
-      }
-      const ans = parseInt(selOpt.value, 10);
+      if (!selOpt) return alert("Selectează o opțiune sau sari peste!");
+      const ans     = parseInt(selOpt.value,10);
       const correct = ans === q.corect;
       if (correct) score++;
-      answered.push({ q, answer: ans, correct });
+      answered.push({q,answer:ans,correct});
 
-      // Disable options și butoane
-      quizDiv.querySelectorAll("input[name=opt]").forEach(i => i.disabled = true);
+      quiz.querySelectorAll("input[name=opt]").forEach(i=>i.disabled=true);
       document.getElementById("verify").disabled = true;
-      document.getElementById("skip").disabled = true;
+      document.getElementById("skip").disabled   = true;
 
-      // Feedback
       const fb = document.getElementById("feedback");
       fb.innerHTML = correct
-        ? `<p><strong style="color:green">✔ Corect!</strong></p>`
-        : `<p><strong style="color:red">✘ Greșit!</strong></p><p>Varianta corectă: <em>${q.variante[q.corect]}</em></p>`;
+        ? `<p style="color:green"><strong>✔ Corect!</strong></p>`
+        : `<p style="color:red"><strong>✘ Greșit!</strong></p>
+           <p>Varianta corectă: <em>${q.variante[q.corect]}</em></p>`;
 
       const cont = document.createElement("button");
       cont.textContent = "Continuă";
@@ -188,31 +235,29 @@ async function startApp(userEmail) {
     };
   }
 
-  // Afișează rezultatele
   function showResult() {
-    quizDiv.innerHTML = "";
-    resultDiv.innerHTML = `<h2>Ai răspuns corect la ${score} din ${answered.length} întrebări.</h2>`;
-    answered.forEach(({ q, answer, correct }, idx) => {
+    document.getElementById("quiz").innerHTML = "";
+    const result = document.getElementById("result");
+    result.innerHTML = `<h2>Ai răspuns corect la ${score} din ${answered.length} întrebări.</h2>`;
+    answered.forEach(({q,answer,correct},idx)=>{
       const block = document.createElement("div");
       block.classList.add("question");
-      block.style.background = correct ? "#e6ffec" : "#ffecec";
+      block.style.background = correct? "#e6ffec":"#ffecec";
       block.style.padding = "10px";
       block.style.marginBottom = "8px";
       block.innerHTML = `
-        <strong>${idx + 1}. ${q.intrebare}</strong><br/>
-        <div>Răspunsul tău: ${answer != null ? q.variante[answer] : "<em>neselectat</em>"}</div>
-        ${
-          correct
-            ? `<div style="color:green">✔ Corect</div>`
-            : `<div style="color:red">✘ Greșit</div><div>Varianta corectă: <em>${q.variante[q.corect]}</em></div>`
-        }
+        <strong>${idx+1}. ${q.intrebare}</strong><br/>
+        <div>Răspunsul tău: ${answer!=null? q.variante[answer] : "<em>neselectat</em>"}</div>
+        ${correct
+          ? `<div style="color:green">✔ Corect</div>`
+          : `<div style="color:red">✘ Greșit</div>
+             <div>Varianta corectă: <em>${q.variante[q.corect]}</em></div>`}
       `;
-      resultDiv.appendChild(block);
+      result.appendChild(block);
     });
   }
 
-  // util shuffle
   function shuffle(a) {
-    return a.sort(() => Math.random() - 0.5);
+    return a.sort(()=>Math.random()-0.5);
   }
 }
