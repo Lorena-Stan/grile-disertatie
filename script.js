@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const authUI     = document.getElementById("auth-container");
   const appUI      = document.getElementById("app-container");
 
-  // Înregistrare
+  // Sign-up
   btnSignup.onclick = async () => {
     authErr.textContent = "";
     try {
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  // Autentificare
+  // Login
   btnLogin.onclick = async () => {
     authErr.textContent = "";
     try {
@@ -39,10 +39,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  // Deconectare
+  // Logout
   btnLogout.onclick = () => auth.signOut();
 
-  // Listener stare autentificare
+  // Auth state listener
   auth.onAuthStateChanged(user => {
     if (user) {
       authUI.style.display = "none";
@@ -55,10 +55,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Funcția principală a aplicației, apelată după autentificare
 async function startApp(userEmail) {
-  const db  = window.db;
-  const TS  = window.FieldValue.serverTimestamp;
+  const db           = window.db;
+  const TS           = window.FieldValue.serverTimestamp;
   const allQuestions = await (await fetch("intrebari_toate_materii_rebuilt.json")).json();
 
   // Log page_load
@@ -69,37 +68,30 @@ async function startApp(userEmail) {
     page:      location.pathname
   }).catch(console.error);
 
-  // Configurare tema
+  // Theme switcher
   document.getElementById("theme-select")
     .addEventListener("change", e =>
       document.body.classList.toggle("dark", e.target.value === "dark")
     );
 
-  // Buton Printează varianta
+  // PRINT: exact 80 întrebări
   document.getElementById("print").onclick = () => {
-    // 1) Construim max 15 din fiecare materie
-    const cats = [
-      "Anatomie patologica","Bacteriologie","Farmacologie",
-      "Fiziologie","Patologie","Anatomie",
-      "Histologie","Semiologie"
-    ];
+    const cats  = ["Anatomie patologica","Bacteriologie","Farmacologie","Fiziologie","Patologie","Anatomie","Histologie","Semiologie"];
     let poolMix = [];
     cats.forEach(cat => {
       const subset = allQuestions.filter(q => q.materie === cat);
       poolMix = poolMix.concat(shuffle(subset).slice(0, 15));
     });
-    // 2) Amestecăm și reducem la 80
     const mix80 = shuffle(poolMix).slice(0, 80);
 
-    // 3) Generăm fereastră de print
     const pw = window.open("", "_blank");
     pw.document.write(`
       <html><head><title>Variantă grile (80 random)</title>
       <style>
-        body { font-family: Arial, sans-serif; padding: 20px; }
-        h1 { text-align: center; }
-        .question { margin-bottom: 1em; }
-        ol { margin: 0 0 1em 20px; }
+        body { font-family: Arial, sans-serif; padding:20px; }
+        h1 { text-align:center; }
+        .question { margin-bottom:1em; }
+        ol { margin:0 0 1em 20px; }
       </style>
       </head><body>
         <h1>Variantă Grile (80 random)</h1>
@@ -120,10 +112,10 @@ async function startApp(userEmail) {
     pw.print();
   };
 
-  // Variabile quiz
-  let queue = [], answered = [], score = 0, attemptsLeft = 0;
+  // Quiz variables
+  let queue        = [], answered = [], score = 0, attemptsLeft = 0;
 
-  // Buton Începe testul
+  // START TEST
   document.getElementById("start").onclick = async () => {
     const sel = document.getElementById("selector").value;
 
@@ -135,13 +127,9 @@ async function startApp(userEmail) {
       testType:  sel
     }).catch(console.error);
 
-    // Construim coada
+    // Build queue with limit
     if (sel === "mix") {
-      const cats = [
-        "Anatomie patologica","Bacteriologie","Farmacologie",
-        "Fiziologie","Patologie","Anatomie",
-        "Histologie","Semiologie"
-      ];
+      const cats = ["Anatomie patologica","Bacteriologie","Farmacologie","Fiziologie","Patologie","Anatomie","Histologie","Semiologie"];
       let mix = [];
       cats.forEach(cat => {
         const subset = allQuestions.filter(q => q.materie === cat);
@@ -150,13 +138,13 @@ async function startApp(userEmail) {
       queue = shuffle(mix).slice(0, 80);
     } else {
       const filtered = allQuestions.filter(q => q.materie === sel);
-      const count = sel === "Semiologie" ? 110 : 100;
-      queue = shuffle(filtered).slice(0, count);
+      const cnt = sel === "Semiologie" ? 110 : 100;
+      queue = shuffle(filtered).slice(0, cnt);
     }
 
     attemptsLeft = queue.length;
 
-    // Ascunde butoane și select
+    // Hide controls
     ["print","start"].forEach(id =>
       document.getElementById(id).style.display = "none"
     );
@@ -167,11 +155,10 @@ async function startApp(userEmail) {
     showNextQuestion();
   };
 
-  // Afișează următoarea întrebare
+  // Show next question
   function showNextQuestion() {
-    if (attemptsLeft <= 0) {
-      return showResult();
-    }
+    if (attemptsLeft <= 0) return showResult();
+
     const quiz = document.getElementById("quiz");
     quiz.innerHTML = "";
     const q = queue[0];
@@ -229,7 +216,7 @@ async function startApp(userEmail) {
     };
   }
 
-  // Afișează rezultatele finale
+  // Show final results
   function showResult() {
     document.getElementById("quiz").innerHTML = "";
     const result = document.getElementById("result");
@@ -252,7 +239,7 @@ async function startApp(userEmail) {
     });
   }
 
-  // Utilitar shuffle
+  // Shuffle util
   function shuffle(a) {
     return a.sort(()=>Math.random()-0.5);
   }
