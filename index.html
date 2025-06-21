@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Test Grilă Medicină Veterinară</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body class="light">
 
-  <!-- 1) AUTENTIFICARE EMAIL/PAROLĂ -->
+  <!-- LOGIN UI -->
   <div id="auth-container" class="container">
     <h2>Autentificare</h2>
-    <input type="email"    id="email"    placeholder="Email" style="display:block; margin:0.5em 0;">
-    <input type="password" id="password" placeholder="Parolă" style="display:block; margin:0.5em 0;">
+    <input type="email"    id="email"        placeholder="Email" style="display:block; margin:0.5em 0;">
+    <input type="password" id="password"     placeholder="Parolă" style="display:block; margin:0.5em 0;">
     <button id="btn-signup">Înregistrează cont</button>
     <button id="btn-login">Autentifică-te</button>
     <p id="auth-error" style="color:red;"></p>
   </div>
 
-  <!-- 2) INTERFAȚA APLICAȚIEI (ascunsă până la login) -->
+  <!-- APP UI -->
   <div id="app-container" class="container" style="display:none;">
     <h1>Test Grilă Medicină Veterinară</h1>
-
     <div class="config">
       <label for="theme-select">Tema:</label>
       <select id="theme-select">
@@ -51,12 +50,12 @@
     <div id="result"></div>
   </div>
 
-  <!-- 3) Firebase compat libraries -->
+  <!-- Firebase compat libraries -->
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
 
-  <!-- 4) Initialize Firebase and expose globals -->
+  <!-- Initialize Firebase & globals -->
   <script>
     const firebaseConfig = {
       apiKey: "AIzaSyB4KxE4U_475bcqwzY85vCqLwLrqgIgQbk",
@@ -72,7 +71,7 @@
     window.FieldValue = firebase.firestore.FieldValue;
   </script>
 
-  <!-- 5) Main app script -->
+  <!-- Main script -->
   <script src="script.js" defer></script>
 </body>
 </html>
