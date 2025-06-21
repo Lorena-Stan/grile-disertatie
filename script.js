@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const authUI     = document.getElementById("auth-container");
   const appUI      = document.getElementById("app-container");
 
-  // Înregistrare
+  // Sign-up
   btnSignup.onclick = async () => {
     authErr.textContent = "";
     try {
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  // Autentificare
+  // Login
   btnLogin.onclick = async () => {
     authErr.textContent = "";
     try {
@@ -39,10 +39,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  // Deconectare
+  // Logout
   btnLogout.onclick = () => auth.signOut();
 
-  // Listener stare autentificare
+  // Auth state listener
   auth.onAuthStateChanged(user => {
     if (user) {
       authUI.style.display = "none";
@@ -74,19 +74,38 @@ async function startApp(userEmail) {
       document.body.classList.toggle("dark", e.target.value === "dark")
     );
 
-  // PRINT: exact 80 întrebări pentru mix
+  // Print variants for any selection
   document.getElementById("print").onclick = () => {
-    const cats  = ["Anatomie patologica","Bacteriologie","Farmacologie","Fiziologie","Patologie","Anatomie","Histologie","Semiologie"];
-    let poolMix = [];
-    cats.forEach(cat => {
-      const subset = allQuestions.filter(q => q.materie === cat);
-      poolMix = poolMix.concat(shuffle(subset).slice(0, 15));
-    });
-    const mix80 = shuffle(poolMix).slice(0, 80);
+    const sel = document.getElementById("selector").value;
+    let toPrint = [];
+    let header  = "";
 
+    if (sel === "mix") {
+      // 80 grile random din toate materiile
+      const cats = [
+        "Anatomie patologica","Bacteriologie","Farmacologie",
+        "Fiziologie","Patologie","Anatomie",
+        "Histologie","Semiologie"
+      ];
+      let pool = [];
+      cats.forEach(cat => {
+        const subset = allQuestions.filter(q => q.materie === cat);
+        pool = pool.concat(shuffle(subset).slice(0, 15));
+      });
+      toPrint = shuffle(pool).slice(0, 80);
+      header  = "80 grile random din toate materiile";
+    } else {
+      // 100 sau 110 din materia selectată
+      const filtered = allQuestions.filter(q => q.materie === sel);
+      const count = sel === "Semiologie" ? 110 : 100;
+      toPrint = shuffle(filtered).slice(0, count);
+      header  = `${count} grile ${sel}`;
+    }
+
+    // Open print window
     const pw = window.open("", "_blank");
     pw.document.write(`
-      <html><head><title>Variantă grile (80 random)</title>
+      <html><head><title>Variantă grile — ${header}</title>
       <style>
         body { font-family: Arial, sans-serif; padding:20px; }
         h1 { text-align:center; }
@@ -94,9 +113,9 @@ async function startApp(userEmail) {
         ol { margin:0 0 1em 20px; }
       </style>
       </head><body>
-        <h1>Variantă Grile (80 random)</h1>
+        <h1>${header}</h1>
     `);
-    mix80.forEach((q, i) => {
+    toPrint.forEach((q, i) => {
       pw.document.write(`
         <div class="question">
           <strong>${i+1}. ${q.intrebare}</strong>
@@ -115,7 +134,7 @@ async function startApp(userEmail) {
   // Quiz variables
   let queue        = [], answered = [], score = 0, attemptsLeft = 0;
 
-  // START TEST
+  // Start test
   document.getElementById("start").onclick = async () => {
     const sel = document.getElementById("selector").value;
 
@@ -129,20 +148,24 @@ async function startApp(userEmail) {
 
     // Build queue
     if (sel === "mix") {
-      const cats = ["Anatomie patologica","Bacteriologie","Farmacologie","Fiziologie","Patologie","Anatomie","Histologie","Semiologie"];
+      const cats = [
+        "Anatomie patologica","Bacteriologie","Farmacologie",
+        "Fiziologie","Patologie","Anatomie",
+        "Histologie","Semiologie"
+      ];
       let mix = [];
       cats.forEach(cat => {
         const subset = allQuestions.filter(q => q.materie === cat);
         mix = mix.concat(shuffle(subset).slice(0, 15));
       });
-      queue = shuffle(mix);               // mix length = 8*15 = 120
+      queue = shuffle(mix);
     } else {
       const filtered = allQuestions.filter(q => q.materie === sel);
       const cnt = sel === "Semiologie" ? 110 : 100;
-      queue = shuffle(filtered).slice(0, cnt); // subject-specific count
+      queue = shuffle(filtered).slice(0, cnt);
     }
 
-    // Ensure we only attempt up to 100 questions
+    // Stop at 100 answered questions max
     attemptsLeft = Math.min(queue.length, 100);
     queue = queue.slice(0, attemptsLeft);
 
