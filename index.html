@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Test Grilă Medicină Veterinară</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body class="light">
 
-  <!-- AUTENTIFICARE EMAIL/PAROLĂ -->
+  <!-- 1) AUTENTIFICARE EMAIL/PAROLĂ -->
   <div id="auth-container" class="container">
     <h2>Autentificare</h2>
-    <input type="email"    id="email"        placeholder="Email"     style="display:block; margin:0.5em 0;">
-    <input type="password" id="password"     placeholder="Parolă"    style="display:block; margin:0.5em 0;">
+    <input type="email"    id="email"    placeholder="Email" style="display:block; margin:0.5em 0;">
+    <input type="password" id="password" placeholder="Parolă" style="display:block; margin:0.5em 0;">
     <button id="btn-signup">Înregistrează cont</button>
     <button id="btn-login">Autentifică-te</button>
     <p id="auth-error" style="color:red;"></p>
   </div>
 
-  <!-- INTERFAȚA APLICAȚIEI -->
+  <!-- 2) INTERFAȚA APLICAȚIEI (ascunsă până la login) -->
   <div id="app-container" class="container" style="display:none;">
     <h1>Test Grilă Medicină Veterinară</h1>
+
     <div class="config">
       <label for="theme-select">Tema:</label>
       <select id="theme-select">
@@ -41,6 +42,7 @@
         <option value="Semiologie">110 grile Semiologie</option>
       </select>
 
+      <button id="print">Printează varianta de grile</button>
       <button id="start">Începe testul</button>
       <button id="btn-logout" style="margin-left:1em;">Deconectează-te</button>
     </div>
@@ -49,12 +51,12 @@
     <div id="result"></div>
   </div>
 
-  <!-- Firebase compat -->
+  <!-- 3) Firebase compat libraries -->
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
 
-  <!-- Init Firebase & expuneri -->
+  <!-- 4) Initialize Firebase and expose globals -->
   <script>
     const firebaseConfig = {
       apiKey: "AIzaSyB4KxE4U_475bcqwzY85vCqLwLrqgIgQbk",
@@ -70,7 +72,7 @@
     window.FieldValue = firebase.firestore.FieldValue;
   </script>
 
-  <!-- Aplicația -->
+  <!-- 5) Main app script -->
   <script src="script.js" defer></script>
 </body>
 </html>
