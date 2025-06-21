@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const authUI     = document.getElementById("auth-container");
   const appUI      = document.getElementById("app-container");
 
-  // Sign-up
+  // Înregistrare
   btnSignup.onclick = async () => {
     authErr.textContent = "";
     try {
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  // Login
+  // Autentificare
   btnLogin.onclick = async () => {
     authErr.textContent = "";
     try {
@@ -39,10 +39,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  // Logout
+  // Deconectare
   btnLogout.onclick = () => auth.signOut();
 
-  // Auth state listener
+  // Listener stare autentificare
   auth.onAuthStateChanged(user => {
     if (user) {
       authUI.style.display = "none";
@@ -74,7 +74,7 @@ async function startApp(userEmail) {
       document.body.classList.toggle("dark", e.target.value === "dark")
     );
 
-  // PRINT: exact 80 întrebări
+  // PRINT: exact 80 întrebări pentru mix
   document.getElementById("print").onclick = () => {
     const cats  = ["Anatomie patologica","Bacteriologie","Farmacologie","Fiziologie","Patologie","Anatomie","Histologie","Semiologie"];
     let poolMix = [];
@@ -127,7 +127,7 @@ async function startApp(userEmail) {
       testType:  sel
     }).catch(console.error);
 
-    // Build queue with limit
+    // Build queue
     if (sel === "mix") {
       const cats = ["Anatomie patologica","Bacteriologie","Farmacologie","Fiziologie","Patologie","Anatomie","Histologie","Semiologie"];
       let mix = [];
@@ -135,14 +135,16 @@ async function startApp(userEmail) {
         const subset = allQuestions.filter(q => q.materie === cat);
         mix = mix.concat(shuffle(subset).slice(0, 15));
       });
-      queue = shuffle(mix).slice(0, 80);
+      queue = shuffle(mix);               // mix length = 8*15 = 120
     } else {
       const filtered = allQuestions.filter(q => q.materie === sel);
       const cnt = sel === "Semiologie" ? 110 : 100;
-      queue = shuffle(filtered).slice(0, cnt);
+      queue = shuffle(filtered).slice(0, cnt); // subject-specific count
     }
 
-    attemptsLeft = queue.length;
+    // Ensure we only attempt up to 100 questions
+    attemptsLeft = Math.min(queue.length, 100);
+    queue = queue.slice(0, attemptsLeft);
 
     // Hide controls
     ["print","start"].forEach(id =>
